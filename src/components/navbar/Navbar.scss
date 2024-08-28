@@ -1,0 +1,257 @@
+@use 'variables' as *;
+
+@mixin responsive($query) {
+  @media ( min-width: $query ) {
+      @content;
+  }
+}
+
+  .logo {
+      width: 14rem;
+      height: 4rem;
+    }
+  
+  .nav {
+    width: 100%;
+    border-bottom: 1px solid $light-gray;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar {
+    background-color: white;
+    z-index: 100;
+    top: 0;
+    padding: 6px 2%;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    img {
+      display: block;
+      margin: auto;
+    }
+    @include responsive($xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+  }
+  }
+  
+  .searchbar {
+    border-radius: 36px;
+    border: 1px solid $primary-color;
+    display: flex;
+    width: 70%;
+    height: 36px;
+    align-items: center;
+    padding: 0;
+    input {
+      padding-left: 16px;
+      width: 80%;
+    }
+    @include responsive($xl) {
+      width: 60%;
+
+  }
+  
+  }
+  
+  .search-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    justify-self: flex-end;
+  }
+  
+  .products {
+    border-right: 1px solid $input-camera-icon-color;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0 16px;
+  }
+  
+  .search-button {
+    background-color: $primary-color;
+    width: 56px;
+    height: 100%;
+    margin: 0;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      transition: 0.2s;
+      line-height: 0;
+      text-align: center;
+      cursor: pointer;
+        span {
+            font-weight: 100;
+            opacity: $opacity-high;
+        }
+        p {
+            font-size: $text-12;
+            font-weight: 400;
+            opacity: $opacity-high;
+            white-space: pre-wrap;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    
+  }
+  .sub-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $shadow;
+    z-index: 0;
+  } 
+  
+  .flexbox {
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-content: center;
+    font-size: $text-12;
+    font-weight: 400;
+    p {
+    font-size: $text-14;
+    font-weight: 500;
+    line-height: 0;
+    opacity: $opacity-high;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+    @include responsive($xl) {
+    }
+  }
+  .navigation-dropdown-section {
+
+    display: none;
+    @include responsive($xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      gap: 12px;
+      line-height: 0;
+
+  }
+  }
+  .sub-nav-links {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a {
+        color: black;
+        opacity: $opacity-high;
+        font-size: $text-14;
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+          color: $primary-color;
+      }
+    }
+    
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: $shadow;
+    z-index: 50;
+    transition: all 0.3s ease;
+
+  }
+
+  .searchbar-resize {
+    border-radius: 36px;
+    border: 2px solid $primary-color;
+    display: flex;
+    width: 70%;
+    height: 36px;
+    align-items: center;
+    padding: 0;
+    input {
+      padding-left: 16px;
+    }
+  }
+
+  .nav-links-resize {
+    width: 10%;
+    text-align: center;
+  }
+
+  .sub-flex {
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-content: center;
+    font-size: $text-12;
+    font-weight: 400;
+    p {
+    font-size: $text-14;
+    font-weight: 500;
+    line-height: 0;
+    opacity: $opacity-high;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    
+  }
+  .categories-resize {
+    display: block;
+    flex-shrink: 0;
+    @include responsive($xl) {
+      display: none;
+  }
+  }
+  .categories {
+    display: none;
+    @include responsive($xl) {
+      flex-shrink: 0;
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      align-content: center;
+      font-size: $text-12;
+      font-weight: 400;
+      p {
+      font-size: $text-14;
+      font-weight: 500;
+      line-height: 0;
+      opacity: $opacity-high;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
