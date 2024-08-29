@@ -9,12 +9,12 @@ const SubNavbar = () => {
       <div className="sub-nav">
         <div className="navbar">
           <div className="sub-flex">
-            <div className="flexbox">
+            <div className="categories">
               <FormatListBulletedIcon fontSize="medium" />
               <p>All Categories</p>
               <KeyboardArrowDownRoundedIcon fontSize="medium" />
-              </div>
             <hr/>
+              </div>
             <div className="sub-nav-links">
             <a href="#">
             Secured Trading Service

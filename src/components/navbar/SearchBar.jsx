@@ -10,11 +10,11 @@ const SearchBar = ({scrollProps}) => {
       <div className={scrollProps ? "searchbar-resize" : "searchbar"}>
         <button className="products">
           <p>Products</p>
-          <KeyboardArrowDownRoundedIcon />
+          <KeyboardArrowDownRoundedIcon fontSize="medium" />
         </button>
         <input placeholder="Enter a keyword to search products" />
         <div className="search-icons">
-          <button>
+          <button class="camera-icon">
             <CameraAltOutlinedIcon fontSize="medium" style={{color: "gray"}} />
           </button>
           <button className="search-button">

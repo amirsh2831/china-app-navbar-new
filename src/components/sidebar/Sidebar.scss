@@ -1,0 +1,67 @@
+@use '../navbar//variables.scss' as *;
+
+
+.sidebar-header {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-left: 8px;
+    height: 48px;
+    span {
+      font-size: $text-16;
+    }
+  }
+
+  .call-to-action {
+    padding: 16px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      width: 112px;
+      height: 32px;
+      border-radius: 48px;
+      font-size: $text-12;
+      &.sign-in {
+        background-color: $primary-color;
+        color: $white;
+      }
+      &.join {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+
+    }
+  }
+
+  .call-to-action-icons {
+    margin-top: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .call-to-action-text {
+    text-align: left;
+    padding: 0 16px;
+    p {
+      font-family: roboto, sans-serif;
+      text-wrap: nowrap;
+      font-size: $text-12;
+      opacity: $opacity-high;
+      line-height: 14px;
+      text-transform: capitalize;
+      font-weight: 400;
+      a {
+        color: blue;
+      }
+    }
+  }
