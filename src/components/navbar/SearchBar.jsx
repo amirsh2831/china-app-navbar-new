@@ -1,7 +1,8 @@
 import React from "react";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
-import { CgSearch } from "react-icons/cg";
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+
 
 
 const SearchBar = ({scrollProps}) => {
@@ -18,7 +19,7 @@ const SearchBar = ({scrollProps}) => {
             <CameraAltOutlinedIcon fontSize="medium" style={{color: "gray"}} />
           </button>
           <button className="search-button">
-            <CgSearch />
+            <SearchOutlinedIcon fontSize="medium" />
           </button>
         </div>
       </div>

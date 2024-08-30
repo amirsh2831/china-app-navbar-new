@@ -33,11 +33,11 @@ const Navbar = () => {
     <>
       <div className="nav">
         <div className={`navbar ${scroll ? "sticky" : " "}`}>
-          <div className="left-side">
+          <div class="left-side">
             <div className="sidebar-icon">
-              <Button onClick={toggleDrawer(true)} color="black">
-                <MenuOutlinedIcon fontSize="medium" />
-              </Button>
+              <button onClick={toggleDrawer(true)}>
+                <MenuOutlinedIcon fontSize="medium" nClick={toggleDrawer(true)} />
+              </button>
               <Drawer open={open} onClose={toggleDrawer(false)}>
                 <Sidebar />
               </Drawer>
@@ -53,8 +53,8 @@ const Navbar = () => {
               <SearchOutlinedIcon fontSize="medium" />
             </div>
           </div>
-          <div className="right-side">
-            <div className="categories-resize">
+          <div class="right-side">
+            <div class="categories-resize">
               <p>All Categories</p>
               <KeyboardArrowDownRoundedIcon fontSize="medium" />
             </div>

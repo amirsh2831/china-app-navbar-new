@@ -10,6 +10,10 @@
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
   }
+
+  html {
+    padding: 0;
+  }
   
   input {
     display: flex;
@@ -46,7 +50,9 @@
     background-color: $light-gray;
   }
 
-  // body {
-  //   width: 100%;
-  // }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 

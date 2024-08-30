@@ -6,6 +6,12 @@
   }
 }
 
+@mixin responsive-minmsx($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max){
+    @content;
+  }
+}
+
   .logo {
     width: 10rem;
     height: 3rem;
@@ -22,7 +28,7 @@
     display: flex;
     justify-content: space-around;
     @include responsive($xl) {
-      max-width: 1440px;
+      max-width: 1920px;
       margin: auto;
     }
     
@@ -47,7 +53,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      max-width: 1440px;
+      max-width: 1920px;
   }
   }
   
@@ -81,6 +87,7 @@
     align-items: center;
     height: 100%;
     justify-self: flex-end;
+    
     button {
       &.camera-icon {
         display: none;
@@ -105,6 +112,7 @@
           font-size: 16px;
 
         }
+        
       }
     }
   }
@@ -163,7 +171,8 @@
       z-index: 0;
     }
     @include responsive($xl) {
-      max-width: 1440px;
+      justify-content: center;
+      max-width: 1920px;
       margin: auto;
     }
   } 
@@ -197,8 +206,7 @@
       align-content: center;
       gap: 12px;
       line-height: 0;
-
-  }
+    }
   }
   .sub-nav-links {
     margin-left: 8px;
@@ -223,21 +231,50 @@
     top: 0;
     width: 100%;
     box-shadow: $shadow;
-    z-index: 50;
+    z-index: 500;
     transition: all 0.3s ease;
-
+    div.left-side {
+      display: flex;
+      @include responsive($md){
+        padding-left: 16px;
+      }
+      @include responsive-minmsx($md, $xl ){
+        display: none;
+      }
+      @include responsive($xl){
+        display: block;
+      }
+    }
+    div.right-side {
+      padding: 0 24px;
+      justify-content: space-around;
+      @include responsive($md) {
+        padding-right: 16px;
+      }
+      div.categories-resize {
+        display: none;         
+      }
+    }
   }
 
   .searchbar-resize {
-    border-radius: 36px;
-    border: 2px solid $primary-color;
-    display: flex;
-    width: 70%;
-    height: 36px;
-    align-items: center;
-    padding: 0;
+      display: none;
+    @include responsive($md){
+      border-radius: 36px;
+      border: 2px solid $primary-color;
+      display: flex;
+      width: 85%;
+      height: 36px;
+      align-items: center;
+      padding: 0;
+
+    }
     input {
+      width: 80%;
       padding-left: 16px;
+      @include responsive($xl2){
+        width: 95%;
+      }
     }
   }
 
@@ -320,11 +357,15 @@
 
   .left-side {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    
+    button {
+      padding-top: 12px;
+      
+    }
     div {
       &.search-icon-resize {
+        padding-top: 12px;
         display: block;
         color: black;
         opacity: $opacity-high;
