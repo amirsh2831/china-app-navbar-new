@@ -9,7 +9,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./Navbar.scss";
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-
+import { Categories } from "../../constants";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Sidebar from "../sidebar/Sidebar";
 
@@ -57,6 +57,16 @@ const Navbar = () => {
             <div class="categories-resize">
               <p>All Categories</p>
               <KeyboardArrowDownRoundedIcon fontSize="medium" />
+              <div class="dropdown-container">
+                <ul class="dropdown-list">
+                  {Categories.map((item) => (
+                    <li class="dropdown-item">
+                      <span>{item.icon}</span>
+                      <p>{item.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <SearchBar scrollProps={scroll} />
             <Links scrollProps={scroll} />

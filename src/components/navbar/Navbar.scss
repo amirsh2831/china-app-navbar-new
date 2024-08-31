@@ -134,6 +134,7 @@
   .nav-links {
     display: none;
     @include responsive($md){
+      position: relative;
       display: flex;
       flex-shrink: 0;
       gap: 24px;
@@ -144,6 +145,14 @@
         line-height: 0;
         text-align: center;
         cursor: pointer;
+         .dropdown-container {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: none;
+          box-shadow: $shadow-ul;
+        }
           span {
               font-weight: 100;
               opacity: $opacity-high;
@@ -158,8 +167,15 @@
               color: $primary-color;
           }
       }
+      div .h:hover .dropdown-container {
+        display: block;
+      }
+      
     }
     
+  }
+  .nav-links:hover .dropdown-container {
+    display: block;
   }
   .sub-nav {
     display: none;
@@ -197,7 +213,7 @@
     }
   }
   .navigation-dropdown-section {
-
+    position: relative;
     display: none;
     @include responsive($xl) {
       display: flex;
@@ -206,8 +222,97 @@
       align-content: center;
       gap: 12px;
       line-height: 0;
+      div.flexbox {
+        position: relative;
+        .dropdown-container {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          list-style: none;
+          margin: 0;
+          padding:0;
+          z-index: 1000;
+          box-shadow: $shadow-ul;
+          li.dropdown-item {
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: $text-14;
+            color: black;
+            opacity: $opacity-medium;
+            flex-shrink: 0;
+
+            &:hover {
+              background-color: $light-gray;
+            }
+            
+          }
+          div.right {
+            width: 170px;
+
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-shrink: 0;
+          }
+          div.left {
+            width: 170px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-shrink: 0
+          }
+          div.single-side {
+            width: 200px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-shrink: 0;
+
+          }
+          ul.dropdown-list {
+            width: 100%;
+            display: block;
+            padding: 0;
+            margin: 0;
+            flex-shrink: 0;
+
+            li {
+              flex-shrink: 0;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+            }
+          }
+          p.title {
+            margin: 0;
+            color: black;
+            font-size: $text-14;
+            font-weight: 600;
+          }
+        }
+      }
+    div.flexbox:hover .dropdown-container {
+      width: auto;
+      flex-flow: row;
+      flex-direction: row;
+      display: flex;
+      gap: 36px;
+      flex-wrap: nowrap;
+      padding: 16px 16px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
   }
+}
   .sub-nav-links {
     margin-left: 8px;
     display: flex;
@@ -313,9 +418,57 @@
   .categories-resize {
     display: none;
     @include responsive($md) {
+      position: relative;
       display: flex;
       flex-shrink: 0;
       align-items: center;
+      .dropdown-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 24px 0;
+        z-index: 1000;
+        box-shadow: $shadow-ul;
+        display: none;
+        
+        ul.dropdown-list {
+          padding: 0 8px;
+          width: 100%;
+          list-style: none;
+          display: grid;
+          grid-auto-flow: row;
+          gap: 0px; /* Optional: space between items */
+          height: 100%; /* Full height of the container */
+          overflow-y: auto; /* Enable vertical scrolling if needed */
+          grid-template-columns: repeat(2, 300px);
+          
+          li.dropdown-item {
+            display: flex;
+            align-items: end;
+            text-align: center;
+            height: 36px;
+            width: 300px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: $text-14;
+            color: black;
+            opacity: $opacity-high;
+            flex-shrink: 0;
+            gap: 8px;
+            font-size: $text-12;
+            opacity: $opacity-medium;
+  
+            &:hover {
+              color: $primary-color;
+            }
+            
+          }
+        }
+        
+      }
       &:hover {
         color: $primary-color;
       }
@@ -324,10 +477,20 @@
       display: none;
   }
   }
+  .categories-resize:hover .dropdown-container {   
+    width: 600px;
+    height: 600px; 
+    overflow: hidden; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr)); 
+    grid-auto-rows: minmax(600px, auto); 
+    gap: 16px; 
+  }
   .categories {
     display: none;
     font-size: $text-10;
     @include responsive($xl) {
+      position: relative;
       display: block;
       flex-shrink: 0;
       cursor: pointer;
@@ -337,16 +500,73 @@
       align-content: center;
       font-size: $text-12;
       font-weight: 400;
+
+      .dropdown-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 24px 0;
+        z-index: 1000;
+        box-shadow: $shadow-ul;
+        display: none;
+        
+        ul.dropdown-list {
+          padding: 0 8px;
+          width: 100%;
+          list-style: none;
+          display: grid;
+          grid-auto-flow: row;
+          gap: 0px; 
+          height: 100%;
+          overflow-y: auto; 
+          grid-template-columns: repeat(2, 300px);
+          
+          li.dropdown-item {
+            display: flex;
+            align-items: end;
+            text-align: center;
+            height: 36px;
+            width: 300px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: $text-14;
+            color: black;
+            opacity: $opacity-high;
+            flex-shrink: 0;
+            gap: 8px;
+            font-size: $text-14;
+            opacity: $opacity-medium;
+  
+            &:hover {
+              color: $primary-color;
+            }
+            
+          }
+        }
+        
+      }
       p {
-      font-size: $text-14;
-      font-weight: 500;
-      line-height: 0;
-      opacity: $opacity-high;
+        font-size: $text-14;
+        font-weight: 500;
+        line-height: 0;
+        opacity: $opacity-high;
       }
       &:hover {
         color: $primary-color;
       }
     }
+  }
+  .categories:hover .dropdown-container {   
+    width: 600px;
+    height: 600px; 
+    overflow: hidden; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+    grid-auto-rows: minmax(600px, auto); 
+    gap: 16px; 
   }
 
   .sidebar-icon {
@@ -376,3 +596,4 @@
       }
     }
   }
+
