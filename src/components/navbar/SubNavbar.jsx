@@ -3,61 +3,69 @@ import React from "react";
 // import { FaChevronDown } from "react-icons/fa6";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import { Buyers } from "../../constants";
+import { Buyers, HelpSubMenu, SupplySubMenu } from "../../constants";
 import { Lang } from "../../constants";
 import { Categories } from "../../constants";
 const SubNavbar = () => {
   return (
     <>
       <div className="sub-nav">
-        <div className="navbar">
+        <div className="sub-navbar">
           <div className="sub-flex">
             <div className="categories">
-              <FormatListBulletedIcon fontSize="medium" />
-              <p>All Categories</p>
-              <KeyboardArrowDownRoundedIcon fontSize="medium" />
               <div class="dropdown-container">
                 <ul class="dropdown-list">
                   {Categories.map((item) => (
                     <li class="dropdown-item">
-                      <span>{item.icon}</span>
-                      <p>{item.text}</p>
+                      <a href={item.link}>
+                        <span>{item.icon}</span>
+                        <p>{item.text}</p>
+                      </a>
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="cat">
+                <FormatListBulletedIcon fontSize="medium" />
+                <p>All Categories</p>
+                <span>
+                  <KeyboardArrowDownRoundedIcon
+                    fontSize="small"
+                    sx={{ paddingTop: "8px" }}
+                  />
+                </span>
               </div>
               <hr />
             </div>
             <div className="sub-nav-links">
               <a href="#">Secured Trading Service</a>
               <a href="#">Video Channel</a>
-              <a href="#">Top-ranking Products</a>
             </div>
           </div>
           <div className="navigation-dropdown-section">
             <div class="flexbox">
               <p>Supply</p>
-              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+              <span>
+                <KeyboardArrowDownRoundedIcon fontSize="small" />
+              </span>
 
               <div class="dropdown-container">
                 <div class="single-side">
                   <ul class="dropdown-list">
-                    <li class="dropdown-item">Solution Sprints</li>
-                    <li class="dropdown-item">Service Synergy</li>
-                    <li class="dropdown-item">Versatile Ventures</li>
-                    <li class="dropdown-item">Task Triumph</li>
-                    <li class="dropdown-item">Problem Solvers Co</li>
-                    <li class="dropdown-item">Seamless Solutions</li>
-                    <li class="dropdown-item">Resourceful Rendezvous</li>
-                    <li class="dropdown-item">Swift Support Services</li>
-                    <li class="dropdown-item">Skillful Solutions</li>
+                    {SupplySubMenu.map((item, i) => (
+                      <li key={i} class="dropdown-item">
+                        <a href={item.link}>{item.text}</a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
             <div className="flexbox">
               <p>Buyer</p>
-              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+              <span>
+                <KeyboardArrowDownRoundedIcon fontSize="small" />
+              </span>
               <div class="dropdown-container">
                 <div class="left">
                   <p class="title">Service</p>
@@ -88,31 +96,96 @@ const SubNavbar = () => {
             <div className="navigation-dropdown-section-middle">
               <div className="flexbox">
                 <p>Help</p>
-                <KeyboardArrowDownRoundedIcon fontSize="medium" />
+                <span>
+                  <KeyboardArrowDownRoundedIcon fontSize="small" />
+                </span>
                 <div class="dropdown-container">
                   <div class="single-side">
                     <ul class="dropdown-list">
-                      <li class="dropdown-item">Why Made-in-China.com</li>
-                      <li class="dropdown-item">How do we audit suppliers</li>
-                      <li class="dropdown-item">How do we secure payment</li>
-                      <li class="dropdown-item">Submit a Complaint</li>
-                      <li class="dropdown-item">Contact Us</li>
-                      <li class="dropdown-item">FAQ</li>
+                      {HelpSubMenu.map((item, i) => (
+                        <li key={i} class="dropdown-item">
+                          <a href={item.link}>{item.text}</a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="flexbox">
                 <p>Apps</p>
-                <KeyboardArrowDownRoundedIcon fontSize="medium" />
+                <span>
+                  <KeyboardArrowDownRoundedIcon fontSize="small" />
+                </span>
+                <div className="dropdown-container">
+                  <div className="single-side">
+                    <div className="app-box">
+                      <div className="title">
+                        <p className="header">Download App!</p>
+                        <p className="sub-header">
+                          Explore App Exclusive Discounts
+                        </p>
+                      </div>
+                      <div className="link-box">
+                        <div className="left">
+                          <p>For Buyers</p>
+                          <img
+                            className="play-store-image"
+                            width={64}
+                            height={24}
+                            src="/src/assets/Google_Play_Store.png"
+                            alt="google play button"
+                          />
+                          <img
+                            className="apple-store-image"
+                            src="/src/assets/App_store_Apple.png"
+                            alt="google play button"
+                          />
+                        </div>
+                        <div className="right">
+                          <img
+                            src="/src/assets/QrCode.png"
+                            alt="google play button"
+                          />
+                        </div>
+                      </div>
+                      <div className="link-box">
+                        <div className="left">
+                          <p>For Suppliers</p>
+                          <img
+                            className="play-store-image"
+                            width={64}
+                            height={24}
+                            src="/src/assets/Google_Play_Store.png"
+                            alt="google play button"
+                          />
+                          <img
+                            className="apple-store-image"
+                            src="/src/assets/App_store_Apple.png"
+                            alt="google play button"
+                          />
+                        </div>
+                        <div className="right">
+                          <img
+                            src="/src/assets/QrCode.png"
+                            alt="google play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="flexbox">
                 <p>English</p>
-                <KeyboardArrowDownRoundedIcon fontSize="medium" />
+                <span>
+                  <KeyboardArrowDownRoundedIcon fontSize="small" />
+                </span>
                 <div class="dropdown-container">
                   <div class="lang">
                     {Lang.map((item) => (
-                      <li class="dropdown-item">{item.text}</li>
+                      <li class="dropdown-item">
+                        <a>{item.text}</a>
+                      </li>
                     ))}
                   </div>
                 </div>

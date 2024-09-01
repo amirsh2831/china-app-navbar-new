@@ -1,60 +1,64 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 :root {
-    font-family: roboto, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-  }
+  font-family: roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
 
-  html {
-    padding: 0;
-  }
-  
-  input {
-    display: flex;
-    height: 100%;
-    outline: none;
-    border:none;
-    background-color: transparent;
-    padding: 0 8px;
-    font-size: 1em;
-    font-weight: 400;
-    &::placeholder {
-        font-size: 1em;
-        font-weight: 500;
-        color: $light-gray;
-    }
-  }
-  
-  button {
+html {
+  padding: 0;
+}
+
+input {
+  display: flex;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0 8px;
+  font-size: 1em;
+  font-weight: 400;
+  &::placeholder {
     font-size: 1em;
     font-weight: 500;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    height: 100%;
+    color: $light-gray;
   }
-  
-  header {
-    width: 100%;
-  }
-  
-  hr {
-    height: 10px;
-    background-color: $light-gray;
-  }
+}
 
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+button {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+}
 
+header {
+  width: 100%;
+}
 
-  
+hr {
+  height: 10px;
+  background-color: $light-gray;
+}
+
+body {
+  background-color: lightgray;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  opacity: $opacity-high;
+}

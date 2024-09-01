@@ -142,113 +142,207 @@ export const Categories = [
   {
     text: "All Categories",
     icon: <RiceBowlIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Agriculture & Food",
     icon: <CheckroomIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Apparel & Accessories",
     icon: <DiamondIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Arts & Crafts",
     icon: <SportsBasketballOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Auto, Motorcycle Parts & Accessories",
     icon: <BusinessCenterOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Bags, Cases & Boxes",
     icon: <ScienceOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Chemicals",
     icon: <DevicesOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Computer Products",
     icon: <FormatPaintOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Construction & Decoration",
     icon: <AppSettingsAltOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Consumer Electronics",
     icon: <SelectAllOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Electrical & Electronics",
     icon: <ChairOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Furniture",
     icon: <MedicationLiquidOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Health & Medicine",
     icon: <SettingsOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Industrial Equipment & Components",
     icon: <FactoryOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Instruments & Meters",
     icon: <OtherHousesOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Light Industry & Daily Use",
     icon: <EmojiObjectsOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Lights & Lighting",
     icon: <AgricultureOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Manufacturing & Processing Machinery",
     icon: <OutdoorGrillOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Metallurgy, Mineral & Energy",
     icon: <KeyboardOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Office Supplies",
     icon: <Inventory2OutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Packaging & Printing",
     icon: <LockOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Security & Protection",
     icon: <DinnerDiningOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Service",
     icon: <SportsBaseballOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Sporting Goods & Recreation",
     icon: <FlagOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Textile",
     icon: <FlagOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Tools & Hardware",
     icon: <BuildOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Toys",
     icon: <ToysOutlinedIcon fontSize="small" />,
+    link: "#",
   },
   {
     text: "Transportation",
     icon: <DirectionsTransitOutlinedIcon fontSize="small" />,
+    link: "#",
+  },
+];
+
+export const SupplySubMenu = [
+  {
+    text: "Solution Sprints",
+    link: "#",
+  },
+  {
+    text: "Service Synergy",
+    link: "#",
+  },
+  {
+    text: "Versatile Ventures",
+    link: "#",
+  },
+  {
+    text: "Task Triumph",
+    link: "#",
+  },
+  {
+    text: "Problem Solvers Co",
+    link: "#",
+  },
+  {
+    text: "Seamless Solutions",
+    link: "#",
+  },
+  {
+    text: "Resourceful Rendezvous",
+    link: "#",
+  },
+  {
+    text: "Swift Support Services",
+    link: "#",
+  },
+  {
+    text: "Skillful Solutions",
+    link: "#",
+  },
+];
+
+export const HelpSubMenu = [
+  {
+    text: "Why Made-in-China.com",
+    link: "#",
+  },
+  {
+    text: "How do we audit suppliers",
+    link: "#",
+  },
+  {
+    text: "How do we secure payment",
+    link: "#",
+  },
+  {
+    text: "Submit a Complaint",
+    link: "#",
+  },
+  {
+    text: "Contact Us",
+    link: "#",
+  },
+  {
+    text: "FAQ",
+    link: "#",
   },
 ];

@@ -20,14 +20,14 @@ const Links = ({ scrollProps }) => {
     <>
       <div className="nav-links">
         {scrollProps ? (
-          <div>
+          <div className="link-item">
             <span>
               <AdsClickRoundedIcon />
             </span>
             <p className="icons_text">Post My RFQ</p>
           </div>
         ) : isTabletOrMobile ? (
-          <div>
+          <div className="link-item">
             <span>
               <AdsClickRoundedIcon />
             </span>

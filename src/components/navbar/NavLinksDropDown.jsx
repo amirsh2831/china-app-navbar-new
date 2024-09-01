@@ -51,9 +51,13 @@ const NavLinksDropDown = ({ id }) => {
             ].map((text, index) => (
               <li>{text}</li>
             ))}
-
+            <Divider
+              variant="fullWidth"
+              component="div"
+              sx={{ marginTop: "16px" }}
+            />
             <br />
-            <li>Post Sourcing Request</li>
+            <li className="post-sourcing-request">Post Sourcing Request</li>
           </ul>
         </div>
       );

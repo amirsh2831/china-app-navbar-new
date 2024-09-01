@@ -7,27 +7,24 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./Navbar.scss";
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
 import { Categories } from "../../constants";
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [open, setOpen] = useState(true);
   const toggleDrawer = (newOpen) => () => {
-      setOpen(newOpen);
+    setOpen(newOpen);
   };
-  
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 10);
     });
   });
-
- 
 
   return (
     <>
@@ -36,7 +33,10 @@ const Navbar = () => {
           <div class="left-side">
             <div className="sidebar-icon">
               <button onClick={toggleDrawer(true)}>
-                <MenuOutlinedIcon fontSize="medium" nClick={toggleDrawer(true)} />
+                <MenuOutlinedIcon
+                  fontSize="medium"
+                  nClick={toggleDrawer(true)}
+                />
               </button>
               <Drawer open={open} onClose={toggleDrawer(false)}>
                 <Sidebar />
@@ -55,8 +55,10 @@ const Navbar = () => {
           </div>
           <div class="right-side">
             <div class="categories-resize">
-              <p>All Categories</p>
-              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+              <div className="cat">
+                <p>All Categories</p>
+                <KeyboardArrowDownRoundedIcon fontSize="medium" />
+              </div>
               <div class="dropdown-container">
                 <ul class="dropdown-list">
                   {Categories.map((item) => (
@@ -73,7 +75,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
 
       <SubNavbar />
     </>
