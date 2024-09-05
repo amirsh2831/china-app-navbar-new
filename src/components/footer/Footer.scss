@@ -1,0 +1,316 @@
+@use "variables" as *;
+
+@mixin responsive($query) {
+  @media (min-width: $query) {
+    @content;
+  }
+}
+
+.footer {
+  padding: 0 2%;
+  background-color: $footer-background-color;
+  padding-top: 36px;
+  height: 200px;
+  .footer-map {
+    display: none;
+    padding-bottom: 36px;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    align-items: start;
+
+    justify-content: space-between;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        font-size: $text-14;
+        opacity: $opacity-high;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        margin-bottom: 8px;
+        a {
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    h4 {
+      font-size: $text-14;
+      font-weight: 500;
+    }
+    .box-3 {
+      ul {
+        height: 270px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+    .box-4 {
+      display: block;
+      h4 {
+        color: gray;
+      }
+      button {
+        background-color: $footer-button-bg;
+        width: 230px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 12px;
+        transition: 100ms;
+        &:hover {
+          background-color: $footer-button-bg-hover;
+        }
+      }
+      .button1 {
+        background-image: url("../../assets/button1.png");
+      }
+      .button2 {
+        background-image: url("../../assets/button2.png");
+      }
+      .button3 {
+        background-image: url("../../assets/button3.png");
+      }
+      .button4 {
+        background-image: url("../../assets/button4.png");
+      }
+      .button5 {
+        background-image: url("../../assets/button5.png");
+      }
+    }
+    @include responsive($xl) {
+      display: flex;
+      max-width: 1920px;
+      margin: auto;
+    }
+  }
+  .footer-map-resize {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    .title {
+      font-size: $text-10;
+      color: gray;
+      font-weight: 500;
+      @include responsive($md) {
+        font-size: $text-12;
+      }
+      @include responsive($lg) {
+        font-size: $text-16;
+      }
+    }
+
+    .footer-resize-menu-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      .chevron {
+        color: grey;
+        transition: 100ms;
+        font-size: $text-14;
+        @include responsive($md) {
+          font-size: $text-16;
+        }
+        @include responsive($lg) {
+          font-size: $text-20;
+        }
+      }
+      .footer-menu-container {
+        border: 0;
+        box-shadow: -4px -4px 10px -3px rgba(0, 0, 0, 0.26);
+        background-color: white;
+        border-radius: 4px;
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        right: -20px;
+        margin: 0;
+        padding: 0px 8;
+        z-index: 1;
+        min-width: 170px;
+        ul.footer-menu-list {
+          padding: 0 8px;
+
+          list-style: none;
+          li.footer-menu-list-item {
+            display: flex;
+            align-items: end;
+            text-align: center;
+            cursor: pointer;
+            height: 28px;
+            align-items: center;
+            font-size: $text-16;
+            color: black;
+            opacity: $opacity-high;
+            flex-shrink: 0;
+
+            opacity: $opacity-medium;
+
+            &:hover {
+              background-color: lightblue;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      &:hover .title {
+        color: $primary-color;
+      }
+      &:first-child {
+        display: none;
+      }
+      @include responsive($md) {
+        &:first-child {
+          display: flex;
+        }
+      }
+    }
+    .footer-resize-menu-item:hover .footer-menu-container {
+      display: block;
+    }
+    .footer-resize-menu-item:hover .chevron {
+      transform: rotate(180deg);
+    }
+    @include responsive($xl) {
+      display: none;
+    }
+  }
+  .socials {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      button {
+        height: 30px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: white;
+        font-size: $text-14;
+      }
+      .apple-button {
+        background-color: #4d4d4d;
+      }
+      .google-button {
+        background-color: #669900;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+    div.box-1 {
+      display: none;
+    }
+    div.box-2 {
+      display: none;
+    }
+    @include responsive($lg) {
+      div.box-1 {
+        display: flex;
+      }
+    }
+    @include responsive($xl) {
+      max-width: 1920px;
+      margin: auto;
+      div.box-2 {
+        display: flex;
+      }
+    }
+  }
+  .footer-links {
+    margin-top: 16px;
+    div {
+      display: none;
+
+      &:last-child {
+        padding-top: 24px;
+        display: flex;
+        justify-content: center;
+        a {
+          display: none;
+          &:first-child {
+            display: block;
+            font-size: $text-10;
+            opacity: $opacity-medium;
+            display: flex;
+            gap: 16px;
+            margin-right: 16px;
+            align-items: center;
+          }
+
+          &:first-child {
+            hr {
+              display: none;
+            }
+          }
+        }
+
+        @include responsive($lg) {
+          a {
+            font-size: $text-12;
+            opacity: $opacity-medium;
+            display: flex;
+            gap: 16px;
+            margin-right: 16px;
+            align-items: center;
+            &:first-child {
+              font-size: $text-12;
+            }
+            &:last-child {
+              hr {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include responsive($xl) {
+      max-width: 1920px;
+      margin: auto;
+      div {
+        display: flex;
+        justify-content: center;
+        a {
+          font-size: $text-12;
+          opacity: $opacity-medium;
+          display: flex;
+          gap: 16px;
+          margin-right: 16px;
+          align-items: center;
+          &:last-child {
+            hr {
+              display: none;
+            }
+          }
+        }
+        &:hover {
+          color: $primary-color;
+        }
+        &:last-child {
+          padding-top: 24px;
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    height: 624px;
+  }
+}
+hr {
+  height: 10px;
+  background-color: lightgray;
+}
