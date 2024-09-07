@@ -1,0 +1,48 @@
+@use "../../../styles/mixins.scss" as *;
+.more-videos-section {
+  height: 50vh;
+  overflow-y: scroll;
+  flex: 1;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 16px;
+  background-color: white;
+
+  .more-videos-title {
+    @include flex;
+    gap: 16px;
+    img {
+      border-radius: 14px;
+    }
+    .more-videos-title-link {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .more-videos {
+    margin-top: 36px;
+    .more-videos-container {
+      line-height: 1.25rem;
+      height: 120px;
+      @include flex;
+      align-items: start;
+      gap: 16px;
+      margin-bottom: 16px;
+      .video-preview {
+        width: 120px;
+        height: 120px;
+        img {
+          border-radius: 18px;
+          width: 120px;
+          height: 120px;
+        }
+      }
+      .video-title {
+        font-size: 14px;
+      }
+      &:hover .video-title {
+        color: crimson;
+      }
+    }
+  }
+}

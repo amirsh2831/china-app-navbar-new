@@ -1,10 +1,21 @@
-@use "variables" as *;
-
-@mixin responsive($query) {
-  @media (min-width: $query) {
-    @content;
-  }
-}
+@use "../../styles/responsive.scss" as *;
+$footer-background-color: #e3e4e6;
+$footer-button-bg: #cacbcc;
+$footer-button-bg-hover: #bebebe;
+$primary-color: crimson;
+$footer-background-color: #e3e4e6;
+$footer-button-bg: #cacbcc;
+$footer-button-bg-hover: #bebebe;
+$text-20: 20px;
+$text-18: 18px;
+$text-16: 16px;
+$text-14: 14px;
+$text-12: 12px;
+$text-10: 10px;
+$text-8: 8px;
+$opacity-high: 0.87;
+$opacity-medium: 0.6;
+$opacity-low: 0.38;
 
 .footer {
   padding: 0 2%;
@@ -21,8 +32,7 @@
     justify-content: space-between;
     ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
+
       li {
         font-size: $text-14;
         opacity: $opacity-high;
@@ -84,7 +94,7 @@
         background-image: url("../../assets/button5.png");
       }
     }
-    @include responsive($xl) {
+    @include responsive($laptop) {
       display: flex;
       max-width: 1920px;
       margin: auto;
@@ -98,10 +108,10 @@
       font-size: $text-10;
       color: gray;
       font-weight: 500;
-      @include responsive($md) {
+      @include responsive($mobile) {
         font-size: $text-12;
       }
-      @include responsive($lg) {
+      @include responsive($tablet) {
         font-size: $text-16;
       }
     }
@@ -115,10 +125,10 @@
         color: grey;
         transition: 100ms;
         font-size: $text-14;
-        @include responsive($md) {
+        @include responsive($mobile) {
           font-size: $text-16;
         }
-        @include responsive($lg) {
+        @include responsive($tablet) {
           font-size: $text-20;
         }
       }
@@ -166,7 +176,7 @@
       &:first-child {
         display: none;
       }
-      @include responsive($md) {
+      @include responsive($mobile) {
         &:first-child {
           display: flex;
         }
@@ -178,11 +188,12 @@
     .footer-resize-menu-item:hover .chevron {
       transform: rotate(180deg);
     }
-    @include responsive($xl) {
+    @include responsive($laptop) {
       display: none;
     }
   }
   .socials {
+    padding: 16px 0;
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid lightgray;
@@ -217,12 +228,12 @@
     div.box-2 {
       display: none;
     }
-    @include responsive($lg) {
+    @include responsive($tablet) {
       div.box-1 {
         display: flex;
       }
     }
-    @include responsive($xl) {
+    @include responsive($laptop) {
       max-width: 1920px;
       margin: auto;
       div.box-2 {
@@ -231,7 +242,7 @@
     }
   }
   .footer-links {
-    margin-top: 16px;
+    padding-top: 36px;
     div {
       display: none;
 
@@ -258,7 +269,7 @@
           }
         }
 
-        @include responsive($lg) {
+        @include responsive($tablet) {
           a {
             font-size: $text-12;
             opacity: $opacity-medium;
@@ -278,7 +289,7 @@
         }
       }
     }
-    @include responsive($xl) {
+    @include responsive($laptop) {
       max-width: 1920px;
       margin: auto;
       div {
@@ -306,7 +317,7 @@
       }
     }
   }
-  @include responsive($xl) {
+  @include responsive($laptop) {
     height: 624px;
   }
 }

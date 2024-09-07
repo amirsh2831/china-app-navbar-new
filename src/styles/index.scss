@@ -1,18 +1,27 @@
 @use "variables" as *;
-
-:root {
+// @font-face {
+//   font-family: roboto, sans-serif;
+//   font-style: normal;
+//   // font-weight: 300;
+//   // font-display: swap;
+//   // src: url(../public//assets/Fonts/Roboto-Regular.eot) format("eot");
+//   // src: url(../public//assets/Fonts/Roboto-Regular.ttf) format("ttf");
+//   // src: url(../public//assets/Fonts/Roboto-Regular.woff) format("woff");
+//   // src: url(../public//assets/Fonts/Roboto-Regular.woff2) format("woff2");
+// }
+* {
   font-family: roboto, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+  // font-size: 14px;
+  // line-height: 1.5;
+  // font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-}
-
-html {
-  padding: 0;
 }
 
 input {
@@ -27,7 +36,7 @@ input {
   &::placeholder {
     font-size: 1em;
     font-weight: 500;
-    color: $light-gray;
+    color: lightgray;
   }
 }
 
@@ -41,24 +50,13 @@ button {
   height: 100%;
 }
 
-header {
-  width: 100%;
-}
-
 hr {
   height: 10px;
-  background-color: $light-gray;
-}
-
-body {
-  background-color: #f0f1f2;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background-color: lightgray;
 }
 
 a {
   text-decoration: none;
   color: black;
-  opacity: $opacity-high;
+  // opacity: $opacity-high;
 }

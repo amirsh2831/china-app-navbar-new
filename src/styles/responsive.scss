@@ -1,0 +1,16 @@
+$desktop: 1760px;
+$laptop: 1025px;
+$tablet: 728px;
+$mobile: 426px;
+
+@mixin responsive($query) {
+  @media (min-width: $query) {
+    @content;
+  }
+}
+
+@mixin responsive-minmsx($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
