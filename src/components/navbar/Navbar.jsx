@@ -15,7 +15,7 @@ import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };

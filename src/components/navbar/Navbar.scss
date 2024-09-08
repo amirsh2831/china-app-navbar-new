@@ -356,6 +356,7 @@ $text-8: 8px;
     div.flexbox {
       position: relative;
       .dropdown-container {
+        z-index: 60;
         border-radius: 4px;
         background-color: $white;
         display: none;
@@ -625,7 +626,6 @@ $text-8: 8px;
     height: 40px;
     position: relative;
     display: none;
-    font-size: $text-10;
     @include responsive($laptop) {
       display: block;
       flex-shrink: 0;
@@ -643,6 +643,9 @@ $text-8: 8px;
         z-index: 200;
         display: flex;
         align-items: center;
+        p {
+          font-size: $text-14;
+        }
       }
       .dropdown-container {
         border: 0;

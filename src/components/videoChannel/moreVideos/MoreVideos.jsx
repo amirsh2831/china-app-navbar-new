@@ -1,72 +1,53 @@
 import React from "react";
 import "./moreVideos.scss";
 import { moreVideos } from "../../../constants";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-const MoreVideos = ({ lockScroll, setLockScroll }) => {
-  const suggestionsRef = useRef(null);
+const MoreVideos = () => {
+  // const moreVideosRef = useRef(null);
+  // const [isVideosLocked, setIsVideosLocked] = useState(false);
 
-  useEffect(() => {
-    // Helper function to check if the suggestions are in the viewport
-    const isInViewport = (element) => {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <=
-          (window.innerWidth || document.documentElement.clientWidth)
-      );
-    };
+  // useEffect(() => {
+  //   const moreVideos = moreVideosRef.current;
+  //   let lastScrollTop = 0;
 
-    // Check if suggestions are already in the viewport on initial render
-    if (suggestionsRef.current && isInViewport(suggestionsRef.current)) {
-      setLockScroll(true);
-    }
+  //   const handleScroll = () => {
+  //     const pageScrollY = window.scrollY;
+  //     const moreVideosTop = moreVideos.getBoundingClientRect().top;
+  //     const moreVideosBottom = moreVideos.scrollHeight - window.innerHeight;
 
-    // IntersectionObserver to monitor when the suggestions section enters the viewport
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setLockScroll(false); // Lock scrolling to suggestions when in view
-        } else {
-          setLockScroll(true); // Unlock scrolling when out of view
-        }
-      },
-      { threshold: 0.5 }
-    );
+  //     // Check if we've scrolled to the point where the more videos section should take over
+  //     if (moreVideosTop <= 0 && !isVideosLocked) {
+  //       setIsVideosLocked(true);
+  //       document.body.style.overflow = "hidden";
+  //     }
 
-    if (suggestionsRef.current) {
-      observer.observe(suggestionsRef.current);
-    }
+  //     if (isVideosLocked) {
+  //       // Scroll the more videos section instead of the page
+  //       const scrollDelta = pageScrollY - lastScrollTop;
+  //       moreVideos.scrollTop += scrollDelta;
 
-    return () => {
-      if (suggestionsRef.current) {
-        observer.unobserve(suggestionsRef.current);
-      }
-    };
-  }, [setLockScroll]);
+  //       // If the more videos section reaches the bottom, unlock the page scroll
+  //       if (moreVideos.scrollTop >= moreVideosBottom) {
+  //         setIsVideosLocked(false);
+  //         document.body.style.overflow = "auto"; // Unlock page scrolling
+  //       }
+  //     }
 
-  const handleScroll = (e) => {
-    const element = e.currentTarget;
+  //     lastScrollTop = pageScrollY;
+  //   };
 
-    // Unlock scroll when user reaches the bottom of the suggestions
-    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      setLockScroll(false);
-    }
-  };
-  useEffect(() => {
-    console.log(lockScroll);
-  }, [lockScroll]);
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //     document.body.style.overflow = "auto"; // Reset the overflow on component unmount
+  //   };
+  // }, [isVideosLocked]);
+
   return (
     <>
-      <div
-        className="more-videos-section"
-        ref={suggestionsRef}
-        onScroll={handleScroll}
-        style={{ overflowY: lockScroll ? "scroll" : "hidden" }}
-      >
+      <div className={`more-videos-section`}>
         <div className="more-videos-title">
           <img
             className="more-videos-title-image"

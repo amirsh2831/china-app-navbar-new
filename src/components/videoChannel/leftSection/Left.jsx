@@ -3,10 +3,12 @@ import Player from "../player/Player";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import Card from "../card/Card";
 import "../VideoChannel.scss";
-export const Left = () => {
+export const Left = ({ scroll }) => {
   return (
     <>
-      <div className="player-section">
+      <div
+        className={`player-section ${scroll ? "player-scetion-scroll" : " "}`}
+      >
         <div className="player">
           <Player />
         </div>

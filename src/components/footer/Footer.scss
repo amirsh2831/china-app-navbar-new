@@ -30,6 +30,11 @@ $opacity-low: 0.38;
     align-items: start;
 
     justify-content: space-between;
+    .title {
+      font-size: $text-14;
+      font-weight: 600;
+      padding-bottom: 16px;
+    }
     ul {
       list-style: none;
 
@@ -105,7 +110,7 @@ $opacity-low: 0.38;
     justify-content: space-around;
     position: relative;
     .title {
-      font-size: $text-10;
+      font-size: $text-12;
       color: gray;
       font-weight: 500;
       @include responsive($mobile) {

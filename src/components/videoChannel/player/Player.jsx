@@ -8,8 +8,8 @@ const Player = () => {
       <div className="video-player">
         <ReactPlayer
           url="src/assets/video.mp4"
-          playing="true"
-          controls="true"
+          playing={true}
+          controls={true}
           width="100%"
           height="100%"
         />
