@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss" as *;
 .more-videos-section {
-  height: 1800px;
+  height: max-content;
   // overflow-y: scroll;
   z-index: 0;
   flex: 1;
