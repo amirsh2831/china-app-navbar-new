@@ -1,0 +1,75 @@
+@use "../../styles/responsive.scss" as *;
+$sub-header-text-resize: 540px;
+$opacity-high: 0.87;
+$opacity-medium: 0.6;
+$opacity-low: 0.38;
+
+.trending-shows-main-container {
+  background-color: #ffffff;
+
+  height: max-content;
+  padding: 16px;
+  .trending-shows-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    height: max-content;
+    .main-title {
+      text-align: left;
+      justify-content: start;
+      width: 100%;
+      h1 {
+        padding-top: 8px;
+        font-size: 18px;
+        font-weight: 500;
+        @include responsive($tablet) {
+          padding-top: 0;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+      h4 {
+        display: none;
+        @include responsive($sub-header-text-resize) {
+          display: block;
+          font-size: 12px;
+          opacity: $opacity-high;
+        }
+        @include responsive($tablet) {
+          font-size: 16px;
+          font-weight: 400;
+          display: block;
+        }
+      }
+      @include responsive($tablet) {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    button {
+      height: 36px;
+      font-size: 14px;
+      background-color: crimson;
+      color: white;
+      border-radius: 4px;
+      position: absolute;
+      right: 0;
+      justify-self: end;
+      padding: 2px 8px;
+      line-height: 1.25rem;
+      @include responsive($laptop) {
+        padding: 8px 12px;
+        top: 50%;
+        font-size: 16px;
+      }
+    }
+  }
+  @include responsive($mobile) {
+    margin: 0 36px;
+  }
+  @include responsive($laptop) {
+    max-width: 1920px;
+    margin: auto;
+  }
+}

@@ -19,10 +19,11 @@ export const Left = ({ scroll }) => {
           </p>
           <button>
             <ShareOutlinedIcon />
-            Share
+            <span>Share</span>
           </button>
         </div>
         <div className="cards">
+          <Card />
           <Card />
         </div>
       </div>

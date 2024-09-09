@@ -1,6 +1,8 @@
 @use "../../../styles/mixins.scss" as *;
+@use "../../../styles/responsive.scss" as *;
+
 .more-videos-section {
-  height: max-content;
+  // height: max-content;
   // overflow-y: scroll;
   z-index: 0;
   flex: 1;
@@ -20,9 +22,25 @@
       font-weight: 700;
     }
   }
+  .more-videos-main-container {
+    display: block;
+    height: max-content;
+    @include responsive($mobile) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include responsive($laptop) {
+      display: block;
+    }
+  }
+
   .more-videos {
+    width: 100%;
     margin-top: 36px;
+    display: block;
+
     .more-videos-container {
+      width: 100%;
       margin-top: 16px;
       line-height: 1.25rem;
       height: 120px;
@@ -34,17 +52,41 @@
         width: 120px;
         height: 120px;
         img {
-          border-radius: 18px;
-          width: 120px;
-          height: 120px;
+          border-radius: 12px;
+          width: 80px;
+          height: 80px;
+          @include responsive($tablet) {
+            width: 120px;
+            height: 120px;
+          }
         }
       }
       .video-title {
-        font-size: 14px;
+        display: -webkit-box;
+        max-width: 400px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 8px;
+        font-size: 12px;
+        @include responsive($tablet) {
+          font-size: 14px;
+        }
       }
       &:hover .video-title {
         color: crimson;
       }
+      @include responsive($mobile) {
+        width: calc(50% - 13px);
+      }
+      @include responsive($laptop) {
+        width: 100%;
+      }
+    }
+
+    @include responsive($laptop) {
+      display: block;
     }
   }
 }

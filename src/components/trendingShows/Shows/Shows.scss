@@ -1,0 +1,139 @@
+@use "../../../styles/mixins.scss" as *;
+@use "../../../styles//responsive.scss" as *;
+$tablet-resize: 769px;
+.shows {
+  display: block;
+  margin-top: 24px;
+  // display: flex;
+  justify-content: center;
+  height: max-content;
+  .main-show {
+    flex: 1 1;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @include responsive($laptop) {
+      height: 400px;
+    }
+    .main-show-info {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0),
+        rgba(1, 0, 0, 0.8)
+      );
+      @include center-vertical;
+      padding-bottom: 24px;
+      padding-left: 24px;
+      align-items: start;
+      justify-content: end;
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      bottom: 0px;
+      // left: 24px;
+      z-index: 20;
+      color: #ffffff;
+      a {
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .more-trending-shows {
+    margin-top: 36px;
+    flex: 1 1;
+    @include center-vertical;
+    align-items: start;
+    gap: 16px;
+    .shows-item {
+      position: relative;
+      align-items: start;
+      display: flex;
+      gap: 16px;
+      .show-banner {
+        img {
+          width: 128px;
+          height: 84px;
+        }
+        @include responsive($laptop) {
+          img {
+            width: 184px;
+            height: 124px;
+          }
+        }
+      }
+      .circle {
+        display: none;
+        @include responsive($tablet-resize) {
+          display: block;
+          position: absolute;
+          left: -38px;
+          top: 0px;
+          width: 18px;
+          height: 18px;
+          border: 2px solid #0066cc;
+          border-radius: 100%;
+          background-color: #ffffff;
+        }
+      }
+      .shows-item-info {
+        display: block;
+        h3 {
+          display: -webkit-box;
+          max-width: 400px;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #222222;
+          font-size: 14px;
+          font-weight: 600;
+          @include responsive($mobile) {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+        .shows-item-info-more {
+          @include center-vertical;
+          align-items: start;
+          gap: 4px;
+          margin-top: 18px;
+          font-size: 14px;
+          color: #888888;
+        }
+      }
+      &:hover .circle {
+        background-color: #0066cc;
+      }
+      @include responsive($tablet) {
+        align-items: center;
+      }
+    }
+    @include responsive($tablet-resize) {
+      margin-top: 0;
+    }
+  }
+  .middle {
+    width: 60px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .middle-line {
+      height: 100%;
+      border-left: 1px solid #e6e6e6;
+    }
+  }
+  @include responsive($tablet-resize) {
+    display: flex;
+  }
+  @include responsive($laptop) {
+    padding-top: 24px;
+    max-width: 1440px;
+    margin: auto;
+  }
+}

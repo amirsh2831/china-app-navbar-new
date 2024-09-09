@@ -45,7 +45,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <h4>Help</h4>
+            <h4 className="title">Help</h4>
             <ul>
               {footerData.Help.map((item, i) => (
                 <li>

@@ -30,7 +30,7 @@ const SubNavbar = () => {
                 <p>All Categories</p>
                 <span>
                   <KeyboardArrowDownRoundedIcon
-                    fontSize="small"
+                    fontSize="medium"
                     sx={{ paddingTop: "8px" }}
                   />
                 </span>

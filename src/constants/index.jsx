@@ -30,6 +30,7 @@ import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import ToysOutlinedIcon from "@mui/icons-material/ToysOutlined";
 import DirectionsTransitOutlinedIcon from "@mui/icons-material/DirectionsTransitOutlined";
 import BuildOutlinedIcon from "@mui/icons-material/BuildOutlined";
+import { duration } from "@mui/material";
 
 export const Navlinks = [
   {
@@ -75,7 +76,7 @@ export const Buyers = {
       text: "Xontact Us",
     },
   ],
-  Search: [
+  sourcing: [
     {
       text: "Product Directory",
     },
@@ -84,6 +85,20 @@ export const Buyers = {
     },
     {
       text: "Post Sourcing Request",
+    },
+  ],
+  Search: [
+    {
+      text: "Sourcing From Industry Hubo",
+    },
+    {
+      text: "Customize Your Products",
+    },
+    {
+      text: "MEI Award Winning Products",
+    },
+    {
+      text: "Smart Expo",
     },
   ],
   QuicLinks: [
@@ -553,6 +568,57 @@ export const moreVideos = [
   {
     imgUrl: "/src/assets/video10.png",
     text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+  {
+    imgUrl: "/src/assets/video10.png",
+    text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+  {
+    imgUrl: "/src/assets/video10.png",
+    text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+  {
+    imgUrl: "/src/assets/video10.png",
+    text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+  {
+    imgUrl: "/src/assets/video10.png",
+    text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+  {
+    imgUrl: "/src/assets/video10.png",
+    text: "Yaomatec 12.7mm Mini WiFi Logo Date Label Qr Barcode Handheld Inkjet Printer",
+    link: "#",
+  },
+];
+
+export const TrendingShows = [
+  {
+    title: "Vietnam Print Pack 2024",
+    imgUrl: "/public/assets/Image/Vietnam-Print-Pack-2024.jpg",
+    duration: "Duration: Sep 18 - 21, 2024",
+    location: "Location: Vietnam",
+    link: "#",
+  },
+  {
+    title: "Hangzhou International Smart Mobility ,Auto modification...",
+    imgUrl:
+      "/public/assets/Image/Hangzhou-International-Smart-Mobility-Auto-modification-and-Automotive-Aftermarket-Services-Ecosystems-Expo-2024.jpg",
+    duration: "Duration: Sep 20 - 22, 2024",
+    location: "Location: China",
+    link: "#",
+  },
+  {
+    title: "SmartHeart presents Thailand International Pet Variety E...",
+    imgUrl:
+      "/public/assets/Image/SmartHeart-presents-Thailand-International-Pet-Variety-Exhibition-2024.jpg",
+    duration: "Duration: Oct 3 - 6, 2024",
+    location: "Location: Thailand",
     link: "#",
   },
 ];

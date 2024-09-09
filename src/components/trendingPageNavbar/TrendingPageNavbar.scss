@@ -1,0 +1,55 @@
+@use "../../styles/variables.scss" as *;
+.navbar {
+  .nav-items {
+    .nav-items-list {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 24px;
+      li {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        a {
+          color: #1470cc;
+          &:hover {
+            color: #e64545;
+          }
+        }
+        .dropdown-container {
+          padding: 16px 0;
+          width: max-content;
+          max-height: 330px;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 16px;
+          border-top: 1px solid lightgray;
+          border-left: 1px solid lightgray;
+          display: none;
+          box-shadow: $shadow-ul;
+          position: absolute;
+          top: 110%;
+          right: 0;
+          background-color: #ffffff;
+          .title {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0 16px;
+            margin-bottom: 8px;
+          }
+          li {
+            padding: 8px 16px;
+            &:hover {
+              background-color: #1470cc;
+            }
+          }
+        }
+      }
+      li:hover .dropdown-container {
+        display: flex;
+      }
+    }
+  }
+}

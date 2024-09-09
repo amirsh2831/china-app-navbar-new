@@ -1,50 +1,8 @@
 import React from "react";
 import "./moreVideos.scss";
 import { moreVideos } from "../../../constants";
-import { useRef, useEffect, useState } from "react";
 
 const MoreVideos = () => {
-  // const moreVideosRef = useRef(null);
-  // const [isVideosLocked, setIsVideosLocked] = useState(false);
-
-  // useEffect(() => {
-  //   const moreVideos = moreVideosRef.current;
-  //   let lastScrollTop = 0;
-
-  //   const handleScroll = () => {
-  //     const pageScrollY = window.scrollY;
-  //     const moreVideosTop = moreVideos.getBoundingClientRect().top;
-  //     const moreVideosBottom = moreVideos.scrollHeight - window.innerHeight;
-
-  //     // Check if we've scrolled to the point where the more videos section should take over
-  //     if (moreVideosTop <= 0 && !isVideosLocked) {
-  //       setIsVideosLocked(true);
-  //       document.body.style.overflow = "hidden";
-  //     }
-
-  //     if (isVideosLocked) {
-  //       // Scroll the more videos section instead of the page
-  //       const scrollDelta = pageScrollY - lastScrollTop;
-  //       moreVideos.scrollTop += scrollDelta;
-
-  //       // If the more videos section reaches the bottom, unlock the page scroll
-  //       if (moreVideos.scrollTop >= moreVideosBottom) {
-  //         setIsVideosLocked(false);
-  //         document.body.style.overflow = "auto"; // Unlock page scrolling
-  //       }
-  //     }
-
-  //     lastScrollTop = pageScrollY;
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     document.body.style.overflow = "auto"; // Reset the overflow on component unmount
-  //   };
-  // }, [isVideosLocked]);
-
   return (
     <>
       <div className={`more-videos-section`}>
@@ -60,7 +18,7 @@ const MoreVideos = () => {
         </div>
         <div className="more-videos">
           <h4>More Videos</h4>
-          <div>
+          <div className="more-videos-main-container">
             {moreVideos.map((item, i) => (
               <div key={i} className="more-videos-container">
                 <div className="video-preview">
