@@ -4,11 +4,22 @@ import VideoChannel from "./components/videoChannel/VideoChannel";
 import { useState } from "react";
 import TrendingShows from "./components/trendingShows/TrendingShows";
 import TrendingPageNavbar from "./components/trendingPageNavbar/trendingPageNavbar";
+import TrendingPageMainSlider from "./components/TrendingPage/trendingPageMainSlider/trendingPageMainSlider";
+import Search from "./components/TrendingPage/Search/Search";
+import Footprint from "./components/TrendingPage/Footprint/Footprint";
+import FeaturedShows from "./components/TrendingPage/featuredShows/FeaturedShows";
+
 function App() {
   return (
     <>
-      {/* <TrendingPageNavbar /> */}
-      <Navbar />
+      <TrendingPageNavbar />
+      <TrendingPageMainSlider />
+      <Search />
+      <br />
+
+      <Footprint />
+      <FeaturedShows />
+      {/* <Navbar /> */}
       {/* <VideoChannel /> */}
       {/* .<br />
       .<br />
@@ -17,9 +28,9 @@ function App() {
       .<br />
       .<br />
       .<br /> */}
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </>
   );
 }

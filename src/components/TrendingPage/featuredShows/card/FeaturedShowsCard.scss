@@ -1,0 +1,49 @@
+.featured-shows-card {
+  //   margin: 16px 36px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 24%;
+  height: auto;
+  background-color: white;
+  .banner {
+    object-fit: fill;
+    width: 100%;
+    height: 62%;
+    img {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
+    }
+  }
+  .featured-shows-card-info {
+    text-align: left;
+    padding: 16px 12px;
+
+    h2 {
+      font-size: 18px;
+      color: #222;
+      line-height: 1rem;
+    }
+    .featured-shows-card-information {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      p {
+        padding-top: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #888;
+        span {
+          padding-left: 8px;
+          font-style: none;
+          color: #222;
+        }
+      }
+    }
+  }
+}

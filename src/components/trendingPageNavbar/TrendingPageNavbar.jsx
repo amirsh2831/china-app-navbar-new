@@ -3,7 +3,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import "./TrendingPageNavbar.scss";
-import { Buyers, Lang } from "../../constants";
+import { Buyers, footerData, Lang, SupplySubMenu } from "../../constants";
+import { Divider } from "@mui/material";
 const TrendingPageNavbar = () => {
   return (
     <div className="navbar">
@@ -22,7 +23,10 @@ const TrendingPageNavbar = () => {
             <a href="#">Join Free</a>
           </li>
           <li className="nav-items-list-item">
-            <p>For Buyers</p> <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            <div className="navbar-item-title">
+              <p>For Buyers</p>{" "}
+              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            </div>
             <div className="dropdown-container">
               <div className="dropdown-item-sections">
                 <p className="title">Search Products & Suppliers</p>
@@ -59,20 +63,61 @@ const TrendingPageNavbar = () => {
             </div>
           </li>
           <li className="nav-items-list-item">
-            <p>For Suppliers</p>{" "}
-            <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            <div className="navbar-item-title">
+              <p>For Suppliers</p>{" "}
+              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            </div>
+            <div className="dropdown-item-sections">
+              <div className="dropdown-container">
+                <ul>
+                  {/* Temprorary Content Loaded here  */}
+                  {footerData.AboutUs.map((item, i) => (
+                    <li key={i}>
+                      <a href={item.link}>{item.text}</a>
+                    </li>
+                  ))}
+                </ul>
+                <Divider variant="fullWidth" component="ul" />
+                <div className="for-suppliers-buttons">
+                  <button>注册供应商</button>
+                  <button>登录</button>
+                </div>
+              </div>
+            </div>
           </li>
           <li className="nav-items-list-item">
             <ShoppingCartOutlinedIcon fontSize="medium" /> <p>0</p>
           </li>
           <li className="nav-items-list-item">
-            <PhoneAndroidOutlinedIcon fontSize="medium" />
-            <p>Get Apps</p>
-            <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            <div className="navbar-item-title">
+              <PhoneAndroidOutlinedIcon fontSize="medium" />
+              <p>Get Apps</p>
+              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            </div>
+            <div className="dropdown-container">
+              <h3>Download App!</h3>
+              <h5>Explore App Exclusive Discounts</h5>
+              <div className="icons">
+                <img
+                  className="barcode-img"
+                  src="/public/assets/Image/code.png"
+                  alt="barcode"
+                />
+                <div className="download-icons">
+                  <img
+                    src="/public/assets/Image/google.png"
+                    alt="Google Play Icon"
+                  />
+                  <img src="/public/assets/Image/apple.png" alt="Apple Icon" />
+                </div>
+              </div>
+            </div>
           </li>
           <li className="nav-items-list-item">
-            <p>English</p>
-            <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            <div className="navbar-item-title">
+              <p>English</p>
+              <KeyboardArrowDownRoundedIcon fontSize="medium" />
+            </div>
             <div className="dropdown-container">
               <ul>
                 {Lang.map((item, i) => (

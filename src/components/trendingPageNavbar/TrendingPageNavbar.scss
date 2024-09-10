@@ -1,4 +1,5 @@
 @use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
 .navbar {
   .nav-items {
     .nav-items-list {
@@ -19,9 +20,9 @@
           }
         }
         .dropdown-container {
-          padding: 16px 0;
+          padding: 16px 8px;
           width: max-content;
-          max-height: 330px;
+          max-height: 420px;
           flex-direction: column;
           flex-wrap: wrap;
           gap: 16px;
@@ -30,21 +31,86 @@
           display: none;
           box-shadow: $shadow-ul;
           position: absolute;
-          top: 110%;
-          right: 0;
+          top: 95%;
+          right: 1px;
+          z-index: 60;
           background-color: #ffffff;
+          .dropdown-item-sections {
+            li {
+              width: 230px;
+            }
+          }
           .title {
             font-size: 12px;
             font-weight: 600;
-            padding: 0 16px;
+            padding: 0 8px;
             margin-bottom: 8px;
           }
           li {
-            padding: 8px 16px;
+            padding: 8px 8px;
             &:hover {
               background-color: #1470cc;
             }
           }
+          .for-suppliers-buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 16px;
+            button {
+              font-size: 14px;
+              font-weight: 500;
+              border: 1px solid lightgray;
+              background-color: #e6ecf2;
+              width: max-content;
+              padding: 4px 8px;
+            }
+          }
+
+          .icons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            .barcode-img {
+              width: 96px;
+              height: 96px;
+            }
+            .download-icons {
+              padding: 8px 0px;
+              @include center-vertical;
+              gap: 8px;
+              img {
+                width: 132px;
+                height: 42px;
+              }
+            }
+          }
+          h5 {
+            line-height: 0.1rem;
+            font-size: 12px;
+            font-weight: 500;
+          }
+          h3 {
+            padding-top: 8px;
+            line-height: 0.1rem;
+          }
+        }
+        .navbar-item-title {
+          padding: 0 4px;
+          display: flex;
+          align-items: center;
+        }
+        &:hover .navbar-item-title {
+          position: relative;
+          border-top: 1px solid lightgray;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+          background-color: #ffffff;
+          height: 100%;
+          z-index: 100;
+          box-shadow: -2px -2px 2px 0px rgba(0, 0, 0, 0.15),
+            1px -1px 2px 0px rgba(0, 0, 0, 0.15);
         }
       }
       li:hover .dropdown-container {

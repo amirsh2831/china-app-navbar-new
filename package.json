@@ -12,15 +12,20 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@mui/base": "^5.0.0-beta.40",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
     "@mui/styled-engine-sc": "^6.0.0",
+    "@mui/x-date-pickers-pro": "^7.16.0",
+    "date-fns": "^3.6.0",
     "react": "^18.3.1",
+    "react-date-range": "^2.0.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
     "react-responsive": "^10.0.0",
     "sass": "^1.77.8",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "swiper": "^11.1.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
