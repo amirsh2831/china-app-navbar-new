@@ -1,0 +1,12 @@
+@use "../../../styles/responsive.scss" as *;
+.news-and-shows {
+  margin: 40px 36px;
+  display: block;
+  justify-content: stretch;
+  gap: 24px;
+  align-items: stretch;
+  height: 100%;
+  @include responsive($laptop) {
+    display: flex;
+  }
+}

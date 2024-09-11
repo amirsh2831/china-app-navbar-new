@@ -1,0 +1,104 @@
+@use "../../../styles/mixins.scss" as *;
+@use "../../../styles/responsive.scss" as *;
+
+.media-form {
+  margin: 16px 36px;
+  .media-form-container {
+    background-image: none;
+    @include responsive($laptop) {
+      background-image: url("assets/Image/exhibition_cooperation_bg_400a453c.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .media-form-items {
+      display: block;
+      @include responsive($laptop) {
+        display: flex;
+        justify-content: space-between;
+        padding: 48px 16px;
+      }
+      .media-form-left {
+        display: none;
+        @include responsive($laptop) {
+          height: 100%;
+          @include center-vertical;
+          align-items: start;
+          justify-content: space-between;
+          flex: 1;
+          padding: 60px;
+        }
+        .media-form-header {
+          font-size: 36px;
+          color: #222222;
+        }
+        .media-form-info {
+          margin-top: 20px;
+          width: 100%;
+          font-size: 16px;
+          line-height: 24px;
+          color: #555555;
+          p {
+            margin-bottom: 16px;
+          }
+        }
+      }
+      .media-form-right {
+        width: 100%;
+        @include responsive($laptop) {
+          align-items: center;
+          flex: 1;
+          @include center-vertical;
+        }
+        .media-form-right-form-section {
+          padding: 35px 45px;
+          background-color: #ffffff;
+          @include center-vertical;
+          align-items: start;
+          gap: 12px;
+          .right-side-title-resize {
+            font-size: clamp(16px, 2vw, 30px);
+            display: block;
+            color: #222222;
+            @include responsive($laptop) {
+              display: none;
+            }
+          }
+          .media-form-title {
+            color: #555555;
+            font-size: 14px;
+          }
+          .media-form-right-rows {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 8px;
+            input {
+              width: 100%;
+              border: 2px solid #a1aab2;
+              height: 44px;
+              border-radius: 2px;
+              &::placeholder {
+                font-size: 14px;
+                color: #888;
+              }
+            }
+            .captcha {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+            }
+          }
+
+          .media-form-submit {
+            background-color: #e64545;
+            padding: 8px 16px;
+            line-height: 1.5rem;
+            border-radius: 4px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

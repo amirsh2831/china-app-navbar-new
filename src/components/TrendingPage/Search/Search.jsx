@@ -14,8 +14,10 @@ import { DateRange } from "react-date-range";
 import { TextField } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { format } from "date-fns";
+import { useMediaQuery } from "react-responsive";
 
 const Search = () => {
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
   // all states
   const [age, setAge] = React.useState("");
   const [open, setOpen] = useState(false);
@@ -76,90 +78,92 @@ const Search = () => {
   return (
     <>
       <h3 className="search-form-title">Shows Searching</h3>
-      <div className="search-form">
-        <FormControl sx={{ width: 260 }}>
-          <Select
-            sx={{ height: 48 }}
-            MenuProps={{
-              PaperProps: {
-                sx: {
-                  maxHeight: 300,
-                  maxWidth: 260,
+      <div className="search-container">
+        <div className="search-form">
+          <FormControl sx={{ width: "30%" }}>
+            <Select
+              sx={{ height: 48 }}
+              MenuProps={{
+                PaperProps: {
+                  sx: {
+                    maxHeight: 300,
+                    maxWidth: 260,
+                  },
                 },
-              },
-            }}
-            classes={{ maxHeight: 10 }}
-            value={age}
-            onChange={handleChange}
-            displayEmpty
-            inputProps={{ "aria-label": "Without label" }}
-            className="select"
-          >
-            <MenuItem value="">
-              <em>All Industries</em>
-            </MenuItem>
-            {AllIndustries.map((item, i) => (
-              <MenuItem key={i} value={i} dense className="items">
-                {item.text}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <FormControl sx={{ width: 260 }}>
-          <Select
-            sx={{ height: 48 }}
-            MenuProps={{
-              PaperProps: {
-                sx: {
-                  maxHeight: 300,
-                  maxWidth: 260,
-                },
-              },
-            }}
-            classes={{ maxHeight: 10 }}
-            value={age}
-            onChange={handleChange}
-            displayEmpty
-            inputProps={{ "aria-label": "Without label" }}
-            className="select"
-          >
-            <MenuItem value="">
-              <em>All Locations</em>
-            </MenuItem>
-            {AllIndustries.map((item, i) => (
-              <MenuItem key={i} value={i} dense className="items">
-                {item.text}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <div className="date-picker-container">
-          <div className="date-picker-element-container" ref={calendarRef}>
-            <input
-              type="text"
-              className="single-calendar-input"
-              onClick={() => {
-                setOpen(!open);
               }}
-              readOnly
-              value={`${formatDate.startDate}-${formatDate.endDate}`}
-            />
-            <div className="icon">
-              <CalendarMonthIcon fontSize="medium" />
-            </div>
-            <div className={`dropdown ${open ? "active" : "inactive"}`}>
-              <DateRange
-                months={2}
-                className="calendarStyle"
-                onChange={(item) => setState([item.selection])}
-                ranges={state}
-                showSelectionPreview={false}
-                editableDateInputs={false}
-                showMonthAndYearPickers={false}
-                showDateDisplay={false}
-                rangeColors={["#DA291C", "#DA291C", "#000000"]}
-                direction="horizontal"
+              classes={{ maxHeight: 10 }}
+              value={age}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              className="select"
+            >
+              <MenuItem value="">
+                <em>All Industries</em>
+              </MenuItem>
+              {AllIndustries.map((item, i) => (
+                <MenuItem key={i} value={i} dense className="items">
+                  {item.text}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl sx={{ width: "30%" }}>
+            <Select
+              sx={{ height: 48 }}
+              MenuProps={{
+                PaperProps: {
+                  sx: {
+                    maxHeight: 300,
+                    maxWidth: 260,
+                  },
+                },
+              }}
+              classes={{ maxHeight: 10 }}
+              value={age}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              className="select"
+            >
+              <MenuItem value="">
+                <em>All Locations</em>
+              </MenuItem>
+              {AllIndustries.map((item, i) => (
+                <MenuItem key={i} value={i} dense className="items">
+                  {item.text}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <div className="date-picker-container">
+            <div className="date-picker-element-container" ref={calendarRef}>
+              <input
+                type="text"
+                className="single-calendar-input"
+                onClick={() => {
+                  setOpen(!open);
+                }}
+                readOnly
+                value={`${formatDate.startDate}-${formatDate.endDate}`}
               />
+              <div className="icon">
+                <CalendarMonthIcon fontSize="medium" />
+              </div>
+              <div className={`dropdown ${open ? "active" : "inactive"}`}>
+                <DateRange
+                  months={isTabletOrMobile ? 1 : 2}
+                  className="calendarStyle"
+                  onChange={(item) => setState([item.selection])}
+                  ranges={state}
+                  showSelectionPreview={false}
+                  editableDateInputs={false}
+                  showMonthAndYearPickers={false}
+                  showDateDisplay={false}
+                  rangeColors={["#DA291C", "#DA291C", "#000000"]}
+                  direction="horizontal"
+                />
+              </div>
             </div>
           </div>
         </div>

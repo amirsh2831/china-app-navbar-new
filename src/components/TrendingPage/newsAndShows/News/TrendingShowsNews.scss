@@ -1,0 +1,72 @@
+@use "../../../../styles/mixins.scss" as *;
+
+.news {
+  // height: 100%;
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .news-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: #222222;
+      font-size: clamp(16px, 2vw, 30px);
+    }
+  }
+  .news-content {
+    border: 1px solid #e9eff5;
+    border-radius: 2px;
+    margin-top: 5px;
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    .news-items {
+      //   padding-top: 5px;
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      //   justify-content: space-;
+      gap: 16px;
+      .news-data {
+        .news-info {
+          display: flex;
+          gap: 8px;
+          a {
+            h4 {
+              font-weight: normal;
+              font-size: 18px;
+              display: -webkit-box;
+              max-width: 100%;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            &:hover {
+              color: crimson;
+            }
+          }
+          .new {
+            height: 28px;
+            border: 1px solid #00b300;
+            padding: 0px 5px;
+            line-height: 28px;
+            color: #00b300;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-wrap: nowrap;
+          }
+        }
+        p {
+          color: #888888;
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+}

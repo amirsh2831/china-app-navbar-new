@@ -1,0 +1,28 @@
+.bottom-links {
+  margin: 40px 36px;
+  .title {
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+    font-weight: 500;
+  }
+  .bottom-links-rows {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin: 10px 40px 0 0;
+      }
+      a {
+        font-size: 14px;
+        line-height: 22px;
+        color: #888;
+        &:hover {
+          color: #e64545;
+        }
+      }
+    }
+  }
+}

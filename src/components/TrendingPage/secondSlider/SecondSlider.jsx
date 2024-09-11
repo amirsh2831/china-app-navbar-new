@@ -5,14 +5,16 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./SecondSlider.scss";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { useMediaQuery } from "react-responsive";
 const SecondSlider = () => {
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
   return (
     <>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={2}
+        slidesPerView={isTabletOrMobile ? 1 : 2}
         loop
         coverflowEffect={{
           rotate: 0,

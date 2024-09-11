@@ -1,11 +1,29 @@
+@use "../../../styles/responsive.scss" as *;
+
 .search-form-title {
   margin: 36px 0px 0px 36px;
 }
-
+.search-container {
+  width: 100%;
+  // overflow: hidden;
+  padding: 16px 36px;
+  display: block;
+  @include responsive($laptop) {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+}
 .search-form {
-  margin: 16px 36px;
   display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 16px;
   justify-content: space-between;
+  @include responsive($tablet) {
+    flex-direction: row;
+  }
+  // gap: 16px;
 }
 .wrapper {
   display: flex;
@@ -35,7 +53,7 @@ input {
 
 .single-calendar-input {
   height: 48px;
-  width: 260px;
+  width: 100%;
   border-radius: 4px;
   border: 2px solid lightgray;
   padding: 0 10px;
@@ -44,6 +62,9 @@ input {
   //   margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  @include responsive($tablet) {
+    width: 260px;
+  }
 }
 
 .date-picker-element-container {
@@ -60,6 +81,7 @@ input {
 .dropdown {
   position: absolute;
   top: 100%;
+  left: -100%;
   left: 0px;
 }
 
@@ -72,17 +94,27 @@ input {
 }
 
 .dropdown.inactive {
+  display: none;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
   transition: 500ms ease;
 }
+
 .search {
+  flex: 2;
   display: flex;
   justify-content: space-between;
-  width: 45%;
+  gap: 16px;
+  width: 100%;
+  padding-top: 16px;
+  @include responsive($laptop) {
+    width: 45%;
+    padding-top: 0;
+  }
   input {
-    width: 85%;
+    height: 48px;
+    width: 100%;
     border-radius: 4px;
     border: 1px solid lightgray;
     color: black;
@@ -91,6 +123,7 @@ input {
     }
   }
   .search-button {
+    height: 48px;
     background-color: crimson;
     color: #ffffff;
     padding: 0px 18px;

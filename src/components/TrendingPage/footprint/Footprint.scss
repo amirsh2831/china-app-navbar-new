@@ -1,3 +1,4 @@
+@use "../../../styles/responsive.scss" as *;
 .footprint-section {
   margin: 16px 36px;
   .footprint-header {
@@ -7,20 +8,30 @@
 
     .footprint-title {
       h1 {
-        font-size: 30px;
+        font-size: clamp(16px, 2vw, 30px);
         color: #222222;
       }
       h5 {
+        display: none;
         padding-top: 12px;
-        font-size: 16px;
+        font-size: clamp(10px, 2vw, 16px);
         color: #555555;
+        @include responsive($tablet) {
+          display: block;
+        }
       }
     }
     a {
+      font-size: clamp(8px, 2vw, 16px);
       color: #1470cc;
     }
   }
   .footprint-bottom-image {
+    display: none;
+    width: 100%;
     margin-top: 18px;
+    @include responsive($mobile) {
+      display: block;
+    }
   }
 }

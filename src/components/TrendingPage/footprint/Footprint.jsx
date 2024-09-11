@@ -1,7 +1,9 @@
 import React from "react";
 import "./Footprint.scss";
 import SecondSlider from "../secondSlider/SecondSlider";
+import { useMediaQuery } from "react-responsive";
 const Footprint = () => {
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
   return (
     <>
       <div className="footprint-section">
@@ -13,7 +15,7 @@ const Footprint = () => {
               partnered with
             </h5>
           </div>
-          <a href="#">view More</a>
+          <a href="#">View More</a>
         </div>
         <SecondSlider />
         <img

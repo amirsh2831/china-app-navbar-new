@@ -5,7 +5,7 @@ import "./FeaturedShows.scss";
 import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useMediaQuery } from "react-responsive";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,14 +13,16 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 const FeaturedShows = () => {
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
+  const isMobile = useMediaQuery({ maxWidth: 425 });
   return (
     <>
       <h1 className="featured-shows-title">Featured Shows</h1>
       <div className="featured-cards-container">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={isMobile ? 1 : isTabletOrMobile ? 3 : 4}
           spaceBetween={15}
-          slidesPerGroup={4}
+          slidesPerGroup={isMobile ? 1 : isTabletOrMobile ? 3 : 4}
           pagination={{
             // el: ".swiper-pagination",
             clickable: true,
@@ -49,6 +51,9 @@ const FeaturedShows = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="ad-banner">
+        <img src="assets/Image/MELTALESX.jpg" alt="Maltex Banner" />
       </div>
     </>
   );

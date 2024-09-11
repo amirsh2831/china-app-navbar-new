@@ -1,13 +1,18 @@
+@use "../../../styles//responsive.scss" as *;
+
 #SecondSwiper {
   //   width: 100%;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin: 16px 36px;
   z-index: 60;
+  @include responsive($mobile) {
+    margin: 16px 36px;
+  }
   .slide-content {
     text-align: center;
     a {
+      font-size: clamp(10px, 2vw, 16px);
       color: #1470cc;
       &:hover {
         color: crimson;
@@ -20,7 +25,10 @@
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 400px;
+    width: 10px;
+    @include responsive($tablet) {
+      width: 400px;
+    }
     position: relative;
     // height: 450px;
   }

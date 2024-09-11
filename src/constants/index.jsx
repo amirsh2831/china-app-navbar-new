@@ -771,3 +771,177 @@ export const FeaturedShowsCardsData = [
     imgUrl: "assets/Image/Featuredshows/MEGA-SHOW-HONG-KONG-2024.jpg",
   },
 ];
+
+export const UpComingShowsData = [
+  {
+    showsImage: "assets/Image/Featuredshows/Vietnam-Print-Pack-2024.jpg",
+  },
+  {
+    showsImage: "assets/Image/Featuredshows/VTG-Vietnam-2024.jpg",
+  },
+  {
+    showsImage: "assets/Image/Featuredshows/ENGINEER-and-MARVEX-2024.jpg",
+  },
+  {
+    showsImage:
+      "assets/Image/Featuredshows/Thailand-International-Woodworking-Furniture-Exhibition-2024.jpg",
+  },
+  {
+    showsImage: "assets/Image/Featuredshows/MobilityX-2024.jpg",
+  },
+  {
+    showsImage: "assets/Image/Featuredshows/BCT-Expo-2024.jpg",
+  },
+];
+
+export const ShowNews = [
+  {
+    text: "VietnamPrintPack 2024: Leading the Way in Printing and Packaging Innovation",
+    date: "Sep 06,2024",
+    new: true,
+    link: "#",
+  },
+  {
+    text: "With extensive business opportunities, 10th edition of LED Expo Thailand is set to illuminate the ASEAN region",
+    date: "Sep 04,2024",
+    new: true,
+    link: "#",
+  },
+  {
+    text: "Business Opportunities Await as RX Japan Highlights Smart Farming Technologies at J AGRI Tokyo 2024",
+    date: "Aug 29,2024",
+    new: false,
+    link: "#",
+  },
+  {
+    text: "Thailand International Woodworking & Furniture Exhibition 2024 to Open in Bangkok this September",
+    date: "Aug 23,2024",
+    new: false,
+    link: "#",
+  },
+];
+
+export const TrendingPageLinks = {
+  QuickProducts: [
+    {
+      text: "China Lamp",
+      link: "",
+    },
+    {
+      text: "LED Stripe",
+      link: "",
+    },
+    {
+      text: "China Bottle",
+      link: "",
+    },
+    {
+      text: "China Wholesale",
+      link: "",
+    },
+    {
+      text: "China Adapter",
+      link: "",
+    },
+    {
+      text: "LED Light",
+      link: "",
+    },
+    {
+      text: "PVC Panel",
+      link: "",
+    },
+    {
+      text: "China Scaffolding",
+      link: "",
+    },
+    {
+      text: "China Elevator",
+      link: "",
+    },
+    {
+      text: "Bathroom Furniture",
+      link: "",
+    },
+    {
+      text: "Truck Tire",
+      link: "",
+    },
+    {
+      text: "Shower Room",
+      link: "",
+    },
+  ],
+  RecommendedSupplier: [
+    {
+      text: "China Lamp Manufacturers",
+      link: "",
+    },
+    {
+      text: "LED Stripe Manufacturers",
+      link: "",
+    },
+    {
+      text: "China Bottle Manufacturers",
+      link: "",
+    },
+    {
+      text: "China Wholesale Manufacturers",
+      link: "",
+    },
+    {
+      text: "China Adapter Manufacturers",
+      link: "",
+    },
+    {
+      text: "LED Light Manufacturers",
+      link: "",
+    },
+    {
+      text: "PVC Panel Manufacturers",
+      link: "",
+    },
+    {
+      text: "China Scaffolding Manufacturers",
+      link: "",
+    },
+    {
+      text: "China Elevator Manufacturers",
+      link: "",
+    },
+    {
+      text: "Bathroom Furniture Manufacturers",
+      link: "",
+    },
+    {
+      text: "Truck Tire Manufacturers",
+      link: "",
+    },
+    {
+      text: "Shower Room Manufacturers",
+      link: "",
+    },
+  ],
+  FriendlyLink: [
+    {
+      text: "CornAsia",
+      link: "",
+    },
+    {
+      text: "GEM Indonesia",
+      link: "",
+    },
+    {
+      text: "Sinoexpo",
+      link: "",
+    },
+    {
+      text: "Reed Exhibitions",
+      link: "",
+    },
+    {
+      text: "Informa Markets",
+      link: "",
+    },
+  ],
+};
