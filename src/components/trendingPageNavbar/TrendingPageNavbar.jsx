@@ -5,9 +5,27 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 import "./TrendingPageNavbar.scss";
 import { Buyers, footerData, Lang, SupplySubMenu } from "../../constants";
 import { Divider } from "@mui/material";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import TrendingPageSidebar from "./trendingPageSidebar/TrendingPageSidebar";
+import Button from "@mui/material/Button";
+import Drawer from "@mui/material/Drawer";
 const TrendingPageNavbar = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
   return (
     <div className="navbar">
+      <div className="sidebar-menu-active">
+        <button onClick={toggleDrawer(true)}>
+          <MenuIcon color="black" />
+        </button>
+        <Drawer open={open} onClose={toggleDrawer(false)}>
+          <TrendingPageSidebar />
+        </Drawer>
+      </div>
       <div className="logo">
         <img
           src="public/assets/Image/logoNewNavbar.png"

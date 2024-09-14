@@ -1,0 +1,27 @@
+.products {
+  padding: 36px;
+  width: 80%;
+  display: block;
+  background-color: #fff;
+  margin: 48px auto;
+  .products-cat {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    gap: 8px;
+    .cat-item {
+      text-overflow: nowrap;
+      white-space: nowrap;
+      background-color: #f0f1f2;
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: #888;
+      font-size: 14px;
+      &:active {
+        background-color: #e64545;
+        color: #fff;
+      }
+    }
+  }
+}

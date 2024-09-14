@@ -2,7 +2,6 @@
 @use "../../../styles/responsive.scss" as *;
 
 .media-form {
-  margin: 16px 36px;
   .media-form-container {
     background-image: none;
     @include responsive($laptop) {
@@ -51,7 +50,7 @@
           @include center-vertical;
         }
         .media-form-right-form-section {
-          padding: 35px 45px;
+          padding: 16px 16px;
           background-color: #ffffff;
           @include center-vertical;
           align-items: start;
@@ -66,7 +65,7 @@
           }
           .media-form-title {
             color: #555555;
-            font-size: 14px;
+            font-size: clamp(12px, 2vw, 16px);
           }
           .media-form-right-rows {
             width: 100%;
@@ -75,18 +74,30 @@
             gap: 8px;
             input {
               width: 100%;
-              border: 2px solid #a1aab2;
+              border: 1px solid #a1aab2;
               height: 44px;
               border-radius: 2px;
               &::placeholder {
-                font-size: 14px;
+                font-size: clamp(12px, 2vw, 16px);
                 color: #888;
               }
             }
             .captcha {
+              width: 100%;
               display: flex;
               align-items: center;
               gap: 4px;
+              img {
+                width: 80%;
+              }
+            }
+          }
+          .captcha-row {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            @include responsive($mobile) {
+              flex-direction: row;
             }
           }
 
@@ -97,8 +108,14 @@
             border-radius: 4px;
             color: #ffffff;
           }
+          @include responsive($tablet) {
+            padding: 35px 45px;
+          }
         }
       }
     }
+  }
+  @include responsive($mobile) {
+    margin: 16px 36px;
   }
 }

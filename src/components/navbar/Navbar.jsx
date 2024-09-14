@@ -33,10 +33,7 @@ const Navbar = () => {
           <div class="left-side">
             <div className="sidebar-icon">
               <button onClick={toggleDrawer(true)}>
-                <MenuOutlinedIcon
-                  fontSize="medium"
-                  nClick={toggleDrawer(true)}
-                />
+                <MenuOutlinedIcon fontSize="medium" />
               </button>
               <Drawer open={open} onClose={toggleDrawer(false)}>
                 <Sidebar />

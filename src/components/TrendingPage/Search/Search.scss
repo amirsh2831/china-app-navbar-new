@@ -1,13 +1,19 @@
 @use "../../../styles/responsive.scss" as *;
 
 .search-form-title {
-  margin: 36px 0px 0px 36px;
+  margin: 16px 16px;
+  @include responsive($tablet) {
+    margin: 36px 0px 0px 36px;
+  }
 }
 .search-container {
   width: 100%;
   // overflow: hidden;
-  padding: 16px 36px;
   display: block;
+  padding: 16px 16px;
+  @include responsive($tablet) {
+    padding: 16px 36px;
+  }
   @include responsive($laptop) {
     display: flex;
     gap: 16px;
@@ -36,12 +42,16 @@
 }
 
 .calendarStyle {
+  width: 250px;
   border: 1px solid #eee;
   font-family: poppins;
   border-radius: 8px;
   z-index: 9999;
   position: relative;
   background-color: #fff;
+  @include responsive($mobile) {
+    width: 100%;
+  }
 }
 
 input {
@@ -81,8 +91,10 @@ input {
 .dropdown {
   position: absolute;
   top: 100%;
-  left: -100%;
-  left: 0px;
+  right: 0px;
+  @include responsive($laptop) {
+    right: -150%;
+  }
 }
 
 .dropdown.active {

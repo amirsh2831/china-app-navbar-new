@@ -80,7 +80,7 @@ const MediaCooperation = () => {
                   placeholder="Official website of the show and other contact information"
                 />
               </div>
-              <div className="media-form-right-rows">
+              <div className="media-form-right-rows captcha-row">
                 <input type="text" />
                 <div className="captcha">
                   <img src="assets/Image/captcha.png" alt="captcha" />

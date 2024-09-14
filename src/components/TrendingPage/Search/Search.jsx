@@ -18,6 +18,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Search = () => {
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
+  const isMobile = useMediaQuery({ maxWidth: 728 });
   // all states
   const [age, setAge] = React.useState("");
   const [open, setOpen] = useState(false);
@@ -80,9 +81,9 @@ const Search = () => {
       <h3 className="search-form-title">Shows Searching</h3>
       <div className="search-container">
         <div className="search-form">
-          <FormControl sx={{ width: "30%" }}>
+          <FormControl sx={{ width: `${isMobile ? "100%" : "30%"}` }}>
             <Select
-              sx={{ height: 48 }}
+              sx={{ height: 48, color: "gray" }}
               MenuProps={{
                 PaperProps: {
                   sx: {
@@ -108,9 +109,9 @@ const Search = () => {
               ))}
             </Select>
           </FormControl>
-          <FormControl sx={{ width: "30%" }}>
+          <FormControl sx={{ width: `${isMobile ? "100%" : "30%"}` }}>
             <Select
-              sx={{ height: 48 }}
+              sx={{ height: 48, color: "gray" }}
               MenuProps={{
                 PaperProps: {
                   sx: {

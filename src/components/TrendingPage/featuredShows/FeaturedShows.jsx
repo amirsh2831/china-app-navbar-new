@@ -13,14 +13,15 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 const FeaturedShows = () => {
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 1024 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ maxWidth: 1024 });
   const isMobile = useMediaQuery({ maxWidth: 425 });
   return (
     <>
       <h1 className="featured-shows-title">Featured Shows</h1>
       <div className="featured-cards-container">
         <Swiper
-          slidesPerView={isMobile ? 1 : isTabletOrMobile ? 3 : 4}
+          slidesPerView={isMobile ? 1 : isTabletOrMobile ? 2 : isTablet ? 3 : 4}
           spaceBetween={15}
           slidesPerGroup={isMobile ? 1 : isTabletOrMobile ? 3 : 4}
           pagination={{

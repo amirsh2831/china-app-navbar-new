@@ -22,6 +22,9 @@
       margin-top: 16px;
     }
   }
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #e64d45;
+  }
   .swiper-slide {
     background-position: center;
     background-size: cover;

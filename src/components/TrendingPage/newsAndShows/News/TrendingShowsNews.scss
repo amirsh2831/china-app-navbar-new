@@ -12,8 +12,13 @@
     display: flex;
     justify-content: space-between;
     h1 {
+      padding-bottom: 16px;
       color: #222222;
       font-size: clamp(16px, 2vw, 30px);
+    }
+    a {
+      font-size: clamp(8px, 2vw, 16px);
+      color: #1470cc;
     }
   }
   .news-content {

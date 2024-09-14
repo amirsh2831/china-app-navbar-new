@@ -1,0 +1,234 @@
+.main-hero {
+  width: 100%;
+  position: relative;
+  .hero-background {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 515px;
+    position: absolute;
+    background-image: url("assets/Image/TradingPage/heroBackground.png");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .bg-icon {
+      position: absolute;
+      //   background-position: center;
+      background-repeat: no-repeat;
+      //   background-size: cover;
+      //   object-fit: cover;
+    }
+    .car {
+      animation: bgUpDown 1.6s linear infinite alternate;
+
+      background-image: url("/assets/Image/TradingPage/animated/train.png");
+      top: -50px;
+      left: 224px;
+      height: 155px;
+      width: 155px;
+    }
+    .case {
+      animation: diagonal 1.9s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/case.png");
+      right: 178px;
+      top: -70px;
+      height: 271px;
+      width: 211px;
+    }
+    .makeup {
+      animation: bgswing 1.9s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/makeup.png");
+      top: 130px;
+      left: 53px;
+      height: 166px;
+      width: 163px;
+    }
+    .shoe {
+      animation: swing 1.9s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/shoe.png");
+      top: 145px;
+      left: 330px;
+      height: 214px;
+      width: 252px;
+    }
+    .watch {
+      animation: diagonal 1.9s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/watch.png");
+      right: 400px;
+      top: 213px;
+      height: 231px;
+      width: 290px;
+    }
+    .headphone {
+      animation: bgUpDown 1.3s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/headphone.png");
+      right: 45px;
+      top: 154px;
+      height: 144px;
+      width: 149px;
+    }
+    .gift {
+      animation: diagonal-reversed 1.9s linear infinite alternate;
+
+      background-image: url("assets/Image/TradingPage/animated/gift.png");
+      top: 311px;
+      left: -90px;
+      height: 245px;
+      width: 220px;
+    }
+  }
+  .hero-content {
+    padding-top: 68px;
+    color: #ffffff;
+    position: relative;
+    z-index: 20;
+    margin: auto;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    .hero-content-title {
+      font-size: 52px;
+    }
+    .hero-content-items-container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .hero-content-item {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+    .hero-searchbar-container {
+      width: 800px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      .hero-searchbar {
+        width: 90%;
+        height: 100%;
+        background-color: #ffffff;
+        input {
+          padding-left: 16px;
+          width: 100%;
+          &:placeholder {
+            color: #222;
+          }
+        }
+      }
+      .hero-searchbar-button {
+        width: 10%;
+        height: 100%;
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+  .hero-main-slider {
+    padding: 0 36px;
+    margin: auto;
+    height: 200px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 60;
+    margin-top: 48px;
+    .cat-container {
+      cursor: pointer;
+      width: 134px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      .cat-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #f5f5f5;
+        img {
+          transition: all ease-in 0.3s;
+        }
+      }
+      .cat-title {
+        text-align: center;
+        font-size: 14px;
+        color: #888;
+        line-height: 18px;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+@keyframes bgUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-3deg) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(3deg) translateY(4px);
+  }
+  100% {
+    -webkit-transform: rotate(-3deg) translateT(-4px);
+  }
+}
+
+@-webkit-keyframes bgswing {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-4px);
+  }
+  100% {
+    -webkit-transform: translateX(4px);
+  }
+}
+
+@-webkit-keyframes diagonal {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(6px, -6px);
+  }
+  100% {
+    -webkit-transform: translate(-6px, 6px);
+  }
+}
+
+@-webkit-keyframes diagonal-reversed {
+  0% {
+    -webkit-transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-4px) translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translatex(4px) translateY(4px);
+  }
+}

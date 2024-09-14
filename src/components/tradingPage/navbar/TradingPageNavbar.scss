@@ -1,0 +1,41 @@
+.trading-navbar {
+  position: relative;
+  z-index: 60;
+  background-color: white;
+  padding: 20px 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e6ecf2;
+  justify-content: space-between;
+  .logo-and-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .logo {
+      width: 252px;
+      height: 47px;
+    }
+    .title {
+      padding-top: 8px;
+      font-size: 16px;
+      line-height: 35px;
+      color: #222;
+      &:hover {
+        color: #e64545;
+      }
+    }
+  }
+  .call-to-action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a {
+      color: #1470cc;
+      font-size: 12px;
+      &:hover {
+        color: #e64545;
+      }
+    }
+  }
+}

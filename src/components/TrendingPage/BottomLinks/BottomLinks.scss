@@ -1,4 +1,6 @@
+@use "../../../styles/responsive.scss" as *;
 .bottom-links {
+  display: none;
   margin: 40px 36px;
   .title {
     padding-top: 24px;
@@ -24,5 +26,8 @@
         }
       }
     }
+  }
+  @include responsive($tablet) {
+    display: block;
   }
 }
