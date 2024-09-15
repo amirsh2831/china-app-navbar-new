@@ -1,0 +1,53 @@
+.bestseller-main-container {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  height: 75%;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h4 {
+    font-size: 12px;
+    color: #e64545;
+  }
+  .bestseller-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .bestseller-item-image {
+      width: 80px;
+      height: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .bestseller-item-info {
+      display: block;
+
+      span {
+        font-size: 18px;
+        font-weight: bold;
+        color: #222222;
+        .type {
+          font-size: 14px;
+          color: #888;
+          font-weight: normal;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: normal;
+        color: #888;
+        span {
+          font-size: 14px;
+          color: #222222;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,11 @@
 .products {
+  position: relative;
+  z-index: 60;
   padding: 36px;
-  width: 80%;
-  display: block;
+  border: 2px solid #e6ecf2;
+  // display: block;
   background-color: #fff;
-  margin: 48px auto;
+  margin: 24px 0;
   .products-cat {
     list-style: none;
     display: flex;
@@ -14,7 +16,7 @@
       text-overflow: nowrap;
       white-space: nowrap;
       background-color: #f0f1f2;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 4px;
       color: #888;
       font-size: 14px;
@@ -22,6 +24,13 @@
         background-color: #e64545;
         color: #fff;
       }
+      &:first-child {
+        background-color: #e64545;
+        color: #fff;
+      }
     }
+  }
+  .products-sldier {
+    margin-top: 16px;
   }
 }

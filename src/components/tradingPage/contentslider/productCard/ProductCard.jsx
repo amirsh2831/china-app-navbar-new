@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductCard.scss";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 const ProductCard = ({ image, title, type, orders }) => {
   return (
     <>
@@ -11,7 +12,18 @@ const ProductCard = ({ image, title, type, orders }) => {
           <span>
             {title}/<span className="type">{type}</span>
           </span>
-          <p>Min Order: {orders}</p>
+          <p>
+            Min Order:{" "}
+            <span>
+              {orders} {type}
+            </span>
+          </p>
+        </div>
+        <div className="card-view-more">
+          <span className="view-more-icon">
+            <ArrowCircleRightOutlinedIcon fontSize="inherit" />
+          </span>
+          <span className="view-more-text">View More</span>
         </div>
       </div>
     </>

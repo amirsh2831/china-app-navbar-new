@@ -1,0 +1,50 @@
+.trading-dynamic-navbar {
+  display: none;
+  width: 100%;
+  top: 0;
+
+  transition: all 0.3s ease;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  .trading-dynamic-navbar-content {
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    ul {
+      color: #888;
+      text-align: center;
+      padding-right: 16px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        font-size: 14px;
+        padding: 16px;
+        font-weight: 500;
+        // line-height: 1.25rem;
+        cursor: pointer;
+        &:hover {
+          color: #e64545;
+        }
+      }
+    }
+  }
+  .trading-dynamic-navbar-search-icon {
+    width: 65px;
+    height: 65px;
+    background-image: linear-gradient(-30deg, #e64545 0%, #f26549 100%);
+    padding-top: 18px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.sticky {
+  display: block;
+  position: sticky;
+  transform: all 3s ease;
+}

@@ -14,7 +14,7 @@ const HeroSection = () => {
             <div className="bg-icon car"></div>
             <div className="bg-icon case"></div>
             <div className="bg-icon makeup"></div>
-            <duv className="bg-icon shoe"></duv>
+            <div className="bg-icon shoe"></div>
             <div className="bg-icon watch"></div>
             <div className="bg-icon headphone"></div>
             <div className="bg-icon gift"></div>

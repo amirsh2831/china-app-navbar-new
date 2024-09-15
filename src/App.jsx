@@ -15,14 +15,19 @@ import Footer from "./components/footer/footer";
 // import BottomLinks from "./components/TrendingPage/BottomLinks/BottomLinks";
 import TradingPageNavbar from "./components/tradingPage/navbar/TradingPageNavbar";
 import HeroScetion from "./components/tradingPage/heroSection/HeroSection";
-import Contentslider from "./components/tradingPage/contentslider/Contentslider";
 import { IndustryItems, IndustryItemsCat } from "./constants";
+import Products from "./components/tradingPage/products/Products";
+import MainSlider from "./components/tradingPage/mainSlider/MainSlider";
+import DynamicNavbar from "./components/tradingPage/dynamicNavbar/DynamicNavbar";
+import { useInView } from "react-intersection-observer";
 function App() {
   return (
     <>
       <TradingPageNavbar />
+      <DynamicNavbar />
       <HeroScetion />
-      <Contentslider products={IndustryItems} cat={IndustryItemsCat} />
+      <MainSlider />
+      <Products />
       <footer>
         <Footer />
       </footer>
