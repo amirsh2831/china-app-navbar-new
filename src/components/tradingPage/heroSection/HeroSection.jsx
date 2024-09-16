@@ -5,7 +5,21 @@ import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
 import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
 import { TradingCat } from "../../../constants";
+import { useMediaQuery } from "react-responsive";
+
+// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
 const HeroSection = () => {
+  const isTablet = useMediaQuery({ maxWidth: 1024 });
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 548 });
   return (
     <>
       <div className="main-hero">
@@ -48,14 +62,29 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-main-slider">
-          {TradingCat.map((item, i) => (
-            <div key={i} className="cat-container">
-              <div className="cat-image">
-                <img src={item.img} alt="Categories Image" />
-              </div>
-              <div className="cat-title">{item.text}</div>
-            </div>
-          ))}
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            id="cat-main-slider"
+            slidesPerView={
+              isMobile ? 3 : isMobileOrTablet ? 4 : isTablet ? 6 : 8
+            }
+            slidesPerGroup={
+              isMobile ? 3 : isMobileOrTablet ? 4 : isTablet ? 6 : 8
+            }
+            spaceBetween={30}
+          >
+            {TradingCat.map((item, i) => (
+              <SwiperSlide key={i}>
+                <div className="cat-container">
+                  <div className="cat-image">
+                    <img src={item.img} alt="Categories Image" />
+                  </div>
+                  <div className="cat-title">{item.text}</div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className="guide-items"></div>
       </div>

@@ -1,27 +1,31 @@
+@use "../../../styles/responsive.scss" as *;
+$laptop-mini-size: 1280px;
 .prod {
-  width: 80%;
+  width: 95%;
   margin: auto;
-  position: relative;
   .prod-title {
     line-height: 1rem;
     margin: 36px 0 18px 0;
-    font-size: 22px;
-    position: relative;
+    font-size: clamp(18px, 2vw, 24px);
   }
   .prod-bg-icon {
+    display: none;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include responsive($laptop) {
+      // display: block;
+    }
   }
   .gift {
     animation: bgUpDown 1.6s linear infinite alternate;
     height: 200px;
     width: 195px;
     position: absolute;
+    left: 0px;
     background-image: url("/assets/Image/TradingPage/animated/gift2.png");
-    left: 10px;
-    top: 250px;
+    // top: 250px;
   }
   .dress {
     animation: bgUpDown 1.9s linear infinite alternate;
@@ -29,13 +33,13 @@
     width: 245px;
     position: absolute;
     background-image: url("/assets/Image/TradingPage/animated/dress.png");
-    right: 15px;
-    top: 250px;
+    right: 0px;
+    // top: 250px;
   }
   .baseball {
     background-image: url("/assets/Image/TradingPage/animated/baseball.png");
-    left: 15px;
-    top: 450px;
+    left: 0px;
+    // top: 450px;
     animation: bgUpDown 1.9s linear infinite alternate;
 
     height: 207px;
@@ -45,33 +49,37 @@
     background-image: url("assets/Image/TradingPage/animated/picture.png");
     height: 249px;
     width: 270px;
-    right: 0px;
-    top: 150px;
+    right: -0px;
+    // top: 150px;
     animation: bgUpDown 1.9s linear infinite alternate;
   }
   .ring {
     background-image: url("assets/Image/TradingPage/animated/ring.png");
     height: 195px;
     width: 218px;
-    top: 250px;
-    left: 10px;
+    // top: 250px;
+    left: 0px;
     animation: bgUpDown 1.9s linear infinite alternate;
   }
   .cases {
     background-image: url("assets/Image/TradingPage/animated/cases.png");
     height: 210px;
     width: 233px;
-    top: 250px;
-    right: 10px;
+    // top: 250px;
+    right: 0px;
     animation: bgUpDown 1.9s linear infinite alternate;
   }
   .napkin {
     background-image: url("assets/Image/TradingPage/animated/napkin.png");
     height: 200px;
     width: 195px;
-    top: 250px;
-    left: 10px;
+    // top: 250px;
+    left: 0px;
     animation: bgUpDown 1.9s linear infinite alternate;
+    margin-bottom: 600px;
+  }
+  @include responsive($laptop-mini-size) {
+    width: 80%;
   }
 }
 

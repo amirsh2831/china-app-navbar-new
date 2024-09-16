@@ -1,11 +1,16 @@
+@use "../../../../styles/responsive.scss" as *;
+$mini-laptop-size: 1280px;
+
 .single-prod-main-container {
+  display: none;
   padding: 16px 24px;
   flex-shrink: 0;
   background-color: #fff;
   border-radius: 8px;
   height: max-content;
-  width: 100%;
-  display: flex;
+  width: 30%;
+  height: 130px;
+
   align-items: center;
   gap: 8px;
   justify-content: space-between;
@@ -13,11 +18,11 @@
     display: block;
     span {
       margin-bottom: 8px;
-      font-size: 18px;
+      font-size: clamp(14px, 2vw, 18px);
       font-weight: bold;
       color: #222222;
       .type {
-        font-size: 14px;
+        font-size: clamp(10px, 1vw, 14px);
         font-weight: normal;
         color: #888;
       }
@@ -46,5 +51,11 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+  @include responsive($tablet) {
+    display: flex;
+  }
+  @include responsive($mini-laptop-size) {
+    width: 100%;
   }
 }

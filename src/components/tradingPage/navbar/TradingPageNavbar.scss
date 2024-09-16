@@ -1,8 +1,10 @@
+@use "../../../styles/responsive.scss" as *;
+$laptop-mini-size: 1280px;
 .trading-navbar {
   position: relative;
   z-index: 60;
   background-color: white;
-  padding: 20px 60px;
+  padding: 20px 2.5%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,12 +19,16 @@
       height: 47px;
     }
     .title {
+      display: none;
       padding-top: 8px;
       font-size: 16px;
       line-height: 35px;
       color: #222;
       &:hover {
         color: #e64545;
+      }
+      @include responsive($mobile) {
+        display: block;
       }
     }
   }
@@ -37,5 +43,8 @@
         color: #e64545;
       }
     }
+  }
+  @include responsive($laptop-mini-size) {
+    padding: 20px 10%;
   }
 }

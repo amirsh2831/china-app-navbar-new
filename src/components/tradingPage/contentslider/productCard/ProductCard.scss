@@ -21,7 +21,7 @@
     span {
       font-weight: bold;
       color: #222222;
-      font-size: 18px;
+      font-size: clamp(14px, 2vw, 18px);
       .type {
         padding-left: 4px;
         font-size: 14px;
@@ -31,7 +31,7 @@
     }
     p {
       padding-top: 4px;
-      font-size: 14px;
+      font-size: clamp(10px, 2vw, 14px);
       color: #888;
       font-weight: normal;
       span {

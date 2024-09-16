@@ -9,21 +9,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-
+import { useMediaQuery } from "react-responsive";
 // import required modules
 import { Grid, Pagination } from "swiper/modules";
 
 export const ProductSlider = ({ product }) => {
+  const isTablet = useMediaQuery({ maxWidth: 1024 });
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 425 });
+
   return (
     <>
       <Swiper
         id="productSlider"
-        slidesPerView={5}
-        grid={{
-          rows: 2,
-          fill: "row",
-        }}
-        spaceBetween={30}
+        slidesPerView={isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : 5}
+        slidesPerGroup={isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : 5}
+        grid={
+          isMobile
+            ? {
+                rows: 1,
+                fill: "row",
+              }
+            : {
+                rows: 2,
+                fill: "row",
+              }
+        }
+        spaceBetween={isMobileOrTablet ? 45 : 30}
         pagination={{
           clickable: true,
         }}

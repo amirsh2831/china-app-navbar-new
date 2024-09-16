@@ -1,23 +1,41 @@
+@use "../../../styles/responsive.scss" as *;
+$mini-laptop-size: 1280px;
 .mainslider-main-container {
-  width: 80%;
-  padding: 24px 36px;
+  width: 95%;
+  padding: 24px 12px;
   margin: 48px auto;
-  display: flex;
+  display: block;
   justify-content: space-between;
   background-color: #d7594d;
   .mainslider-cards {
     flex-shrink: 0;
     justify-content: space-between;
-    width: 28%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 20px;
+    @include responsive($mini-laptop-size) {
+      margin-bottom: 0;
+      flex-direction: column;
+      width: 28%;
+    }
   }
   .mainslider-slider {
     // background-color: #fff;
     // border-radius: 8px;
     padding: 0;
     margin: 0;
-    width: 70%;
+    width: 100%;
     height: 100%;
+    @include responsive($mini-laptop-size) {
+      width: 70%;
+    }
+  }
+  @include responsive($mobile) {
+    padding: 24px 36px;
+  }
+  @include responsive($mini-laptop-size) {
+    display: flex;
+    width: 80%;
   }
 }

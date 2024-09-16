@@ -1,10 +1,15 @@
+@use "../../../../styles/responsive.scss" as *;
+$mini-laptop-size: 1280px;
+
 .bestseller-main-container {
   flex-shrink: 0;
   background-color: #ffffff;
   border-radius: 8px;
   width: 100%;
-  height: 75%;
-  padding: 16px 24px;
+  // align-self: stretch;
+  height: 130px;
+  overflow: hidden;
+  padding: 16px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,13 +32,13 @@
     }
     .bestseller-item-info {
       display: block;
-
+      text-align: left;
       span {
-        font-size: 18px;
+        font-size: clamp(14px, 2vw, 18px);
         font-weight: bold;
         color: #222222;
         .type {
-          font-size: 14px;
+          font-size: clamp(10px, 2vw, 14px);
           color: #888;
           font-weight: normal;
         }
@@ -50,4 +55,50 @@
       }
     }
   }
+  @include responsive($tablet) {
+    width: 68%;
+  }
+  @include responsive($mini-laptop-size) {
+    width: 100%;
+    height: 75%;
+    flex-direction: column;
+  }
+}
+
+#trading-page-main-bestseller {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 99;
+  width: 36px;
+  height: 36px;
+  background-color: #222;
+  border-radius: 100%;
+  opacity: 0.6;
+  &:after {
+    font-size: 18px;
+    color: #f5f5f5;
+  }
+}
+.swiper-button-disabled {
+  display: none;
+}
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

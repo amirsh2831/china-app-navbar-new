@@ -1,17 +1,25 @@
+@use "../../../styles/responsive.scss" as *;
+$laptop-mini-size: 1280px;
 .main-hero {
-  width: 100%;
-  position: relative;
+  overflow: hidden;
+  resize: none;
+  max-width: 1920px;
+  margin: auto;
+
   .hero-background {
+    position: absolute;
+    overflow: hidden;
+    resize: none;
     z-index: 1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: 515px;
-    position: absolute;
+    object-fit: cover;
     background-image: url("assets/Image/TradingPage/heroBackground.png");
     background-position: center top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     .bg-icon {
       position: absolute;
@@ -33,21 +41,28 @@
       animation: diagonal 1.9s linear infinite alternate;
 
       background-image: url("assets/Image/TradingPage/animated/case.png");
-      right: 178px;
+      right: 30px;
       top: -70px;
       height: 271px;
       width: 211px;
+      @include responsive($tablet) {
+        right: 178px;
+      }
     }
     .makeup {
       animation: bgswing 1.9s linear infinite alternate;
 
       background-image: url("assets/Image/TradingPage/animated/makeup.png");
       top: 130px;
-      left: 53px;
+      left: -30px;
       height: 166px;
       width: 163px;
+      @include responsive($tablet) {
+        left: 53px;
+      }
     }
     .shoe {
+      display: none;
       animation: swing 1.9s linear infinite alternate;
 
       background-image: url("assets/Image/TradingPage/animated/shoe.png");
@@ -55,24 +70,36 @@
       left: 330px;
       height: 214px;
       width: 252px;
+      @include responsive($tablet) {
+        display: block;
+      }
     }
     .watch {
       animation: diagonal 1.9s linear infinite alternate;
-
+      display: none;
       background-image: url("assets/Image/TradingPage/animated/watch.png");
-      right: 400px;
       top: 213px;
       height: 231px;
       width: 290px;
+      right: 200px;
+      @include responsive($laptop) {
+        display: block;
+      }
+      @include responsive($laptop-mini-size) {
+        right: 400px;
+      }
     }
     .headphone {
       animation: bgUpDown 1.3s linear infinite alternate;
 
       background-image: url("assets/Image/TradingPage/animated/headphone.png");
-      right: 45px;
+      right: -30px;
       top: 154px;
       height: 144px;
       width: 149px;
+      @include responsive($tablet) {
+        right: 45px;
+      }
     }
     .gift {
       animation: diagonal-reversed 1.9s linear infinite alternate;
@@ -96,10 +123,13 @@
     align-items: center;
     gap: 36px;
     .hero-content-title {
-      font-size: 52px;
+      font-size: 32px;
+      @include responsive($tablet) {
+        font-size: 52px;
+      }
     }
     .hero-content-items-container {
-      display: flex;
+      display: none;
       align-items: center;
       gap: 24px;
       .hero-content-item {
@@ -108,9 +138,12 @@
         align-items: center;
         gap: 8px;
       }
+      @include responsive($tablet) {
+        display: flex;
+      }
     }
     .hero-searchbar-container {
-      width: 800px;
+      width: 98%;
       height: 54px;
       display: flex;
       align-items: center;
@@ -127,18 +160,31 @@
         }
       }
       .hero-searchbar-button {
-        width: 10%;
+        padding: 8px 12px;
+        width: 23%;
         height: 100%;
         background-color: #000000;
         color: #ffffff;
+        @include responsive($tablet) {
+          width: 15%;
+        }
+        @include responsive($laptop) {
+          width: 10%;
+        }
+      }
+      @include responsive($tablet) {
+        width: 600px;
+      }
+      @include responsive($laptop) {
+        width: 800px;
       }
     }
   }
   .hero-main-slider {
-    padding: 0 36px;
-    margin: auto;
-    height: 200px;
-    width: 80%;
+    padding: 0 0px;
+    margin: 48px auto;
+    height: 130px;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,25 +192,49 @@
     position: relative;
     z-index: 60;
     margin-top: 48px;
+    #cat-main-slider {
+      padding: 0 18px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        z-index: 99;
+        width: 36px;
+        height: 36px;
+        background-color: #222;
+        border-radius: 100%;
+        opacity: 0.6;
+        &:after {
+          font-size: 18px;
+          color: #f5f5f5;
+        }
+      }
+      .swiper-button-disabled {
+        display: none;
+      }
+    }
     .cat-container {
       cursor: pointer;
       width: 134px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
+
       .cat-image {
-        width: 100px;
-        height: 100px;
+        width: 64px;
+        height: 64px;
         border-radius: 100%;
         background-color: #f5f5f5;
         img {
           transition: all ease-in 0.3s;
         }
+        @include responsive($mobile) {
+          width: 100px;
+          height: 100px;
+        }
       }
       .cat-title {
         text-align: center;
-        font-size: 14px;
+        font-size: clamp(10px, 2vw, 14px);
         color: #888;
         line-height: 18px;
       }
@@ -173,7 +243,20 @@
           transform: scale(1.1);
         }
       }
+      @include responsive($mobile) {
+        gap: 16px;
+      }
     }
+    @include responsive($mobile) {
+      height: 200px;
+      padding: 0 36px;
+    }
+    @include responsive($laptop-mini-size) {
+      width: 80%;
+    }
+  }
+  @include responsive($tablet) {
+    height: 545px;
   }
 }
 @keyframes bgUpDown {

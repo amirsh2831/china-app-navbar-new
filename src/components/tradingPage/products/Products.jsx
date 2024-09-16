@@ -1,7 +1,6 @@
 import React from "react";
 import "./Products.scss";
 import Contentslider from "../contentslider/Contentslider";
-import { useRef } from "react";
 import { IndustryItems, IndustryItemsCat } from "../../../constants";
 import { useInViewContext } from "../../../Context/ContextProvider";
 const Products = () => {
