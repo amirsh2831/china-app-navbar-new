@@ -1,6 +1,7 @@
 @use "../../../styles/responsive.scss" as *;
 $laptop-mini-size: 1280px;
 .prod {
+  max-width: 1208px;
   width: 95%;
   margin: auto;
   .prod-title {

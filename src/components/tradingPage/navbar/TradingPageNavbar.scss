@@ -6,41 +6,45 @@ $laptop-mini-size: 1280px;
   background-color: white;
   padding: 20px 2.5%;
   width: 100%;
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid #e6ecf2;
-  justify-content: space-between;
-  .logo-and-title {
+  .trending-page-navbar-content {
     display: flex;
     align-items: center;
-    gap: 16px;
-    .logo {
-      width: 252px;
-      height: 47px;
-    }
-    .title {
-      display: none;
-      padding-top: 8px;
-      font-size: 16px;
-      line-height: 35px;
-      color: #222;
-      &:hover {
-        color: #e64545;
+    justify-content: space-between;
+    max-width: 1208px;
+    margin: auto;
+    .logo-and-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .logo {
+        width: 252px;
+        height: 47px;
       }
-      @include responsive($mobile) {
-        display: block;
+      .title {
+        display: none;
+        padding-top: 8px;
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 35px;
+        color: #222;
+        &:hover {
+          color: #e64545;
+        }
+        @include responsive($mobile) {
+          display: block;
+        }
       }
     }
-  }
-  .call-to-action {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    a {
-      color: #1470cc;
-      font-size: 12px;
-      &:hover {
-        color: #e64545;
+    .call-to-action {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      a {
+        color: #1470cc;
+        font-size: 12px;
+        &:hover {
+          color: #e64545;
+        }
       }
     }
   }

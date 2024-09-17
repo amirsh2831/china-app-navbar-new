@@ -75,7 +75,15 @@ const HeroSection = () => {
             spaceBetween={30}
           >
             {TradingCat.map((item, i) => (
-              <SwiperSlide key={i}>
+              <SwiperSlide
+                key={i}
+                onClick={() => {
+                  const element = document.getElementById(
+                    "prod-" + (i + 1).toString()
+                  );
+                  element.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <div className="cat-container">
                   <div className="cat-image">
                     <img src={item.img} alt="Categories Image" />

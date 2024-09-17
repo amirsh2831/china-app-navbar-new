@@ -1143,3 +1143,42 @@ export const MainSliderProducts = [
     order: "100",
   },
 ];
+
+export const SigninFooter = {
+  firstLine: [
+    {
+      text: "About Us",
+      link: "#",
+    },
+    {
+      text: "FAQ",
+      link: "#",
+    },
+    {
+      text: "Help",
+      link: "#",
+    },
+    {
+      text: "Contact Us",
+      link: "#",
+    },
+    {
+      text: "Mobile Site",
+      link: "#",
+    },
+  ],
+  secondLine: [
+    {
+      text: "User Agrrement",
+      link: "#",
+    },
+    {
+      text: "Declaration",
+      link: "#",
+    },
+    {
+      text: "Privacy Policy",
+      link: "#",
+    },
+  ],
+};

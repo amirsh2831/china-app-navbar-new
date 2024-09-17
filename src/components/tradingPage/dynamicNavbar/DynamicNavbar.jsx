@@ -17,6 +17,7 @@ const DynamicNavbar = () => {
   const isMobile = useMediaQuery({ maxWidth: 425 });
   const [search, setSearch] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const categoriesSwiper = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -37,13 +38,6 @@ const DynamicNavbar = () => {
     section6InView,
     section7InView,
     section8InView,
-    section2Ref,
-    section3Ref,
-    section4Ref,
-    section5Ref,
-    section6Ref,
-    section7Ref,
-    section8Ref,
   } = useInViewContext();
 
   useEffect(() => {
@@ -81,12 +75,19 @@ const DynamicNavbar = () => {
     section7InView,
     section8InView,
   ]);
+  useEffect(() => {
+    isTablet ? categoriesSwiper.current.swiper.slideTo(indexNumber - 1) : {};
+  }, [indexNumber]);
 
   return (
     <>
       <div className={`trading-dynamic-navbar ${scroll ? "sticky" : ""}`}>
-        <div className="trading-dynamic-navbar-content">
+        <div
+          className="trading-dynamic-navbar-content"
+          style={search ? { display: "none" } : { display: "flex" }}
+        >
           <Swiper
+            ref={categoriesSwiper}
             navigation={true}
             modules={[Navigation]}
             id="trading-sticky-nav-slider"
@@ -108,7 +109,7 @@ const DynamicNavbar = () => {
                   const element = document.getElementById(
                     "prod-" + (index + 1).toString()
                   );
-                  console.log("prod-" + (index + 1).toString());
+
                   element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
@@ -125,25 +126,25 @@ const DynamicNavbar = () => {
             }}
           >
             <SearchIcon />
-            <div
-              className={`click-search-bar ${
-                search ? "click-search-bar-active" : ""
-              }`}
-              onClick={(e) => {
-                handleSetSearch();
-                e.stopPropagation();
-              }}
-            >
-              <input
-                className="searchbar-input"
-                placeholder="search..."
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-              />
-              <SearchIcon />
-            </div>
           </div>
+        </div>
+        <div
+          className={`click-search-bar ${
+            search ? "click-search-bar-active" : ""
+          }`}
+          onClick={(e) => {
+            handleSetSearch();
+            e.stopPropagation();
+          }}
+        >
+          <input
+            className="searchbar-input"
+            placeholder="search..."
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          />
+          <SearchIcon />
         </div>
       </div>
     </>

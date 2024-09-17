@@ -1,6 +1,6 @@
 @use "../../../../styles/responsive.scss" as *;
 $mini-laptop-size: 1280px;
-
+$mobile-resize: 585px;
 .bestseller-main-container {
   flex-shrink: 0;
   background-color: #ffffff;
@@ -55,7 +55,10 @@ $mini-laptop-size: 1280px;
       }
     }
   }
-  @include responsive($tablet) {
+  @include responsive($mobile-resize) {
+    width: 48%;
+  }
+  @include responsive($laptop) {
     width: 68%;
   }
   @include responsive($mini-laptop-size) {

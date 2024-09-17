@@ -1,5 +1,5 @@
 // import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/footer";
+// import Footer from "./components/footer/footer";
 // import VideoChannel from "./components/videoChannel/VideoChannel";
 // import { useState } from "react";
 // import TrendingShows from "./components/trendingShows/TrendingShows";
@@ -13,24 +13,18 @@ import Footer from "./components/footer/footer";
 // import TrendingShowsNews from "./components/TrendingPage/newsAndShows/News/TrendingShowsNews";
 // import NewsAndShows from "./components/TrendingPage/newsAndShows/NewsAndShows";
 // import BottomLinks from "./components/TrendingPage/BottomLinks/BottomLinks";
-import TradingPageNavbar from "./components/tradingPage/navbar/TradingPageNavbar";
-import HeroScetion from "./components/tradingPage/heroSection/HeroSection";
-import { IndustryItems, IndustryItemsCat } from "./constants";
-import Products from "./components/tradingPage/products/Products";
-import MainSlider from "./components/tradingPage/mainSlider/MainSlider";
-import DynamicNavbar from "./components/tradingPage/dynamicNavbar/DynamicNavbar";
-import { useInView } from "react-intersection-observer";
+// import TradingPageNavbar from "./components/tradingPage/navbar/TradingPageNavbar";
+// import HeroScetion from "./components/tradingPage/heroSection/HeroSection";
+// import { IndustryItems, IndustryItemsCat } from "./constants";
+// import Products from "./components/tradingPage/products/Products";
+// import MainSlider from "./components/tradingPage/mainSlider/MainSlider";
+// import DynamicNavbar from "./components/tradingPage/dynamicNavbar/DynamicNavbar";
+// import { useInView } from "react-intersection-observer";
+import Signin from "./components/signinPage/Signin";
 function App() {
   return (
     <>
-      <TradingPageNavbar />
-      <DynamicNavbar />
-      <HeroScetion />
-      <MainSlider />
-      <Products />
-      <footer>
-        <Footer />
-      </footer>
+      <Signin />
     </>
   );
 }

@@ -1,6 +1,6 @@
 @use "../../../../styles/responsive.scss" as *;
 $mini-laptop-size: 1280px;
-
+$mobile-resize: 585px;
 .single-prod-main-container {
   display: none;
   padding: 16px 24px;
@@ -8,9 +8,8 @@ $mini-laptop-size: 1280px;
   background-color: #fff;
   border-radius: 8px;
   height: max-content;
-  width: 30%;
+  width: 50%;
   height: 130px;
-
   align-items: center;
   gap: 8px;
   justify-content: space-between;
@@ -52,7 +51,12 @@ $mini-laptop-size: 1280px;
       object-fit: cover;
     }
   }
-  @include responsive($tablet) {
+  @include responsive($mobile-resize) {
+    width: 50%;
+    display: flex;
+  }
+  @include responsive($laptop) {
+    width: 30%;
     display: flex;
   }
   @include responsive($mini-laptop-size) {

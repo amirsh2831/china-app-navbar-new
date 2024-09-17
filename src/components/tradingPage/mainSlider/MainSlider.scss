@@ -1,6 +1,7 @@
 @use "../../../styles/responsive.scss" as *;
 $mini-laptop-size: 1280px;
 .mainslider-main-container {
+  max-width: 1208px;
   width: 95%;
   padding: 24px 12px;
   margin: 48px auto;
