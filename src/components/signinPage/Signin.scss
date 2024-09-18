@@ -17,7 +17,7 @@ $tablet-resize: 900px;
       .signin-main-header-logo-lang {
         display: flex;
         align-items: center;
-        gap: 36px;
+        gap: 16px;
         img {
           width: 257px;
           height: 47px;
@@ -34,6 +34,7 @@ $tablet-resize: 900px;
             font-size: 12px;
             display: flex;
             align-items: center;
+            font-weight: 500;
             span {
               padding-top: 3px;
               font-size: 14px;
@@ -56,6 +57,7 @@ $tablet-resize: 900px;
               top: 100%;
               left: 0;
               ul {
+                padding: 4px 0;
                 list-style: none;
                 li {
                   cursor: pointer;
@@ -248,8 +250,9 @@ $tablet-resize: 900px;
           align-items: center;
           width: 40%;
           margin: auto;
-          margin-top: 50px;
+          margin-top: 45px;
           gap: 8px;
+          color: #222;
           .logos {
             display: flex;
             gap: 16px;

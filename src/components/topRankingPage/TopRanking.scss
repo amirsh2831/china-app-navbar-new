@@ -1,0 +1,132 @@
+@use "../../styles/responsive.scss" as *;
+$tablet-size: 768px;
+$mobile-resize: 520px;
+.top-ranking-main-banner {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background-image: url("assets/Image/TopRanking/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 56px;
+  height: 300px;
+  overflow: hidden;
+  .top-ranking-banner-info {
+    height: 188px;
+    width: 75%;
+    margin: 0 24px;
+    color: #fff;
+    h1 {
+      font-size: clamp(18px, 2vw, 26px);
+      line-height: 24px;
+      font-weight: 600;
+    }
+    h4 {
+      padding-top: 12px;
+      word-break: break-all;
+      font-size: clamp(12px, 2vw, 16px);
+      line-height: 26px;
+      width: 90%;
+      font-weight: 400;
+      margin-bottom: 24px;
+      @include responsive($mobile) {
+        width: 50%;
+      }
+    }
+    a.top-ranking-discover {
+      font-size: clamp(12px, 2vw, 16px);
+      background-color: #fff0cf;
+      padding: 8px 16px;
+      border-radius: 16px;
+      color: #ff620a;
+    }
+    @include responsive($mobile) {
+      margin: auto;
+    }
+  }
+}
+.top-ranking-main-body {
+  max-width: 1920px;
+  margin: auto;
+  padding-top: 48px;
+  width: 98%;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  .top-ranking-filters {
+    display: none;
+    border-radius: 4px;
+    position: sticky;
+    top: 96px;
+    padding-top: 8px;
+    width: 220px;
+    background-color: #fff;
+    @include responsive($tablet-size) {
+      display: block;
+    }
+  }
+  .top-ranking-filter-mobile {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    background-color: #fff;
+    height: 48px;
+    z-index: 60;
+    @include responsive($tablet-size) {
+      display: none;
+    }
+  }
+
+  .top-ranking-main-products {
+    position: relative;
+    // width: 85%;
+    margin: auto;
+    .top-ranking-products-header {
+      padding-left: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      h3 {
+        font-size: clamp(16px, 2vw, 22px);
+        line-height: 28px;
+        color: #222;
+      }
+      a {
+        color: #007dfa;
+        font-size: 16px;
+      }
+    }
+    .top-ranking-products-grid-wrapper {
+      justify-content: space-evenly;
+      margin: 24px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px;
+      @include responsive($mobile-resize) {
+        gap: 36px;
+        justify-content: space-evenly;
+      }
+      @include responsive($tablet-size) {
+        justify-content: space-evenly;
+        gap: 16px;
+      }
+    }
+    @include responsive($tablet-size) {
+      width: calc(100% - 227px);
+      margin: 0;
+    }
+  }
+}
+.sticky-top-ranking {
+  top: 45px;
+  left: 0;
+  display: block;
+  position: fixed;
+  @include responsive($mobile) {
+    top: 60px;
+  }
+}

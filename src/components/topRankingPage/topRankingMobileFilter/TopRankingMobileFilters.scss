@@ -1,0 +1,26 @@
+.top-ranking-mobile-filters {
+  width: 100%;
+  padding: 16px 16px;
+  .top-ranking-mobile-container {
+    height: 100%;
+    display: flex;
+    .dropdown-container {
+      display: none;
+      position: absolute;
+      top: 80%;
+      left: 0;
+      height: 100vh;
+      background-color: #fff;
+
+      .top-ranking-filters-container::-webkit-scrollbar {
+        display: none;
+      }
+      .top-ranking-filters-header {
+        display: none;
+      }
+    }
+  }
+  .top-ranking-mobile-container:hover .dropdown-container {
+    display: block;
+  }
+}

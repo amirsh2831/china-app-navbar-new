@@ -1,0 +1,93 @@
+@use "../../../styles/responsive.scss" as *;
+$mobile-resize: 520px;
+
+.top-ranking-product-card {
+  border-radius: 4px;
+  width: 200px;
+  height: 420px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  //   align-items: stretch;
+  .top-ranking-product-banner {
+    width: 100%;
+    height: 237px;
+    img {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    // object-fit: contain;
+  }
+  .top-ranking-product-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 237px);
+    padding: 16px 8px;
+    .top-ranking-product-card-title {
+      font-size: 16px;
+      display: -webkit-box;
+      font-weight: normal;
+      word-break: break-all;
+      letter-spacing: 0.03em;
+      line-height: 16px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #555;
+    }
+    .top-ranking-product-card-tags-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      align-items: center;
+      gap: 8px;
+      .top-ranking-product-card-tags {
+        height: 18px;
+        padding: 2px 8px;
+        border: 1px solid #e64545;
+        color: #e64545;
+        white-space: nowrap;
+        font-size: 12px;
+      }
+    }
+    .top-ranking-product-card-price-tag {
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      width: 90%;
+    }
+    .top-ranking-product-card-amount {
+      font-size: 12px;
+      color: #555;
+    }
+    .top-ranking-product-card-demand {
+      background-image: url("assets/Image/TopRanking/trend.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: 28px;
+      padding-left: 12px;
+      color: #8b2a00;
+    }
+  }
+  .top-ranking-product-card-demand::before {
+    content: "🔥";
+    padding-right: 4px;
+  }
+  @include responsive($mobile-resize) {
+    width: 237px;
+  }
+}

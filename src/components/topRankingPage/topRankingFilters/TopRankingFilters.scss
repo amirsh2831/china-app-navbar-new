@@ -1,0 +1,38 @@
+.top-ranking-filters-container {
+  //   scrollbar-width: thin;
+  //   scrollbar-gutter: stable;
+  //   scrollbar-color: #888 #e0e0e0;
+  height: 700px;
+  overflow-y: scroll;
+  .top-ranking-filters-header {
+    font-size: 12px;
+    // color: #e64545;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+  ul {
+    list-style: none;
+    li {
+      font-size: 14px;
+      color: #555;
+      height: 36px;
+      padding-left: 5px;
+      cursor: pointer;
+      //   &:nth-child(n + 6) {
+      //     display: none;
+      //   }
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #e64545;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: lightgray;
+    border-radius: 100px;
+  }
+}

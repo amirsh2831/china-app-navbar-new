@@ -15,10 +15,12 @@ const Signin = () => {
         <div className="signin-main-container">
           <div className="signin-main-header">
             <div className="signin-main-header-logo-lang">
-              <img
-                alt="Made In China Main Logo"
-                src="assets/Image/Signin/logo.png"
-              />
+              <a href="#">
+                <img
+                  alt="Made In China Main Logo"
+                  src="assets/Image/Signin/logo.png"
+                />
+              </a>
               <div className="signin-main-header-lang">
                 <div className="lang-container">
                   <p>English</p>
@@ -61,7 +63,9 @@ const Signin = () => {
           </div>
           <div className="signin-main-body">
             <div className="left">
-              <img src="assets/Image/Signin/logon.jpg" alt="Main Form Left" />
+              <a href="#">
+                <img src="assets/Image/Signin/logon.jpg" alt="Main Form Left" />
+              </a>
             </div>
             {qrSignin ? (
               <div className="right">
@@ -99,7 +103,7 @@ const Signin = () => {
                 <div className="signin-type-lable">Sign in with a QR code</div>
                 <div className="signin-main-form">
                   <div className="signin-main-form-input">
-                    <label htmlFor="email">Email Address or ID</label>
+                    <label htmlFor="email">Email Address or Member ID</label>
                     <input id="email" />
                   </div>
                   <div className="signin-main-form-input">
@@ -121,24 +125,32 @@ const Signin = () => {
                 <div className="signin-main-form-options">
                   <p>Sign in With</p>
                   <div className="logos">
-                    <img
-                      alt="Login With Face Book"
-                      src="assets/Image/Signin/facebook-logo.svg"
-                    />
-                    <img
-                      alt="Login With Face Book"
-                      src="assets/Image/Signin/linkedin-logo.svg"
-                    />
+                    <a href="#">
+                      <img
+                        alt="Login With Face Book"
+                        src="assets/Image/Signin/facebook-logo.svg"
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        alt="Login With Face Book"
+                        src="assets/Image/Signin/linkedin-logo.svg"
+                      />
+                    </a>
 
-                    <img
-                      alt="Login With Face Book"
-                      src="assets/Image/Signin/x-logo.svg"
-                    />
+                    <a href="#">
+                      <img
+                        alt="Login With Face Book"
+                        src="assets/Image/Signin/x-logo.svg"
+                      />
+                    </a>
 
-                    <img
-                      alt="Login With Face Book"
-                      src="assets/Image/Signin/google-logo.svg"
-                    />
+                    <a href="#">
+                      <img
+                        alt="Login With Face Book"
+                        src="assets/Image/Signin/google-logo.svg"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
