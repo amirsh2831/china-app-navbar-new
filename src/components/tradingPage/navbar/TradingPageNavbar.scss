@@ -13,15 +13,15 @@ $laptop-mini-size: 1280px;
     justify-content: space-between;
     max-width: 1208px;
     margin: auto;
-    .logo-and-title {
+    .trading-logo-and-title {
       display: flex;
       align-items: center;
       gap: 16px;
-      .logo {
+      .trading-logo {
         width: 252px;
         height: 47px;
       }
-      .title {
+      .trading-title {
         display: none;
         padding-top: 8px;
         font-size: clamp(14px, 2vw, 16px);
@@ -35,7 +35,7 @@ $laptop-mini-size: 1280px;
         }
       }
     }
-    .call-to-action {
+    .trading-call-to-action {
       display: flex;
       align-items: center;
       gap: 16px;

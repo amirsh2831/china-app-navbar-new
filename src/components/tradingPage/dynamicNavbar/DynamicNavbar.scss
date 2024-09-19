@@ -8,7 +8,7 @@ $tablet-main: 768px;
   position: relative;
   transition: all 0.3s ease;
   background-color: #fff;
-  z-index: 999;
+  z-index: 9999;
   box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.1);
   .trading-dynamic-navbar-content {
     max-width: 1208px;
@@ -124,7 +124,7 @@ $tablet-main: 768px;
   }
 }
 
-.sticky {
+.sticky-trading {
   display: block;
   position: sticky;
   transform: all 3s ease;

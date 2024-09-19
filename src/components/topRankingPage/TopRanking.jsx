@@ -77,6 +77,169 @@ const TopRanking = () => {
                 demand={"433"}
               />
               <TopRankingCards
+                banner={"assets/Image/TopRanking/product2.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product3.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product4.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product5.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+            </div>
+          </div>
+          <div className="top-ranking-products-wrapper">
+            <div className="top-ranking-products-header">
+              <h3>Most Popular Bathroom Cabinets</h3>
+              <a href="#">View More</a>
+            </div>
+            <div className="top-ranking-products-grid-wrapper">
+              <TopRankingCards
+                banner={"assets/Image/TopRanking/product1.png"}
+                title={
+                  "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"
+                }
+                // title={"hello"}
+                tags={["ODM/OEM", "Online Trading"]}
+                price={"US$ 0.89-0.91 / Set"}
+                amount={"200 Sets (MOQ)"}
+                demand={"433"}
+              />
+              <TopRankingCards
                 banner={"assets/Image/TopRanking/product1.png"}
                 title={
                   "CNC Free Sample Dz47-63 AC Miniature Circuit Breaker 1p 2p 3p 4p 6A 16A 20A 40A 63A AC 230V 400V Electric MCB"

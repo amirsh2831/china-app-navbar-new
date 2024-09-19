@@ -55,7 +55,7 @@ const TrendingPageNavbar = () => {
                 </ul>
               </div>
               <div className="dropdown-item-sections">
-                <p className="title">Sourcing Solutions</p>
+                <p className="trading-title">Sourcing Solutions</p>
                 <ul>
                   {Buyers.sourcing.map((item, i) => (
                     <li key={i}>{item.text}</li>

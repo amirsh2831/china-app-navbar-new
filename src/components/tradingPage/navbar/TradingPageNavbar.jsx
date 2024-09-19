@@ -6,15 +6,15 @@ const TradingPageNavbar = () => {
     <>
       <div className="trading-navbar">
         <div className="trending-page-navbar-content">
-          <div className="logo-and-title">
+          <div className="trading-logo-and-title">
             <img
               src="/assets/Image/TradingPage/logo.png"
-              className="logo"
+              className="trading-logo"
               alt="Trading Page Logo"
             />
             <a className="title">Secured Trading</a>
           </div>
-          <div className="call-to-action">
+          <div className="trading-call-to-action">
             <a href="#">Sign in</a>
             <a href="#">Join Free</a>
           </div>

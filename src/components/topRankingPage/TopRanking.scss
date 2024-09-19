@@ -69,6 +69,7 @@ $mobile-resize: 520px;
     }
   }
   .top-ranking-filter-mobile {
+    cursor: pointer;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
     width: 100%;
     background-color: #fff;
@@ -108,10 +109,9 @@ $mobile-resize: 520px;
       gap: 10px;
       @include responsive($mobile-resize) {
         gap: 36px;
-        justify-content: space-evenly;
       }
       @include responsive($tablet-size) {
-        justify-content: space-evenly;
+        justify-content: flex-start;
         gap: 16px;
       }
     }

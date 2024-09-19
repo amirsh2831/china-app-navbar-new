@@ -241,6 +241,126 @@ const TopRankingFilters = () => {
               </ul>
             </AccordionDetails>
           </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={expanded === "panel9"}
+            onChange={handleChange("panel9")}
+          >
+            <AccordionSummary
+              aria-controls="panel9d-content"
+              id="panel9d-header"
+            >
+              <Typography>
+                {RecommendedRankings.AgricultureAndFood.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {RecommendedRankings.AgricultureAndFood.data.map((item, i) => (
+                  <li key={i}>{item.text}</li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
     </>

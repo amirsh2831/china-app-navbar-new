@@ -1,0 +1,33 @@
+.suppliers-main-banner-slider-card {
+  width: 172px;
+  .suppliers-main-banner-slider-image {
+    width: 100%;
+    height: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .suppliers-main-banner-slider-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 4px;
+    text-align: left;
+    p {
+      font-size: 12px;
+      line-height: 21px;
+      color: #fff;
+      margin-top: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    h3 {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}

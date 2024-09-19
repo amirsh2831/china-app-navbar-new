@@ -81,7 +81,9 @@ const DynamicNavbar = () => {
 
   return (
     <>
-      <div className={`trading-dynamic-navbar ${scroll ? "sticky" : ""}`}>
+      <div
+        className={`trading-dynamic-navbar ${scroll ? "sticky-trading" : ""}`}
+      >
         <div
           className="trading-dynamic-navbar-content"
           style={search ? { display: "none" } : { display: "flex" }}

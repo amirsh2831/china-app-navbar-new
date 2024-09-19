@@ -12,7 +12,7 @@ const Contentslider = ({ cat, products }) => {
 
   return (
     <>
-      <div className="products">
+      <div className="products-trad">
         <div className="products-cat">
           <Swiper
             id="cat-slider"

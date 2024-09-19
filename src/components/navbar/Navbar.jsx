@@ -29,8 +29,8 @@ const Navbar = () => {
   return (
     <>
       <div className="nav">
-        <div className={`navbar ${scroll ? "sticky" : " "}`}>
-          <div class="left-side">
+        <div className={`navbar ${scroll ? "main-nav-sticky" : " "}`}>
+          <div class="navbar-left-side">
             <div className="sidebar-icon">
               <button onClick={toggleDrawer(true)}>
                 <MenuOutlinedIcon fontSize="medium" />
@@ -44,13 +44,13 @@ const Navbar = () => {
               alt="Main Logo"
               width={100}
               height={100}
-              className="logo"
+              className="main-navbar-logo"
             />
             <div class="search-icon-resize">
               <SearchOutlinedIcon fontSize="medium" />
             </div>
           </div>
-          <div class="right-side">
+          <div class="navbar-right-side">
             <div class="categories-resize">
               <div className="cat">
                 <p>All Categories</p>

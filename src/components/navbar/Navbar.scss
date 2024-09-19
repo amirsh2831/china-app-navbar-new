@@ -29,7 +29,7 @@ $text-8: 8px;
 //   }
 // }
 
-.logo {
+.main-navbar-logo {
   width: 10rem;
   height: 3rem;
   @include responsive($mobile) {
@@ -158,7 +158,7 @@ $text-8: 8px;
   }
 }
 
-.products {
+.navbar-products {
   border-right: 1px solid $input-camera-icon-color;
   display: flex;
   align-items: center;
@@ -556,7 +556,7 @@ $text-8: 8px;
   }
 }
 
-.sticky {
+.main-nav-sticky {
   z-index: 100;
   position: fixed;
   top: 0;
@@ -564,7 +564,7 @@ $text-8: 8px;
   box-shadow: $shadow;
   // z-index: 100;
   transition: all 0.3s ease;
-  div.left-side {
+  div.navbar-left-side {
     display: flex;
     @include responsive($mobile) {
       padding-left: 16px;
@@ -576,7 +576,7 @@ $text-8: 8px;
       display: block;
     }
   }
-  div.right-side {
+  div.navbar-right-side {
     padding: 0 24px;
     justify-content: space-around;
     @include responsive($mobile) {
@@ -744,7 +744,7 @@ $text-8: 8px;
   }
 }
 
-.right-side {
+.navbar-right-side {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -854,7 +854,7 @@ $text-8: 8px;
   }
 }
 
-.left-side {
+.navbar-left-side {
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -1,0 +1,150 @@
+.suppliers-main-banner {
+  width: 95%;
+  margin: auto;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #5125af 0%, #62cad9 100%);
+  .suppliers-main-banner-video {
+    padding: 18px 36px;
+    width: 35%;
+    .supplier-main-banner-video-player {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .suppliers-main-banner-right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: calc(100% - 410px);
+    height: 360px;
+    .suppliers-main-banner-header {
+      padding: 8px 16px;
+      background-color: #62cad9;
+      display: flex;
+      justify-content: space-between;
+      .suppliers-main-banner-title {
+        display: flex;
+        gap: 8px;
+        img.suppliers-main-banner-manufacturer-logo {
+          width: 50px;
+          height: 50px;
+        }
+        .suppliers-main-banner-top-supplier-info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          align-items: start;
+          .suppliers-main-banner-top-supplier-title {
+            width: max-content;
+            a {
+              color: #fff;
+              text-decoration: underline;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 21px;
+              white-space: nowrap;
+            }
+          }
+          .suppliers-main-banner-top-supplier-more-information {
+            padding-top: 8px;
+            display: flex;
+            align-items: center;
+            a {
+              width: fit-content;
+              display: flex;
+              align-items: center;
+              font-size: 12px;
+              margin-right: 16px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: #fff;
+              img {
+                width: 16px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+      .suppliers-main-banner-call-to-action {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        .suppliers-main-banner-contact-now {
+          height: 30px;
+          padding: 0 16px;
+          width: auto;
+          color: #fff;
+          border-radius: 48px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          span {
+            padding-top: 2px;
+            font-size: 18px;
+          }
+
+          background-color: #e64545;
+          &:hover {
+            background-color: #cf3e3e;
+          }
+        }
+        .suppliers-main-banner-chat {
+          height: 30px;
+          padding: 0 16px;
+          width: auto;
+          background-color: #f5f7fa;
+          border-radius: 48px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+    .suppliers-main-banner-slider-container {
+      width: 100%;
+      height: 100%;
+      // height: max-content;
+      #supplier-main-banner-slider {
+        width: 100%;
+        height: 100%;
+        .swiper-scrollbar.swiper-scrollbar-horizontal {
+          max-width: 60px !important;
+          height: 5px;
+          bottom: 0;
+          left: 45%;
+
+          background-color: gray;
+        }
+        .swiper-button-next {
+          background-color: red;
+        }
+        .swiper-scrollbar-drag {
+          background-color: #555;
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+
+          /* Center slide text vertically */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

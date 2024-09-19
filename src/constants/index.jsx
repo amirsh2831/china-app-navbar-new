@@ -2227,3 +2227,114 @@ export const Badges = [
   "Movers & Shakers",
   "New Releases",
 ];
+
+export const SuppliersSlider = [
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product2.png",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product3.png",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product4.png",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product5.png",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product6.png",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+  {
+    title: "Manufacturer in China Made in China Brass Countersank Head Screw",
+    price: "US$ 0.01-0.2",
+    type: "Piece",
+    img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
+  },
+];

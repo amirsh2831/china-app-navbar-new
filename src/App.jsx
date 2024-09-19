@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/footer";
+import SupplierMain from "./components/suppliersMainPage/SuppliersMain";
+// import Footer from "./components/footer/footer";
 // import VideoChannel from "./components/videoChannel/VideoChannel";
 // import { useState } from "react";
 // import TrendingShows from "./components/trendingShows/TrendingShows";
@@ -21,15 +22,12 @@ import Footer from "./components/footer/footer";
 // import DynamicNavbar from "./components/tradingPage/dynamicNavbar/DynamicNavbar";
 // import { useInView } from "react-intersection-observer";
 // import Signin from "./components/signinPage/Signin";
-import TopRanking from "./components/topRankingPage/TopRanking";
+// import TopRanking from "./components/topRankingPage/TopRanking";
 function App() {
   return (
     <>
       <Navbar />
-      <TopRanking />
-      <footer>
-        <Footer />
-      </footer>
+      <SupplierMain />
     </>
   );
 }

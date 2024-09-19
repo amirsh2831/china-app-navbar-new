@@ -7,7 +7,7 @@ import "swiper/css";
 const MainProductContainer = ({ products, cat }) => {
   return (
     <>
-      <div className="products">
+      <div className="products-main-slider products-trad">
         <div className="products-cat">
           <Swiper
             id="cat-slider"
