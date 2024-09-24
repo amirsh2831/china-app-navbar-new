@@ -1,0 +1,27 @@
+.suppliers-page-recommended-products {
+  width: 13%;
+  background-color: #fff;
+  height: 600px;
+  padding: 16px 15px;
+  h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .suppliers-page-recommended-products-list {
+    list-style: none;
+    li {
+      font-size: 14px;
+      line-height: 8px;
+      padding: 9px 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #555;
+      a {
+        &:hover {
+          color: #e64545;
+        }
+      }
+    }
+  }
+}

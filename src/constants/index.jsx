@@ -2338,3 +2338,42 @@ export const SuppliersSlider = [
     img: "assets/Image/Suppliers/BannerSlider/product1.jpg",
   },
 ];
+
+export const suppliersCatCategries = [
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+  {
+    text: "Manufacturing & Processing Machinery",
+    number: "6,986",
+  },
+];

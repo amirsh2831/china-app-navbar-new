@@ -9,6 +9,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 import { SuppliersSlider } from "../../../constants";
 const SupplierMainBanner = () => {
   return (

@@ -1,0 +1,30 @@
+.suppliers-main-page-container {
+  width: 95%;
+  margin: auto;
+  .suppliers-page-text-under-main-banner {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    p {
+      font-weight: normal;
+      color: #888888;
+      #total-manufacturers {
+        color: #222222;
+        line-height: 23px;
+      }
+    }
+  }
+  .suppliers-page-main-body {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: space-between;
+    .suppliers-page-main-body-manufacturers-cards {
+      width: 70%;
+    }
+  }
+}

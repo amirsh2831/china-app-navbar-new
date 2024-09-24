@@ -1,6 +1,5 @@
 .suppliers-main-banner {
-  width: 95%;
-  margin: auto;
+  width: 100%;
   height: max-content;
   display: flex;
   align-items: center;
@@ -21,8 +20,9 @@
     width: calc(100% - 410px);
     height: 360px;
     .suppliers-main-banner-header {
-      padding: 8px 16px;
-      background-color: #62cad9;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 16px;
       display: flex;
       justify-content: space-between;
       .suppliers-main-banner-title {
@@ -122,10 +122,24 @@
           background-color: gray;
         }
         .swiper-button-next {
-          background-color: red;
+          background: rgba(0, 0, 0, 0.3);
+          color: #fff;
+          padding: 30px 16px;
+          &::after {
+            font-size: 18px;
+          }
         }
+        .swiper-button-prev {
+          background: rgba(0, 0, 0, 0.3);
+          color: #fff;
+          padding: 30px 16px;
+          &::after {
+            font-size: 18px;
+          }
+        }
+
         .swiper-scrollbar-drag {
-          background-color: #555;
+          background-color: #372525;
         }
 
         .swiper-slide {

@@ -1,0 +1,56 @@
+.suppliers-main-categories {
+  width: 14%;
+  height: max-content;
+
+  background-color: #fff;
+  .suppliers-main-page-categories-item-container {
+    padding: 16px 15px;
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .suppliers-main-page-categories-item-list {
+      list-style: none;
+      padding: 8px 0px;
+      li {
+        text-overflow: wrap;
+        white-space: wrap;
+
+        font-size: 14px;
+        line-height: 15px;
+        color: #555;
+        margin-bottom: 8px;
+      }
+    }
+    .suppliers-more-less {
+      background-color: #fff;
+      font-size: 12px;
+      border-radius: 24px;
+      border: 1px solid #555;
+      padding: 4px 8px;
+    }
+  }
+  .suppliers-page-categories-checkbox-list {
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .suppliers-pafe-categoties-checkbox-list-contaier {
+      gap: 8px;
+      align-items: end;
+      display: flex;
+      input {
+        width: 16px;
+        height: 16px;
+      }
+      label {
+        color: #555;
+        font-size: 14px;
+      }
+    }
+  }
+}
