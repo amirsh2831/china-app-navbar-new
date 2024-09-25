@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
 import SupplierMain from "./components/suppliersMainPage/SuppliersMain";
-// import Footer from "./components/footer/footer";
+import Footer from "./components/footer/footer";
 // import VideoChannel from "./components/videoChannel/VideoChannel";
 // import { useState } from "react";
 // import TrendingShows from "./components/trendingShows/TrendingShows";
@@ -28,6 +28,9 @@ function App() {
     <>
       <Navbar />
       <SupplierMain />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

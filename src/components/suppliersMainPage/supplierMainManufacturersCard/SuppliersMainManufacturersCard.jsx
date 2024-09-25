@@ -6,10 +6,12 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import LocalPostOfficeOutlinedIcon from "@mui/icons-material/LocalPostOfficeOutlined";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import SuppliersMainBannerSliderCards from "../suppliersMainBanner/suppliersMainBannerSliderCards/SuppliersMainBannerSliderCards";
 import SuppliersManufacturersSampleCards from "./SuppliersManufacturersSampleCards/SuppliersManufacturersSAmpleCard";
 import Replay30OutlinedIcon from "@mui/icons-material/Replay30Outlined";
+import { useMediaQuery } from "react-responsive";
+import { SuppliersManufacturersCards } from "../../../constants";
 const SuppliersMainManufacturersCard = () => {
+  const resize1 = useMediaQuery({ maxWidth: 1150 });
   return (
     <>
       <div className="suppliers-page-manufacturers-card">
@@ -99,30 +101,16 @@ const SuppliersMainManufacturersCard = () => {
           </div>
           <div className="suppliers-page-manufacturers-card-body-img-samples">
             {/* Manufacturere Samples goes here */}
-            <a href="#">
-              <SuppliersManufacturersSampleCards
-                image={"assets/Image/Suppliers/manufacturer-image-0.png"}
-                title={"US$ 90"}
-                type={"Set"}
-                amount={1}
-              />
-            </a>
-            <a href="#">
-              <SuppliersManufacturersSampleCards
-                image={"assets/Image/Suppliers/manufacturer-image-1.png"}
-                title={"US$ 90"}
-                type={"Set"}
-                amount={1}
-              />
-            </a>
-            <a href="#">
-              <SuppliersManufacturersSampleCards
-                image={"assets/Image/Suppliers/manufacturer-image-2.png"}
-                title={"US$ 90"}
-                type={"Set"}
-                amount={1}
-              />
-            </a>
+            {SuppliersManufacturersCards.map((item, i) => (
+              <a href="#" key={i}>
+                <SuppliersManufacturersSampleCards
+                  image={item.image}
+                  title={item.title}
+                  type={item.type}
+                  amount={item.amount}
+                />
+              </a>
+            ))}
           </div>
           <div className="suppliers-page-manufacturers-card-body-look-around">
             {/* 360 Image goes here */}

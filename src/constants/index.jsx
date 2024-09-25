@@ -2377,3 +2377,34 @@ export const suppliersCatCategries = [
     number: "6,986",
   },
 ];
+
+export const MainBannerPhotoSlider = [
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image1.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image2.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image3.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image4.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image5.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image6.png",
+  "assets/Image/Suppliers/BannerSlider/PhotoSlider/Image7.png",
+];
+
+export const SuppliersManufacturersCards = [
+  {
+    image: "assets/Image/Suppliers/manufacturer-image-0.png",
+    title: "US$ 90",
+    type: "Set",
+    amount: 1,
+  },
+  {
+    image: "assets/Image/Suppliers/manufacturer-image-1.png",
+    title: "US$ 90",
+    type: "Set",
+    amount: 1,
+  },
+  {
+    image: "assets/Image/Suppliers/manufacturer-image-2.png",
+    title: "US$ 90",
+    type: "Set",
+    amount: 1,
+  },
+];

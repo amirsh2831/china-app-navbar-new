@@ -1,4 +1,7 @@
+@use "../../../styles/responsive.scss" as *;
+$miniLaptop: 1024px;
 .suppliers-page-recommended-products {
+  display: none;
   width: 13%;
   background-color: #fff;
   height: 600px;
@@ -23,5 +26,8 @@
         }
       }
     }
+  }
+  @include responsive($miniLaptop) {
+    display: block;
   }
 }

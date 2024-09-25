@@ -1,0 +1,112 @@
+.supplier-modal-video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  .supplier-modal-video-player {
+    width: 100%;
+    .controls {
+      position: absolute;
+      background-color: red;
+      bottom: -100px;
+    }
+  }
+}
+.supplier-modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  padding: 16px;
+  .supplier-modal-info-title {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 470px;
+    &:hover {
+      color: crimson;
+    }
+  }
+  .supplier-modal-info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+    p {
+      font-size: 0.875rem;
+      color: #888;
+      #supplier-modal-price {
+        color: #e64545;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      #supplier-modal-type {
+        font-size: 1rem;
+        color: #222;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      #supplier-modal-moq {
+        font-weight: 600;
+      }
+    }
+    #supplier-modal-info-link {
+      font-size: 0.75rem;
+      &:hover {
+        color: #e64545;
+      }
+    }
+    .supplier-modal-info-call-to-action {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .supplier-modal-info-call-to-action-contact-now {
+        background-color: #e64545;
+        display: flex;
+        padding: 8px 16px;
+        border-radius: 4px;
+        align-items: center;
+        gap: 4px;
+        color: #fff;
+        p {
+          color: #fff;
+        }
+      }
+      a {
+        color: #1470cc;
+        display: flex;
+        align-items: center;
+        #supplier-modal-info-more-details-icon {
+          font-size: 16px;
+        }
+        &:hover {
+          color: #e64545;
+        }
+      }
+    }
+  }
+}
+.supplier-modal-close {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 100%;
+  .supplier-modal-close-icon {
+    margin: auto;
+    color: #fff;
+    font-size: 36px;
+  }
+}

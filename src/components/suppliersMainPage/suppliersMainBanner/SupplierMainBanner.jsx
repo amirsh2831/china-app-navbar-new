@@ -2,27 +2,71 @@ import React from "react";
 import "./SupplierMainBanner.scss";
 import ReactPlayer from "react-player";
 import LocalPostOfficeOutlinedIcon from "@mui/icons-material/LocalPostOfficeOutlined";
+import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
+import InsertPhotoOutlinedIcon from "@mui/icons-material/InsertPhotoOutlined";
 // Import Swiper React components
 import SuppliersMainBannerSliderCards from "./suppliersMainBannerSliderCards/suppliersMainBannerSliderCards";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar, Navigation } from "swiper/modules";
-// Import Swiper styles
+import { Scrollbar, Navigation, Autoplay } from "swiper/modules";
+import { useMediaQuery } from "react-responsive";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { SuppliersSlider } from "../../../constants";
+import { useInViewContext } from "../../../Context/ContextProvider";
+import VideoPlayerModal from "./videoPlayerModal/VideoPlayerModal";
+import { useState } from "react";
+import PhotoSlider from "./photoSlider/PhotoSlider";
+
 const SupplierMainBanner = () => {
+  const resize1 = useMediaQuery({ maxWidth: 1366 });
+  const isTablet = useMediaQuery({ maxWidth: 1024 });
+  const { open, setOpen } = useInViewContext();
+  const [video, setVideo] = useState(true);
+  const handleOpen = () => setOpen(true);
+  const handleVideo = () => {
+    setVideo(true);
+  };
+  const handlePhoto = () => {
+    setVideo(false);
+  };
   return (
     <>
       <div className="suppliers-main-banner">
         <div className="suppliers-main-banner-video">
-          <ReactPlayer
-            url="src/assets/video.mp4"
-            playing={true}
-            width="100%"
-            height="100%"
-            className="supplier-main-banner-video-player"
-          />
+          {video ? (
+            <video
+              onClick={handleOpen}
+              id="main-banner-video"
+              autoPlay
+              muted
+              loop
+              controls
+              className="supplier-main-banner-video-player"
+            >
+              <VideoPlayerModal />
+              <source src="src/assets/video.mp4" type="video/mp4" />
+            </video>
+          ) : (
+            <PhotoSlider />
+          )}
+          <div className="suppliers-main-banner-view-section-controller">
+            <div
+              className="suppliers-main-banner-view-video-controller"
+              style={video ? { backgroundColor: "#fff", color: "#000" } : {}}
+              onClick={handleVideo}
+            >
+              <VideocamOutlinedIcon fontSize="medium" />
+            </div>
+            <div
+              className="supplier-page-main-banner-view-photo-controller"
+              style={video ? {} : { backgroundColor: "#fff", color: "#000" }}
+              onClick={handlePhoto}
+            >
+              <InsertPhotoOutlinedIcon fontSize="medium" />
+              <span>10 / 10</span>
+            </div>
+          </div>
         </div>
         <div className="suppliers-main-banner-right-side">
           <div className="suppliers-main-banner-header">
@@ -74,12 +118,16 @@ const SupplierMainBanner = () => {
             <Swiper
               navigation={true}
               spaceBetween={10}
-              slidesPerView={6}
-              slidesPerGroup={6}
-              scrollbar={{
-                dragSize: 30,
+              slidesPerView={isTablet ? 4 : resize1 ? 5 : 6}
+              slidesPerGroup={isTablet ? 4 : resize1 ? 5 : 6}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
               }}
-              modules={[Scrollbar, Navigation]}
+              scrollbar={{
+                dragSize: 20,
+              }}
+              modules={[Scrollbar, Navigation, Autoplay]}
               id="supplier-main-banner-slider"
             >
               {SuppliersSlider.map((item, i) => (

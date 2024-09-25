@@ -8,8 +8,12 @@ import SuppliersRecommended from "./suppliersRecomended/SuppliersRecommended";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
+import SuppliersMainSecondBanner from "./suppliersMainSecondBanner/SuppliersMainSecondBanner";
+import { TrendingPageLinks } from "../../constants";
 const SuppliersMain = () => {
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
@@ -66,6 +70,40 @@ const SuppliersMain = () => {
             <SuppliersMainManufacturersCard />
           </div>
           <SuppliersRecommended />
+        </div>
+        <div className="suppliers-page-cards-pagination">
+          <div className="suppliers-page-cards-pagination-count">
+            <p>Items Per Range: </p>
+            <span>10</span>/<span>30</span>/<span>60</span>
+          </div>
+          <div className="suppliers-page-cards-pagination-container">
+            <Stack spacing={2}>
+              <Pagination count={200} variant="outlined" shape="rounded" />
+            </Stack>
+            <button className="suppliers-page-cards-pagination-next-button">
+              Next
+              <KeyboardTabOutlinedIcon
+                fontSize="inherit"
+                id="next-button-icon"
+              />
+            </button>
+          </div>
+        </div>
+        <div className="suppliers-page-second-banner">
+          <SuppliersMainSecondBanner />
+        </div>
+        <div className="suppliers-page-footer-recommended-supplier">
+          <h3>Recommended Suppliers:</h3>
+          <ul className="suppliers-page-footer-recommended-supplier-list">
+            {TrendingPageLinks.RecommendedSupplier.map((item, i) => (
+              <li
+                className="suppliers-page-footer-recommended-supplier-list-item"
+                key={i}
+              >
+                <a href={item.link}>{item.text}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>

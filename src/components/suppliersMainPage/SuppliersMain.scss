@@ -1,3 +1,5 @@
+@use "../../styles/responsive.scss" as *;
+$TabletSize: 1024px;
 .suppliers-main-page-container {
   width: 95%;
   margin: auto;
@@ -24,7 +26,95 @@
     margin-top: 16px;
     justify-content: space-between;
     .suppliers-page-main-body-manufacturers-cards {
+      width: 95%;
+      margin: auto;
+      @include responsive($tablet) {
+        margin: 0;
+        width: 80%;
+      }
+      @include responsive($TabletSize) {
+        width: 70%;
+      }
+    }
+  }
+  .suppliers-page-cards-pagination {
+    padding: 8px 16px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .suppliers-page-cards-pagination-container {
+      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 2;
+    }
+    .suppliers-page-cards-pagination-count {
+      font-size: 12px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      white-space: nowrap;
+    }
+    .suppliers-page-cards-pagination-next-button {
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #e64545;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.75rem;
+      #next-button-icon {
+        font-size: 18px;
+      }
+      &:hover {
+        background-color: #cc3d3d;
+      }
+    }
+  }
+  .suppliers-page-second-banner {
+    padding-top: 48px;
+    width: 95%;
+    margin: auto;
+    @include responsive($TabletSize) {
       width: 70%;
+    }
+  }
+  .suppliers-page-footer-recommended-supplier {
+    padding-top: 36px;
+    width: 70%;
+    display: none;
+    margin: auto;
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .suppliers-page-footer-recommended-supplier-list {
+      margin-bottom: 24px;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 4px;
+
+      li {
+        a {
+          white-space: nowrap;
+          font-weight: thin;
+          text-align: left;
+          font-size: 0.75rem;
+          line-height: 24px;
+          color: #2e8ae6;
+          &:hover {
+            color: #e64545;
+          }
+        }
+      }
+    }
+    @include responsive($TabletSize) {
+      display: block;
     }
   }
 }

@@ -1,5 +1,7 @@
+@use "../../../styles/responsive.scss" as *;
 .suppliers-main-categories {
-  width: 14%;
+  width: 17%;
+  display: none;
   height: max-content;
 
   background-color: #fff;
@@ -52,5 +54,11 @@
         font-size: 14px;
       }
     }
+  }
+  @include responsive($tablet) {
+    display: block;
+  }
+  @include responsive($laptop) {
+    width: 14%;
   }
 }
