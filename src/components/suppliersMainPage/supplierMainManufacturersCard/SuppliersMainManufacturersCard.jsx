@@ -8,8 +8,12 @@ import LocalPostOfficeOutlinedIcon from "@mui/icons-material/LocalPostOfficeOutl
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import SuppliersManufacturersSampleCards from "./SuppliersManufacturersSampleCards/SuppliersManufacturersSAmpleCard";
 import Replay30OutlinedIcon from "@mui/icons-material/Replay30Outlined";
+import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import { useMediaQuery } from "react-responsive";
-import { SuppliersManufacturersCards } from "../../../constants";
+import {
+  SuppliersAuditedSupplier,
+  SuppliersManufacturersCards,
+} from "../../../constants";
 const SuppliersMainManufacturersCard = () => {
   const resize1 = useMediaQuery({ maxWidth: 1150 });
   return (
@@ -21,6 +25,7 @@ const SuppliersMainManufacturersCard = () => {
             <img
               src="assets/Image/Suppliers/com-logo.png"
               alt="Manufacturer Logo"
+              className="suppliers-page-manufacturers-card-company-logo"
             />
             <div className="suppliers-page-manufacturers-card-header-info-title">
               <h3>Shaoxing Naite Drive Technology Co., Ltd.</h3>
@@ -40,9 +45,34 @@ const SuppliersMainManufacturersCard = () => {
                   <span className="suppliers-page-manufacturers-card-info-badge-item-audited">
                     Audited Supplyer <ExpandMoreRoundedIcon fontSize="small" />
                   </span>
+                  <div className="suppliers-page-manufactureres-card-info-item-tooltip">
+                    <h3>Audited Supplier</h3>
+                    <ul className="suppliers-page-manufacturers-card-info-item-tooltip-list">
+                      {SuppliersAuditedSupplier.map((item, i) => (
+                        <li key={i}>
+                          {item.disabled ? (
+                            <span className="suppliers-page-manufacturers-card-info-title-item-disabled">
+                              {item.text}
+                            </span>
+                          ) : (
+                            <div className="suppliers-page-manufacturers-card-info-tooltip-list-item">
+                              <CheckRoundedIcon
+                                fontSize="inherit"
+                                className="supplier-page-audited-supplier-icon"
+                              />
+                              <span className="supplier-page-manufacturers-card-info-tooltip-item-text">
+                                {item.text}
+                              </span>
+                            </div>
+                          )}
+                          <div className="suppliers-page-manufacturers-card-info-tooltip-list-item"></div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
                 <div className="suppliers-page-manufacturers-card-header-info-badge-item">
-                  <AspectRatioOutlinedIcon fontSize="medium" />
+                  <AspectRatioOutlinedIcon fontSize="inherit" />
                   <span>2000+</span>
                 </div>
               </div>
@@ -124,6 +154,13 @@ const SuppliersMainManufacturersCard = () => {
               </div>
             </a>
           </div>
+        </div>
+        <div className="suppliers-page-manufacturers-card-body-mobile-buttons">
+          <button>Contact Now</button>
+          <button>
+            <img src="assets/Image/Suppliers/massege.png" alt="chat app icon" />
+            Chat With Supplier
+          </button>
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import SupplierMain from "./components/suppliersMainPage/SuppliersMain";
 import Footer from "./components/footer/footer";
+import SuppliersMobilieSubNav from "./components/suppliersMainPage/suppliersMobileSubNab/SuppliersMobilieSubNav";
 // import VideoChannel from "./components/videoChannel/VideoChannel";
 // import { useState } from "react";
 // import TrendingShows from "./components/trendingShows/TrendingShows";
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <SuppliersMobilieSubNav />
       <SupplierMain />
       <footer>
         <Footer />

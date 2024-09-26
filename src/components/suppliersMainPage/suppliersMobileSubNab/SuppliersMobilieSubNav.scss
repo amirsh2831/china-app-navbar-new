@@ -1,0 +1,56 @@
+@use "../../../styles/responsive.scss" as *;
+.suppliers-page-mobile-sub-navbar {
+  position: fixed;
+  z-index: 80;
+  top: 46px;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  //   padding: 8px 0;
+  height: 40px;
+  justify-content: space-between;
+  .suppliers-page-mobile-sub-navbar-nav {
+    height: 100%;
+
+    ul {
+      height: 100%;
+      gap: 16px;
+      align-items: center;
+      display: flex;
+      padding: 0 16px;
+      list-style: none;
+      li.suppliers-mobile-sub-navbar-nav-items {
+        display: flex;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+  .suppliers-page-mobile-sub-navbar-filter {
+    button {
+      font-size: 12px;
+
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 16px;
+      #suppliers-page-mobile-sub-navbar-filter-icon {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  @include responsive($mobile) {
+    display: none;
+  }
+}
+.suppliers-page-mobile-sub-navbar-active-item {
+  border-bottom: 1px solid crimson;
+  height: 100%;
+}

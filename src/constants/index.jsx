@@ -2408,3 +2408,74 @@ export const SuppliersManufacturersCards = [
     amount: 1,
   },
 ];
+
+export const SuppliersAuditedSupplier = [
+  {
+    text: "General Information",
+    disabled: false,
+  },
+  {
+    text: "Foreign Trade Capacity",
+    disabled: false,
+  },
+  {
+    text: "Product Reasearch & Development Capacity",
+    disabled: false,
+  },
+  {
+    text: "Management Systems & Product Certefication",
+    disabled: false,
+  },
+  {
+    text: "Financial Position",
+    disabled: true,
+  },
+  {
+    text: "Working Environment",
+    disabled: false,
+  },
+  {
+    text: "Photos",
+    disabled: false,
+  },
+  {
+    text: "Industry Information",
+    disabled: true,
+  },
+  {
+    text: "Energy Saving & emission Reduction",
+    disabled: false,
+  },
+];
+
+export const SuppliersAnnualRevenue = [
+  {
+    text: "<1 Million USD",
+    number: "7,509",
+  },
+  {
+    text: "1 ~ 2.5 Million USD",
+    number: "7,509",
+  },
+  {
+    text: "2.5 ~ 5 Million USD",
+    number: "7,509",
+  },
+  {
+    text: "5 ~ 10 Million USD",
+    number: "7,509",
+  },
+  {
+    text: "10 ~ 50 Million USD",
+    number: "7,509",
+  },
+  {
+    text: "10 ~ 50 Million USD",
+    number: "7,509",
+  },
+
+  {
+    text: "10 ~ 50 Million USD",
+    number: "7,509",
+  },
+];

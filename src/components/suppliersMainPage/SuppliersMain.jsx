@@ -14,7 +14,9 @@ import Stack from "@mui/material/Stack";
 import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
 import SuppliersMainSecondBanner from "./suppliersMainSecondBanner/SuppliersMainSecondBanner";
 import { TrendingPageLinks } from "../../constants";
+import { useMediaQuery } from "react-responsive";
 const SuppliersMain = () => {
+  const isMoblie = useMediaQuery({ maxWidth: 425 });
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
       Home
@@ -35,20 +37,21 @@ const SuppliersMain = () => {
   return (
     <>
       <div className="suppliers-main-page-container">
-        <Stack spacing={2}>
-          <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-            aria-label="breadcrumb"
-            sx={{ Color: "#555", fontSize: "12px", padding: "8px 0 " }}
-          >
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
+        {!isMoblie && (
+          <Stack spacing={2}>
+            <Breadcrumbs
+              separator={<NavigateNextIcon fontSize="small" />}
+              aria-label="breadcrumb"
+              sx={{ Color: "#555", fontSize: "12px", padding: "8px 0 " }}
+            >
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        )}
         <SuppliersMainBanner />
         <span className="suppliers-page-text-under-main-banner">
           Made In China
           <p>
-            {" "}
             <span id="total-manufacturers">Total 2,000+</span> manufacturers &
             suppliers found with 6,000+ products
           </p>
@@ -77,7 +80,7 @@ const SuppliersMain = () => {
             <span>10</span>/<span>30</span>/<span>60</span>
           </div>
           <div className="suppliers-page-cards-pagination-container">
-            <Stack spacing={2}>
+            <Stack spacing={2} whiteSpace={"nowrap"}>
               <Pagination count={200} variant="outlined" shape="rounded" />
             </Stack>
             <button className="suppliers-page-cards-pagination-next-button">

@@ -1,23 +1,25 @@
 @use "../../../styles/responsive.scss" as *;
 $resize1: 1380px;
+$TabletSize: 768px;
+$resize2: 570px;
 .suppliers-second-banner {
   width: 100%;
   height: max-content;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #5125af 0%, #62cad9 100%);
   .suppliers-second-banner-video {
     position: relative;
-    width: 40%;
+    width: 100%;
     padding: 16px 14px;
     height: 370px;
     .suppliers-second-banner-view-section-controller {
       cursor: pointer;
-      z-index: 10000;
+      z-index: 1;
       position: absolute;
-      bottom: 50px;
-      left: 32%;
+      top: 30px;
+      left: 38%;
       display: flex;
       align-items: center;
       height: max-content;
@@ -37,22 +39,30 @@ $resize1: 1380px;
         border-radius: 36px;
         align-items: center;
       }
+      @include responsive($TabletSize) {
+        left: 32%;
+      }
     }
     .supplier-second-banner-video-player {
       background-color: black;
       height: 100%;
       width: 100%;
     }
+    @include responsive($TabletSize) {
+      width: 40%;
+    }
   }
   .suppliers-second-banner-right-side {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    width: 60%;
+    width: 100%;
     height: 360px;
     .suppliers-second-banner-header {
       padding: 8px 16px;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       justify-content: space-between;
       .suppliers-second-banner-title {
         display: flex;
@@ -65,14 +75,16 @@ $resize1: 1380px;
           display: flex;
           flex-direction: column;
           gap: 4px;
-          align-items: center;
+          // align-items: center;
           .suppliers-second-banner-top-supplier-title {
+            text-align: left;
             width: max-content;
             a {
+              text-align: left;
               color: #fff;
               text-decoration: underline;
               font-weight: 700;
-              font-size: 1rem;
+              font-size: clamp(12px, 1vw, 14px);
               line-height: 21px;
               white-space: nowrap;
             }
@@ -82,10 +94,11 @@ $resize1: 1380px;
             display: flex;
             align-items: center;
             a {
+              white-space: nowrap;
               width: fit-content;
               display: flex;
               align-items: center;
-              font-size: 0.75em;
+              font-size: clamp(10px, 1vw, 12px);
               margin-right: 16px;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -111,10 +124,10 @@ $resize1: 1380px;
           display: flex;
           align-items: center;
           gap: 8px;
-          font-size: 14px;
+          font-size: clamp(10px, 2vw, 14px);
           span {
             padding-top: 2px;
-            font-size: 18px;
+            font-size: clamp(14px, 2vw, 18px);
           }
 
           background-color: #e64545;
@@ -134,12 +147,22 @@ $resize1: 1380px;
           font-size: 14px;
         }
       }
+      @include responsive($resize2) {
+        flex-direction: row;
+        gap: 0;
+      }
+      @include responsive($TabletSize) {
+        flex-direction: column;
+        gap: 4px;
+      }
       @include responsive($resize1) {
-        display: flex;
+        flex-direction: row;
+        gap: 0;
       }
     }
     .suppliers-second-banner-slider-container {
-      width: 100%;
+      // width: 100%;
+      padding: 0 8px;
       height: 100%;
       // height: max-content;
       #supplier-second-banner-slider {
@@ -155,7 +178,7 @@ $resize1: 1380px;
           background-color: #888888;
         }
         .swiper-button-next {
-          right: 1rem;
+          right: 0;
           background: rgba(0, 0, 0, 0.3);
           color: #fff;
           padding: 30px 16px;
@@ -164,7 +187,7 @@ $resize1: 1380px;
           }
         }
         .swiper-button-prev {
-          left: 1rem;
+          left: 0;
           background: rgba(0, 0, 0, 0.3);
           color: #fff;
           padding: 30px 16px;
@@ -196,5 +219,11 @@ $resize1: 1380px;
         }
       }
     }
+    @include responsive($TabletSize) {
+      width: 60%;
+    }
+  }
+  @include responsive($TabletSize) {
+    display: flex;
   }
 }

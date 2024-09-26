@@ -19,8 +19,12 @@ import { useState } from "react";
 import PhotoSlider from "./photoSlider/PhotoSlider";
 
 const SupplierMainBanner = () => {
+  const [sliderIndex, setSliderIndex] = useState(1);
+  const [totalSlides, setTotalSlides] = useState(0);
   const resize1 = useMediaQuery({ maxWidth: 1366 });
   const isTablet = useMediaQuery({ maxWidth: 1024 });
+  const isSmallTablet = useMediaQuery({ maxWidth: 570 });
+
   const { open, setOpen } = useInViewContext();
   const [video, setVideo] = useState(true);
   const handleOpen = () => setOpen(true);
@@ -30,6 +34,7 @@ const SupplierMainBanner = () => {
   const handlePhoto = () => {
     setVideo(false);
   };
+
   return (
     <>
       <div className="suppliers-main-banner">
@@ -48,7 +53,11 @@ const SupplierMainBanner = () => {
               <source src="src/assets/video.mp4" type="video/mp4" />
             </video>
           ) : (
-            <PhotoSlider />
+            <PhotoSlider
+              setTotalSlides={setTotalSlides}
+              index={sliderIndex}
+              setSliderIndex={setSliderIndex}
+            />
           )}
           <div className="suppliers-main-banner-view-section-controller">
             <div
@@ -64,7 +73,13 @@ const SupplierMainBanner = () => {
               onClick={handlePhoto}
             >
               <InsertPhotoOutlinedIcon fontSize="medium" />
-              <span>10 / 10</span>
+              {video ? (
+                "photos"
+              ) : (
+                <span>
+                  {sliderIndex} / {totalSlides}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -118,8 +133,10 @@ const SupplierMainBanner = () => {
             <Swiper
               navigation={true}
               spaceBetween={10}
-              slidesPerView={isTablet ? 4 : resize1 ? 5 : 6}
-              slidesPerGroup={isTablet ? 4 : resize1 ? 5 : 6}
+              slidesPerView={isSmallTablet ? 3 : isTablet ? 4 : resize1 ? 5 : 6}
+              slidesPerGroup={
+                isSmallTablet ? 3 : isTablet ? 4 : resize1 ? 5 : 6
+              }
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,

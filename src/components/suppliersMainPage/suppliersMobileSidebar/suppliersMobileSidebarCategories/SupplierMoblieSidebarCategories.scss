@@ -1,0 +1,32 @@
+.suppliers-page-mobile-sub-navbar-sidebar-categories {
+  padding: 16px 16px;
+  //   display: flex;
+  .suppliers-page-mobile-sub-navbar-sidebar-categories-header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .suppliers-more-less-secondary {
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .suppliers-page-mobile-sub-navbar-sidebar-categories-items-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+    li {
+      font-size: 10px;
+      border-radius: 4px;
+      padding: 8px 8px;
+      border: 1px solid #888888;
+      background-color: #f2f3f4;
+    }
+  }
+}

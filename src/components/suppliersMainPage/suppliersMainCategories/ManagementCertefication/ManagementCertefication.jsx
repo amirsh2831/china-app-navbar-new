@@ -11,6 +11,12 @@ const ManagementCertefication = () => {
     <>
       <div className="suppliers-main-page-categories-item-container">
         <h3>Management Certefication</h3>
+        <button
+          className="suppliers-more-less-secondary"
+          onClick={handleMoreLess}
+        >
+          {more ? "Less" : "More"}
+        </button>
         <ul className="suppliers-main-page-categories-item-list">
           {more
             ? suppliersCatCategries.map((item, i) => (

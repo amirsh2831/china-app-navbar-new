@@ -22,6 +22,7 @@ const SuppliersMainSecondBanner = () => {
   const { open, setOpen } = useInViewContext();
   const [video, setVideo] = useState(true);
   const resize1 = useMediaQuery({ maxWidth: 1366 });
+  const isTablet = useMediaQuery({ maxWidth: 768 });
   const handleVideo = () => {
     setVideo(true);
   };
@@ -111,8 +112,8 @@ const SuppliersMainSecondBanner = () => {
             <Swiper
               navigation={true}
               spaceBetween={10}
-              slidesPerView={resize1 ? 2 : 3}
-              slidesPerGroup={resize1 ? 2 : 3}
+              slidesPerView={isTablet ? 3 : resize1 ? 2 : 3}
+              slidesPerGroup={isTablet ? 3 : resize1 ? 2 : 3}
               scrollbar={{
                 dragSize: 10,
               }}

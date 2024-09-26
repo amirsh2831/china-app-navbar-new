@@ -2,27 +2,34 @@
 $resize1: 980px;
 $resize2: 1200px;
 $resize3: 1440px;
+$TabletSize: 768px;
 
 .suppliers-page-manufacturers-card {
   padding: 16px;
   width: 100%;
-  height: 300px;
+  height: 270px;
   background-color: white;
   border-bottom: 1px solid #e7ebf3;
   .suppliers-page-manufacturers-card-header {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: start;
     .suppliers-page-manufacturers-card-header-info {
       display: flex;
       gap: 16px;
+      img.suppliers-page-manufacturers-card-company-logo {
+        display: none;
+        @include responsive($mobile) {
+          display: block;
+        }
+      }
       .suppliers-page-manufacturers-card-header-info-title {
         display: flex;
         align-items: start;
         flex-direction: column;
         justify-content: space-evenly;
         h3 {
-          font-size: 16px;
+          font-size: clamp(12px, 2vw, 16px);
           color: #222222;
           font-weight: 500;
           line-height: 24px;
@@ -33,11 +40,12 @@ $resize3: 1440px;
           justify-content: space-around;
           gap: 8px;
           .suppliers-page-manufacturers-card-header-info-badge-item {
+            position: relative;
             display: flex;
             align-items: center;
             gap: 8px;
             span {
-              font-size: 14px;
+              font-size: clamp(10px, 2vw, 14px);
               line-height: 21px;
             }
             span.suppliers-page-manufacturers-card-info-badge-item-audited {
@@ -49,27 +57,105 @@ $resize3: 1440px;
               width: 16px;
               height: 16px;
             }
+            .suppliers-page-manufactureres-card-info-item-tooltip {
+              box-shadow: rgba(0, 0, 0, 0.03) 0px 9px 16px 8px,
+                rgba(0, 0, 0, 0.06) 0px 6px 10px,
+                rgba(0, 0, 0, 0.12) 0px 3px 6px -3px;
+              // padding: 8px;
+              border-radius: 3px;
+              position: absolute;
+              width: max-content;
+              white-space: nowrap;
+              // visibility: hidden;
+              bottom: 120%;
+              // left: 50%;
+              margin-right: calc(100% / 2);
+              display: none;
+              background-color: #fff;
+              z-index: 1;
+              h3 {
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 8px 8px 0px 8px;
+                width: 100%;
+                text-align: left;
+                border-bottom: 0.5px solid lightgray;
+              }
+              .suppliers-page-manufacturers-card-info-item-tooltip-list {
+                white-space: nowrap;
+                padding: 8px;
+                list-style: none;
+                line-height: 24px;
+                .suppliers-page-manufacturers-card-info-title-item-disabled {
+                  color: #888888;
+                  padding-left: 24px;
+                }
+                .suppliers-page-manufacturers-card-info-tooltip-list-item {
+                  white-space: nowrap;
+                  display: flex;
+                  align-items: center;
+                  flex-wrap: nowrap;
+                  gap: 8px;
+                  .supplier-page-audited-supplier-icon {
+                    color: #e64545;
+                  }
+                  .supplier-page-manufacturers-card-info-tooltip-item-text {
+                    line-height: 24px;
+
+                    white-space: nowrap;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+            .suppliers-page-manufactureres-card-info-item-tooltip::after {
+              content: " ";
+              position: absolute;
+              top: 100%; /* At the bottom of the tooltip */
+              left: 10%;
+              width: 4px;
+              height: 6px;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: white transparent transparent transparent;
+            }
+            &:hover .suppliers-page-manufactureres-card-info-item-tooltip {
+              display: block;
+            }
           }
         }
       }
     }
     .suppliers-page-manufacturers-card-header-like {
+      padding-top: 8px;
       display: flex;
       align-items: center;
       gap: 12px;
       .suppliers-page-manufacturers-card-header-like-item {
-        font-size: 14px;
+        // font-size: clamp(10px, 2vw, 14px);
         display: flex;
         align-items: center;
         gap: 4px;
         .suppliers-page-manufacturers-hedaer-like-icon {
-          font-size: 18px;
+          font-size: clamp(12px, 2vw, 18px);
         }
         span {
           padding-bottom: 4px;
-          font-size: 14px;
+          font-size: clamp(10px, 2vw, 14px);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        @include responsive($TabletSize) {
+          &:nth-child(2) {
+            display: flex;
+          }
         }
       }
+    }
+    @include responsive($TabletSize) {
+      align-items: end;
     }
   }
   .suppliers-page-manufacturers-card-body {
@@ -78,7 +164,7 @@ $resize3: 1440px;
     align-items: center;
     margin-top: 16px;
     .supliers-page-manufacturers-card-body-info {
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: start;
@@ -91,19 +177,19 @@ $resize3: 1440px;
           gap: 4px;
           margin-bottom: 8px;
           p {
-            font-size: 14px;
+            font-size: clamp(10px, 2vw, 14px);
             line-height: 21px;
             color: #999999;
           }
           span {
-            font-size: 14px;
+            font-size: clamp(10px, 2vw, 14px);
             line-height: 21px;
             color: #222222;
           }
         }
       }
       a {
-        font-size: 14px;
+        font-size: clamp(10px, 2vw, 14px);
         display: flex;
         align-items: center;
         color: #2e8ae6;
@@ -122,7 +208,7 @@ $resize3: 1440px;
           display: flex;
           align-items: center;
           gap: 8px;
-          font-size: 14px;
+          font-size: clamp(10px, 2vw, 14px);
           padding: 2px 12px;
           color: #fff;
           border-radius: 4px;
@@ -134,15 +220,22 @@ $resize3: 1440px;
           display: flex;
           align-items: center;
           gap: 8px;
+          font-size: clamp(10px, 2vw, 14px);
         }
+      }
+      @include responsive($mobile) {
+        display: flex;
       }
     }
     .suppliers-page-manufacturers-card-body-img-samples {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
       a {
-        display: none;
+        display: block;
+        @include responsive($mobile) {
+          display: none;
+        }
         @include responsive($resize1) {
           &:nth-child(1) {
             display: block;
@@ -161,6 +254,7 @@ $resize3: 1440px;
       }
     }
     .suppliers-page-manufacturers-card-body-look-around {
+      display: none;
       position: relative;
       object-fit: cover;
       width: 50%;
@@ -190,6 +284,31 @@ $resize3: 1440px;
       @include responsive($resize1) {
         width: 30%;
       }
+      @include responsive($mobile) {
+        display: block;
+      }
     }
+  }
+  .suppliers-page-manufacturers-card-body-mobile-buttons {
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    button {
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      background-color: #e3e4e6;
+      border-radius: 16px;
+      border: 1px solid #888888;
+    }
+    @include responsive($mobile) {
+      display: none;
+    }
+  }
+  @include responsive($mobile) {
+    height: 300px;
   }
 }

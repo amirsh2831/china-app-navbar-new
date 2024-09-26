@@ -1,10 +1,10 @@
 @use "../../../styles/responsive.scss" as *;
 $Tabletsize: 768px;
-$miniLaptop: 1024px;
+$resize1: 540px;
 .suppliers-main-banner {
   width: 100%;
   height: max-content;
-  display: block;
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding: 8px;
@@ -16,7 +16,7 @@ $miniLaptop: 1024px;
     height: 370px;
     .suppliers-main-banner-view-section-controller {
       cursor: pointer;
-      z-index: 10000;
+      z-index: 1;
       position: absolute;
       top: 30px;
       left: 40%;
@@ -65,6 +65,8 @@ $miniLaptop: 1024px;
       padding-bottom: 8px;
       padding-right: 16px;
       display: flex;
+      flex-direction: column;
+      gap: 8px;
       justify-content: space-between;
       .suppliers-main-banner-title {
         display: flex;
@@ -151,6 +153,9 @@ $miniLaptop: 1024px;
           }
         }
       }
+      @include responsive($resize1) {
+        flex-direction: row;
+      }
     }
     .suppliers-main-banner-slider-container {
       width: 100%;
@@ -212,6 +217,9 @@ $miniLaptop: 1024px;
     @include responsive($Tabletsize) {
       width: 70%;
     }
+  }
+  @include responsive($mobile) {
+    display: block;
   }
   @include responsive($Tabletsize) {
     display: flex;
