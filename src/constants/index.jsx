@@ -2450,31 +2450,38 @@ export const SuppliersAuditedSupplier = [
 
 export const SuppliersAnnualRevenue = [
   {
+    id: 1,
     text: "<1 Million USD",
     number: "7,509",
   },
   {
+    id: 2,
     text: "1 ~ 2.5 Million USD",
     number: "7,509",
   },
   {
+    id: 3,
     text: "2.5 ~ 5 Million USD",
     number: "7,509",
   },
   {
+    id: 4,
     text: "5 ~ 10 Million USD",
     number: "7,509",
   },
   {
+    id: 5,
     text: "10 ~ 50 Million USD",
     number: "7,509",
   },
   {
+    id: 6,
     text: "10 ~ 50 Million USD",
     number: "7,509",
   },
 
   {
+    id: 7,
     text: "10 ~ 50 Million USD",
     number: "7,509",
   },

@@ -4,11 +4,8 @@ import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import "./Signin.scss";
 import { Lang, SigninFooter } from "../../constants";
 import { useState } from "react";
+import SigninComp from "../signinComp/SigninComp";
 const Signin = () => {
-  const [qrSignin, setQrSignin] = useState(false);
-  const handleQrSelec = () => {
-    setQrSignin(!qrSignin);
-  };
   return (
     <>
       <div className="signin-main">
@@ -67,7 +64,8 @@ const Signin = () => {
                 <img src="assets/Image/Signin/logon.jpg" alt="Main Form Left" />
               </a>
             </div>
-            {qrSignin ? (
+            <SigninComp />
+            {/* {qrSignin ? (
               <div className="right">
                 <div onClick={handleQrSelec}>
                   <img
@@ -154,7 +152,7 @@ const Signin = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
         <div className="signin-main-footer">

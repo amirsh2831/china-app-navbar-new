@@ -25,7 +25,7 @@ const SupplierMainBanner = () => {
   const isTablet = useMediaQuery({ maxWidth: 1024 });
   const isSmallTablet = useMediaQuery({ maxWidth: 570 });
 
-  const { open, setOpen } = useInViewContext();
+  const [open, setOpen] = useState();
   const [video, setVideo] = useState(true);
   const handleOpen = () => setOpen(true);
   const handleVideo = () => {
@@ -40,18 +40,20 @@ const SupplierMainBanner = () => {
       <div className="suppliers-main-banner">
         <div className="suppliers-main-banner-video">
           {video ? (
-            <video
-              onClick={handleOpen}
-              id="main-banner-video"
-              autoPlay
-              muted
-              loop
-              controls
-              className="supplier-main-banner-video-player"
-            >
-              <VideoPlayerModal />
-              <source src="src/assets/video.mp4" type="video/mp4" />
-            </video>
+            <>
+              <video
+                onClick={handleOpen}
+                id="main-banner-video"
+                autoPlay
+                muted
+                loop
+                controls
+                className="supplier-main-banner-video-player"
+              >
+                <source src="src/assets/video.mp4" type="video/mp4" />
+              </video>
+              <VideoPlayerModal open={open} setOpen={setOpen} />
+            </>
           ) : (
             <PhotoSlider
               setTotalSlides={setTotalSlides}

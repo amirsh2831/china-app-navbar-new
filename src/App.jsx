@@ -22,17 +22,20 @@ import SuppliersMobilieSubNav from "./components/suppliersMainPage/suppliersMobi
 // import MainSlider from "./components/tradingPage/mainSlider/MainSlider";
 // import DynamicNavbar from "./components/tradingPage/dynamicNavbar/DynamicNavbar";
 // import { useInView } from "react-intersection-observer";
-// import Signin from "./components/signinPage/Signin";
+import Signin from "./components/signinPage/Signin";
+import SigninComp from "./components/signinComp/SigninComp";
 // import TopRanking from "./components/topRankingPage/TopRanking";
 function App() {
   return (
     <>
-      <Navbar />
+      <Signin />
+      {/* <SigninComp /> */}
+      {/* <Navbar />
       <SuppliersMobilieSubNav />
       <SupplierMain />
       <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </>
   );
 }

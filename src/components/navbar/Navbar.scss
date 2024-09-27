@@ -39,14 +39,15 @@ $text-8: 8px;
 }
 
 .nav {
+  background-color: white;
   width: 100%;
   border-bottom: 1px solid $light-gray;
   display: flex;
   justify-content: space-around;
-  @include responsive($laptop) {
-    max-width: 1920px;
-    margin: auto;
-  }
+  // @include responsive($laptop) {
+  //   max-width: 1920px;
+  //   margin: auto;
+  // }
 }
 
 .navbar {
@@ -72,6 +73,10 @@ $text-8: 8px;
     gap: 16px;
     max-width: 1920px;
   }
+  @include responsive($laptop) {
+    max-width: 1920px;
+    margin: auto;
+  }
 }
 .sub-navbar {
   position: relative;
@@ -96,6 +101,7 @@ $text-8: 8px;
     justify-content: space-between;
     gap: 16px;
     max-width: 1920px;
+    margin: auto;
   }
 }
 
@@ -167,7 +173,7 @@ $text-8: 8px;
   gap: 4px;
   padding: 0 8px;
   padding: 0 16px;
-  font-size: $text-16;
+  font-size: clamp(12px, 2vw, 16px);
   // @include responsive($tablet) {
   // }
 }
@@ -302,15 +308,16 @@ $text-8: 8px;
   @include responsive($mobile) {
     // z-index: 100;
     width: 100%;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     box-shadow: $shadow;
   }
-  @include responsive($laptop) {
-    justify-content: center;
-    max-width: 1920px;
-    margin: auto;
-  }
+  // @include responsive($laptop) {
+  //   justify-content: center;
+  //   max-width: 1920px;
+  //   margin: auto;
+  // }
 }
 
 .flexbox {
@@ -764,6 +771,8 @@ $text-8: 8px;
     flex-shrink: 0;
     align-items: center;
     .cat {
+      // background-color: red;
+      font-size: clamp(12px, 2vw, 16px);
       padding: 0 8px;
       height: 40px;
       position: relative;
@@ -792,18 +801,19 @@ $text-8: 8px;
         grid-auto-flow: row;
         gap: 0px;
         height: 100%;
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(2, 200px);
 
         li.dropdown-item {
           display: flex;
           align-items: end;
           text-align: center;
           height: 36px;
-          width: 300px;
+          width: 200px;
+          text-align: left;
           cursor: pointer;
           display: flex;
           align-items: center;
-          font-size: $text-14;
+          font-size: clamp(10px, 2vw, 14px);
           color: black;
           opacity: $opacity-high;
           flex-shrink: 0;
@@ -814,6 +824,12 @@ $text-8: 8px;
           &:hover {
             color: $primary-color;
           }
+          @include responsive($tablet) {
+            width: 300px;
+          }
+        }
+        @include responsive($tablet) {
+          grid-template-columns: repeat(2, 300px);
         }
       }
     }
@@ -828,13 +844,16 @@ $text-8: 8px;
   }
 }
 .categories-resize:hover .dropdown-container {
-  width: 600px;
+  width: 400px;
   height: 600px;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
   grid-auto-rows: minmax(600px, auto);
   gap: 16px;
+  @include responsive($tablet) {
+    width: 600px;
+  }
 }
 
 .categories:hover .dropdown-container {

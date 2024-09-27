@@ -13,13 +13,14 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { SuppliersSlider } from "../../../constants";
-import { useInViewContext } from "../../../Context/ContextProvider";
 import VideoPlayerModal from "../suppliersMainBanner/videoPlayerModal/VideoPlayerModal";
 import { useState } from "react";
 import PhotoSlider from "../suppliersMainBanner/photoSlider/PhotoSlider";
 import { useMediaQuery } from "react-responsive";
 const SuppliersMainSecondBanner = () => {
-  const { open, setOpen } = useInViewContext();
+  const [sliderIndex, setSliderIndex] = useState(1);
+  const [totalSlides, setTotalSlides] = useState(0);
+  const [open, setOpen] = useState(false);
   const [video, setVideo] = useState(true);
   const resize1 = useMediaQuery({ maxWidth: 1366 });
   const isTablet = useMediaQuery({ maxWidth: 768 });
@@ -36,20 +37,26 @@ const SuppliersMainSecondBanner = () => {
       <div className="suppliers-second-banner">
         <div className="suppliers-second-banner-video">
           {video ? (
-            <video
-              onClick={handleOpen}
-              id="second-banner-video"
-              autoPlay
-              muted
-              loop
-              controls
-              className="supplier-second-banner-video-player"
-            >
-              <VideoPlayerModal />
-              <source src="src/assets/video.mp4" type="video/mp4" />
-            </video>
+            <>
+              <video
+                onClick={handleOpen}
+                id="second-banner-video"
+                autoPlay
+                muted
+                loop
+                controls
+                className="supplier-second-banner-video-player"
+              >
+                <source src="src/assets/video.mp4" type="video/mp4" />
+              </video>
+              <VideoPlayerModal open={open} setOpen={setOpen} />
+            </>
           ) : (
-            <PhotoSlider />
+            <PhotoSlider
+              setTotalSlides={setTotalSlides}
+              index={sliderIndex}
+              setSliderIndex={setSliderIndex}
+            />
           )}
           <div className="suppliers-second-banner-view-section-controller">
             <div
@@ -65,7 +72,13 @@ const SuppliersMainSecondBanner = () => {
               onClick={handlePhoto}
             >
               <InsertPhotoOutlinedIcon fontSize="medium" />
-              <span>10 / 10</span>
+              {video ? (
+                "photos"
+              ) : (
+                <span>
+                  {sliderIndex} / {totalSlides}
+                </span>
+              )}
             </div>
           </div>
         </div>

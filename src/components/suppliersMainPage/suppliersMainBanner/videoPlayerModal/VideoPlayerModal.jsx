@@ -3,17 +3,15 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import LocalPostOfficeOutlinedIcon from "@mui/icons-material/LocalPostOfficeOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import { useInViewContext } from "../../../../Context/ContextProvider";
 import "./VideoPlayerModal.scss";
-const VideoPlayerModal = () => {
-  const { open, setOpen } = useInViewContext();
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+const VideoPlayerModal = ({ open, setOpen }) => {
+  const handleClose = () => {
+    setOpen(false);
+    console.log(open);
+  };
   const style = {
     position: "absolute",
     top: "50%",
@@ -29,7 +27,7 @@ const VideoPlayerModal = () => {
         // aria-labelledby="transition-modal-title"
         // aria-describedby="transition-modal-description"
         open={open}
-        onClose={handleClose}
+        onClose={() => handleClose()}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
@@ -42,7 +40,6 @@ const VideoPlayerModal = () => {
           <Box sx={style}>
             <div className="supplier-modal-video-container">
               <video
-                onClick={handleOpen}
                 id="main-banner-video"
                 autoPlay
                 muted
@@ -86,8 +83,8 @@ const VideoPlayerModal = () => {
               <div
                 className="supplier-modal-close"
                 onClick={() => {
-                  handleClose;
-                  console.log(open);
+                  handleClose();
+                  // console.log(open);
                 }}
               >
                 <CloseOutlinedIcon

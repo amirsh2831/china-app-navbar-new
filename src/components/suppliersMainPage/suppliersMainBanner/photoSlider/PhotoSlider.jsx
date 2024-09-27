@@ -20,9 +20,9 @@ const PhotoSlider = ({ setSliderIndex, index, setTotalSlides }) => {
     <>
       <div className="suppliers-page-main-banner-photo-slider-container">
         <Swiper
-          onSwiper={(swiper) => setTotalSlides(swiper.slides.length - 1)}
+          onSwiper={(swiper) => setTotalSlides(swiper.slides.length)}
           onActiveIndexChange={(siwperCore) => {
-            handleSetIndex(siwperCore.activeIndex);
+            handleSetIndex(siwperCore.activeIndex + 1);
           }}
           navigation={true}
           modules={[Navigation]}

@@ -15,7 +15,6 @@ export const InViewProvider = ({ children }) => {
   const [section6Ref, section6InView] = useInView({ threshold: 0.6 });
   const [section7Ref, section7InView] = useInView({ threshold: 0.6 });
   const [section8Ref, section8InView] = useInView({ threshold: 0.6 });
-  const [open, setOpen] = useState(false);
   // Add any additional state if needed
 
   // Context value that can be accessed by components
@@ -36,8 +35,6 @@ export const InViewProvider = ({ children }) => {
     section7InView,
     section8Ref,
     section8InView,
-    open,
-    setOpen,
   };
 
   return (
