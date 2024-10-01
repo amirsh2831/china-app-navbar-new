@@ -1,0 +1,43 @@
+.products-page-more-videos-container {
+  margin-top: 24px;
+  padding: 16px;
+  height: 280px;
+  background-color: #fff;
+  .products-page-more-videos-body {
+    // padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .products-page-more-videos-item {
+      width: 19%;
+      .products-page-more-videos-preview {
+        position: relative;
+        width: 100%;
+        height: auto;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .products-page-main-videos-play-button {
+          position: absolute;
+          top: 40%;
+          left: 40%;
+          color: #fff;
+        }
+      }
+      .products-page-main-videos-info {
+        margin-top: 24px;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    // padding: 36px ;
+  }
+}

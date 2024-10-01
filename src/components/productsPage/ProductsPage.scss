@@ -1,0 +1,53 @@
+.products-main-page-container {
+  width: 95%;
+  margin: auto;
+  .products-main-page-text-under-main-banner {
+    // copy and Paste
+  }
+  .products-main-body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    // background-color: aqua;
+    height: auto;
+    margin-top: 24px;
+    .products-page-main-body-product-container {
+      height: 100%;
+      width: 83%;
+      // height: 1800px;
+      height: max-content;
+      .products-page-main-body-cards-container {
+        background-color: #fff;
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        // padding-bottom: 16px;
+        border-bottom: 1px solid #e6ecf2;
+      }
+    }
+    .products-page-main-body-cards-pagination {
+      background-color: #fff;
+      padding: 16px 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      .products-page-cards-pagination-next-button {
+        background-color: #e64545;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #fff;
+        border-radius: 4px;
+        margin-left: 8px;
+      }
+    }
+    .products-page-secondary-banner {
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+  }
+}

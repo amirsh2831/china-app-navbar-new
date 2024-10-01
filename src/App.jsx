@@ -24,18 +24,20 @@ import SuppliersMobilieSubNav from "./components/suppliersMainPage/suppliersMobi
 // import { useInView } from "react-intersection-observer";
 import Signin from "./components/signinPage/Signin";
 import SigninComp from "./components/signinComp/SigninComp";
+import ProductsPage from "./components/productsPage/ProductsPage";
 // import TopRanking from "./components/topRankingPage/TopRanking";
 function App() {
   return (
     <>
-      <Signin />
+      {/* <Signin /> */}
       {/* <SigninComp /> */}
-      {/* <Navbar />
-      <SuppliersMobilieSubNav />
-      <SupplierMain />
+      <Navbar />
+      {/* <SuppliersMobilieSubNav />
+      <SupplierMain /> */}
+      <ProductsPage />
       <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </>
   );
 }
