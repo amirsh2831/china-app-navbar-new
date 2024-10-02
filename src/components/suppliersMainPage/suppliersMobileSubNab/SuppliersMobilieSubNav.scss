@@ -47,7 +47,10 @@
     }
   }
   @include responsive($mobile) {
+    // top: 128px;
     display: none;
+  }
+  @include responsive($tablet) {
   }
 }
 .suppliers-page-mobile-sub-navbar-active-item {

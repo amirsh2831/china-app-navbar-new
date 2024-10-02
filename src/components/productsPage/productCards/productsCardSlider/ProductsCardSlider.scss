@@ -1,10 +1,42 @@
 .products-page-card-photo-slider-container {
   width: 100%;
   height: 100%;
+  position: relative;
+  .products-page-card-photo-slider-index {
+    position: absolute;
+    display: flex;
+    // background-color: red;
+    bottom: 0;
+    z-index: 99;
+    align-items: center;
+    gap: 4px;
+    left: 6px;
+    .products-page-card-photo-sldier-play-button {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #fff;
+      }
+    }
+    .products-page-card-photo-slider-index-item {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 6px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
   #products-page-main-cards-photo-slider {
     overflow: hidden;
     width: 100%;
-    height: 80%;
+    height: 100%;
     .swiper-button-next {
       // opacity: 0;
       // visibility: hidden;

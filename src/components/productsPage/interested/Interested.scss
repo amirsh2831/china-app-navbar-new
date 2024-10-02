@@ -1,22 +1,28 @@
+@use "../../../styles/responsive.scss" as *;
+
 .products-page-interested-container {
   padding: 16px;
+  border: 1px solid #e6ecf2;
+
   margin-top: 24px;
   background-color: #fff;
   h3 {
     font-size: 16px;
   }
   .products-page-interested-body {
-    height: 300px;
+    height: max-content;
     padding: 36px 12px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
     .products-page-interested-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      width: 20%;
+      width: 33.33%;
       align-items: center;
       .products-page-interested-image {
         width: 70%;
@@ -38,6 +44,12 @@
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      @include responsive($tablet) {
+        width: 25%;
+      }
+      @include responsive($laptop) {
+        width: 20%;
       }
     }
   }

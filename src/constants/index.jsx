@@ -2532,6 +2532,32 @@ export const ProductsCardInformation = {
   threesixty: false,
   fast: true,
   largeImage: true,
+  moreInfolist: [
+    {
+      title: "Material:",
+      text: "Iron",
+    },
+    {
+      title: "Type:",
+      text: "Open Top",
+    },
+    {
+      title: "Usage:",
+      text: "outdoor Cycling",
+    },
+    {
+      title: "Customized:",
+      text: "Customized",
+    },
+    {
+      title: "color",
+      text: "Multi Color",
+    },
+    {
+      title: "Feature",
+      text: "Eco-Freindly",
+    },
+  ],
 };
 
 export const ProductsInterested = [

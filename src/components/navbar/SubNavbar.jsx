@@ -9,7 +9,7 @@ import { Categories } from "../../constants";
 const SubNavbar = () => {
   return (
     <>
-      <div className="sub-nav">
+      <div className="sub-nav" id="sub">
         <div className="sub-navbar">
           <div className="sub-flex">
             <div className="categories">

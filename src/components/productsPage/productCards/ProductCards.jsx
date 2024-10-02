@@ -59,11 +59,14 @@ const ProductCards = ({ productCardsInfo }) => {
               />
             )}
             {productCardsInfo.largeImage && (
-              <VideoLabelOutlinedIcon fontSize="small" color="red" />
+              <VideoLabelOutlinedIcon
+                fontSize="small"
+                style={{ color: "crimson" }}
+              />
             )}
             {productCardsInfo.fast && (
               <a className="products-main-cards-info-more-info-fast">
-                <StarIcon fontSize="small" color="red" />
+                <StarIcon fontSize="small" style={{ color: "crimson" }} />
                 <strong>5</strong>
                 <span>(5.0)</span>"On Time Deliverly
               </a>
@@ -75,7 +78,7 @@ const ProductCards = ({ productCardsInfo }) => {
             </button>
             <button className="products-main-cards-info-call-to-action-cart-button">
               {/* shopping cart icon */}
-              <AddShoppingCartIcon color="red" />
+              <AddShoppingCartIcon color="red" fontSize="inherit" />
             </button>
             <button className="products-main-cards-info-call-to-action-massenger">
               {/* massenger icon  */}
@@ -84,6 +87,15 @@ const ProductCards = ({ productCardsInfo }) => {
                 alt="massege icon"
               />
             </button>
+          </div>
+          <div className="products-main-cards-info-hover">
+            <ul className="products-main-cards-info-hover-list">
+              {productCardsInfo.moreInfolist.map((item, i) => (
+                <li key={i}>
+                  <span>{item.title}</span> {item.text}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         {/* more info on card hover goes here */}

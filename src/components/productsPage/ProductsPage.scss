@@ -1,22 +1,36 @@
+@use "../../styles/responsive.scss" as *;
 .products-main-page-container {
-  width: 95%;
+  width: 98%;
   margin: auto;
-  .products-main-page-text-under-main-banner {
+  .products-page-text-under-main-banner {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 20px;
+    margin-top: 16px;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #888;
+    }
     // copy and Paste
   }
   .products-main-body {
+    position: relative;
     display: flex;
     align-items: start;
     justify-content: space-between;
-    // background-color: aqua;
     height: auto;
     margin-top: 24px;
     .products-page-main-body-product-container {
+      position: relative;
       height: 100%;
-      width: 83%;
+      width: 98%;
       // height: 1800px;
       height: max-content;
       .products-page-main-body-cards-container {
+        position: relative;
         background-color: #fff;
         margin-top: 24px;
         display: flex;
@@ -25,6 +39,9 @@
         width: 100%;
         // padding-bottom: 16px;
         border-bottom: 1px solid #e6ecf2;
+      }
+      @include responsive($tablet) {
+        width: 85%;
       }
     }
     .products-page-main-body-cards-pagination {

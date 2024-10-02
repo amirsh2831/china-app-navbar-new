@@ -1,5 +1,79 @@
+@use "../../../styles/responsive.scss" as *;
+.products-page-categories-fixed-item-1,
+.products-page-categories-fixed-item-2,
+.products-page-categories-fixed-item-3 {
+  display: none;
+  @include responsive($tablet) {
+    display: flex;
+  }
+}
+.products-page-categories-fixed-item-1 {
+  cursor: pointer;
+  position: fixed;
+  width: 13.5%;
+  height: 60px;
+  z-index: 990;
+  top: 77px;
+  background-color: white;
+  // display: flex;
+  align-items: center;
+  padding-left: 24px;
+  border-bottom: 1px solid #e6ecf2;
+
+  p {
+    // background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &:hover {
+    color: crimson;
+  }
+}
+.products-page-categories-fixed-item-2 {
+  cursor: pointer;
+  position: fixed;
+  width: 13.5%;
+  height: 60px;
+  z-index: 990;
+  top: 137px;
+  background-color: white;
+  // display: flex;
+  align-items: center;
+  padding-left: 24px;
+  border-bottom: 1px solid #e6ecf2;
+  p {
+    // background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &:hover {
+    color: crimson;
+  }
+}
+.products-page-categories-fixed-item-3 {
+  cursor: pointer;
+  position: fixed;
+  width: 13.5%;
+  height: 60px;
+  z-index: 99;
+  top: 192px;
+  background-color: white;
+  // display: flex;
+  align-items: center;
+  padding-left: 24px;
+  border-bottom: 1px solid #e6ecf2;
+  p {
+    // background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &:hover {
+    color: crimson;
+  }
+}
 .products-page-categories {
-  width: 15%;
+  display: none;
+  width: 14%;
   background-color: #fff;
   height: auto;
   padding: 8px;
@@ -8,5 +82,8 @@
     font-size: 16px;
     color: #888;
     padding-left: 8px;
+  }
+  @include responsive($tablet) {
+    display: block;
   }
 }

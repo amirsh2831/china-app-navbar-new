@@ -26,14 +26,17 @@ import Signin from "./components/signinPage/Signin";
 import SigninComp from "./components/signinComp/SigninComp";
 import ProductsPage from "./components/productsPage/ProductsPage";
 // import TopRanking from "./components/topRankingPage/TopRanking";
+
 function App() {
+  // const [scroll, setScroll] = useState(false);
+
   return (
     <>
       {/* <Signin /> */}
       {/* <SigninComp /> */}
       <Navbar />
-      {/* <SuppliersMobilieSubNav />
-      <SupplierMain /> */}
+      {/* <SuppliersMobilieSubNav /> */}
+      {/* <SupplierMain /> */}
       <ProductsPage />
       <footer>
         <Footer />
