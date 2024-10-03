@@ -1,7 +1,6 @@
 import React from "react";
 import "./MainProductSlider.scss";
 import ProductCard from "../../../contentslider/productCard/ProductCard";
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
@@ -18,7 +17,32 @@ const MainProductSlider = ({ product }) => {
   return (
     <>
       <Swiper
-        id="mainProductSlider"
+        id="mainProductSlider-trading"
+        slidesPerView={3}
+        grid={{
+          rows: 2,
+          fill: "row",
+        }}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Grid, Pagination]}
+      >
+        {product.map((item, i) => (
+          <SwiperSlide key={i}>
+            {/* <ProductCard
+              image={item.image}
+              title={item.title}
+              type={item.type}
+              orders={item.order}
+            /> */}
+            A
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      {/* <Swiper
+        id="mainProductSlider-trading"
         slidesPerView={isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : 4}
         grid={{
           rows: 2,
@@ -29,7 +53,6 @@ const MainProductSlider = ({ product }) => {
           clickable: true,
         }}
         modules={[Grid, Pagination]}
-        // className="mySwiper"
       >
         {product.map((item, i) => (
           <SwiperSlide key={i}>
@@ -42,7 +65,7 @@ const MainProductSlider = ({ product }) => {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </>
   );
 };

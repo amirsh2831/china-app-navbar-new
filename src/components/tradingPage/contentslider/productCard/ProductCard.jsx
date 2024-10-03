@@ -4,7 +4,7 @@ import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOu
 const ProductCard = ({ image, title, type, orders }) => {
   return (
     <>
-      <div className="product-card">
+      <div className="product-card-trading">
         <div className="product-image">
           <img alt="Product Image" src={image} />
         </div>

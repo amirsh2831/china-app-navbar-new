@@ -15,7 +15,15 @@ import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
 import SuppliersMainSecondBanner from "./suppliersMainSecondBanner/SuppliersMainSecondBanner";
 import { TrendingPageLinks } from "../../constants";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
+import SuppliersMobilieSubNav from "./suppliersMobileSubNab/SuppliersMobilieSubNav";
 const SuppliersMain = () => {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
   const isMoblie = useMediaQuery({ maxWidth: 425 });
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
@@ -36,6 +44,13 @@ const SuppliersMain = () => {
   ];
   return (
     <>
+      {isMoblie ? (
+        <SuppliersMobilieSubNav />
+      ) : scroll ? (
+        <SuppliersMobilieSubNav />
+      ) : (
+        ""
+      )}
       <div className="suppliers-main-page-container">
         {!isMoblie && (
           <Stack spacing={2}>

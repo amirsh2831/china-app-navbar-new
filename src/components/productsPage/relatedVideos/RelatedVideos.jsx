@@ -13,7 +13,7 @@ const RelatedVideos = () => {
               <div className="products-page-more-videos-preview">
                 <img src={item.image} alt="More Videos Preview Image" />
                 <div className="products-page-main-videos-play-button">
-                  <PlayCircleFilledWhiteOutlinedIcon fontSize="large" />
+                  <PlayCircleFilledWhiteOutlinedIcon fontSize="inherit" />
                 </div>
               </div>
               <div className="products-page-main-videos-info">

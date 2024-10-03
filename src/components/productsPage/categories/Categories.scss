@@ -7,83 +7,68 @@
     display: flex;
   }
 }
-.products-page-categories-fixed-item-1 {
+.products-page-categories-fixed-item {
+  max-width: 259px;
   cursor: pointer;
   position: fixed;
-  width: 13.5%;
+  bottom: 1200px;
+  width: 17.5%;
   height: 60px;
+  // left: 0;
   z-index: 990;
-  top: 77px;
+  // top: 77px;
   background-color: white;
-  // display: flex;
+  display: none;
   align-items: center;
   padding-left: 24px;
   border-bottom: 1px solid #e6ecf2;
 
   p {
     // background-color: red;
-    font-size: 16px;
+    font-size: clamp(12px, 1vw, 16px);
     font-weight: 600;
   }
   &:hover {
     color: crimson;
   }
-}
-.products-page-categories-fixed-item-2 {
-  cursor: pointer;
-  position: fixed;
-  width: 13.5%;
-  height: 60px;
-  z-index: 990;
-  top: 137px;
-  background-color: white;
-  // display: flex;
-  align-items: center;
-  padding-left: 24px;
-  border-bottom: 1px solid #e6ecf2;
-  p {
-    // background-color: red;
-    font-size: 16px;
-    font-weight: 600;
+  @include responsive($tablet) {
+    display: flex;
   }
-  &:hover {
-    color: crimson;
+  @include responsive($laptop) {
+    width: 13%;
   }
 }
-.products-page-categories-fixed-item-3 {
-  cursor: pointer;
-  position: fixed;
-  width: 13.5%;
-  height: 60px;
-  z-index: 99;
-  top: 192px;
-  background-color: white;
-  // display: flex;
-  align-items: center;
-  padding-left: 24px;
-  border-bottom: 1px solid #e6ecf2;
-  p {
-    // background-color: red;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  &:hover {
-    color: crimson;
-  }
-}
+
 .products-page-categories {
   display: none;
-  width: 14%;
+  width: 13.5%;
   background-color: #fff;
   height: auto;
   padding: 8px;
+
   .products-page-categories-list-title {
     padding-top: 16px;
-    font-size: 16px;
+    font-size: clamp(12px, 1vw, 16px);
     color: #888;
     padding-left: 8px;
   }
+  .products-page-categories-accordion-title {
+    // line-height: 0.25rem;
+    // background-color: red;
+    font-size: clamp(12px, 1vw, 16px);
+    // white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   @include responsive($tablet) {
+    width: 18%;
     display: block;
+  }
+  @include responsive($laptop) {
+    width: 13.5%;
   }
 }

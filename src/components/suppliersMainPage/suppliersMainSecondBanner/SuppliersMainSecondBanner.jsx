@@ -131,7 +131,7 @@ const SuppliersMainSecondBanner = () => {
                 dragSize: 10,
               }}
               modules={[Scrollbar, Navigation]}
-              id="supplier-second-banner-slider"
+              id="supplier_second_banner_slider"
             >
               {SuppliersSlider.map((item, i) => (
                 <SwiperSlide key={i}>

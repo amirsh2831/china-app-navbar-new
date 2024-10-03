@@ -17,7 +17,7 @@ const TrendingPageNavbar = () => {
     setOpen(newOpen);
   };
   return (
-    <div className="navbar">
+    <div className="trending-navbar">
       <div className="sidebar-menu-active">
         <button onClick={toggleDrawer(true)}>
           <MenuIcon color="black" />

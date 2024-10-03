@@ -1,32 +1,28 @@
 @use "../../../styles/responsive.scss" as *;
 $resize1: 1440px;
 $resize2: 1200px;
+$resize-mobile: 540px;
 .products-main-cards-container {
   position: relative;
   border: 1px solid #e6ecf2;
   background-color: #fff;
-  width: 33.33%;
-  padding: 20px;
-
-  // height: 100px;
-  // background-color: red;
-  // overflow: hidden;
-  // border-right-color: transparent;
-  // height: 400px;
+  width: 50%;
+  padding: 10px;
   height: max-content;
   &:last-child {
     border-right: 2px solid #e6ecf2;
   }
   .products-main-cards-header {
     width: 100%;
-    height: 210px;
+    height: max-content;
     position: relative;
     .products-main-cards-liked {
-      display: flex;
+      cursor: pointer;
+      display: none;
       color: #fff;
-      width: 30px;
-      z-index: 99;
-      height: 30px;
+      width: 24px;
+      z-index: 2;
+      height: 24px;
       align-items: center;
       justify-content: center;
       border-radius: 100%;
@@ -34,10 +30,19 @@ $resize2: 1200px;
       top: -15px;
       right: -15px;
       background: #d9dfe6;
+      @include responsive($mobile) {
+        display: flex;
+      }
     }
   }
   .products-main-cards-image-slider-container {
-    height: 210px;
+    height: 150px;
+    @include responsive($mobile) {
+      height: 170px;
+    }
+    @include responsive($tablet) {
+      height: 210px;
+    }
   }
   .products-main-cards-info {
     margin-top: 8px;
@@ -55,7 +60,7 @@ $resize2: 1200px;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       display: -webkit-box;
-      font-size: 14px;
+      font-size: clamp(10px, 1vw, 14px);
       font-weight: 500;
       letter-spacing: 0.05rem;
       line-height: 1.25;
@@ -67,21 +72,20 @@ $resize2: 1200px;
     .products-main-cards-information {
       // white-space: nowrap;
       // display: flex;
+      text-align: left;
+      font-size: clamp(10px, 1vw, 14px);
       div {
         display: flex;
         gap: 4px;
         align-items: center;
       }
-      text-align: left;
       strong {
-        font-size: 14px;
         font-weight: 750;
         line-height: 1;
 
         color: #222;
       }
       p {
-        font-size: 14px;
         font-weight: normal;
         // color: #555;
       }
@@ -104,7 +108,7 @@ $resize2: 1200px;
         color: #555;
         font-weight: 600;
         display: flex;
-        font-size: 12px;
+        font-size: clamp(8px, 1vw, 12px);
         gap: 2px;
         align-items: center;
         background: linear-gradient(90deg, #ffe2e2, #fff);
@@ -118,12 +122,76 @@ $resize2: 1200px;
     }
     .products-main-cards-info-manufacturer {
       max-width: 100%;
-      overflow: hidden;
+      // overflow-x: hidden;
+      // overflow-y: visible;
       text-overflow: ellipsis;
       white-space: nowrap;
-      font-size: 12px;
+      font-size: clamp(8px, 1vw, 12px);
+      position: relative;
       a {
         color: #888;
+      }
+      .products-main-cards-info-manufacturer-dropdown {
+        display: none;
+        width: 120%;
+        box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.6);
+        border-radius: 4px;
+        left: -20px;
+        // background-color: red;
+        background-color: #fff;
+        // display: none;
+        position: absolute;
+        top: 100%;
+        z-index: 11;
+        height: 170px;
+        padding: 5px;
+        .products-main-cards-info-manufacturer-dropdown-header {
+          height: 50px;
+          width: 100%;
+          background-image: url("assets/Image/Products/company_bg.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          h5 {
+            padding: 8px;
+            font-size: 12px;
+            white-space: wrap;
+            font-weight: bold;
+            color: #222;
+          }
+        }
+        .products-main-cards-info-manufacturer-dropdown-body {
+          width: 100%;
+          padding: 8px;
+          ul {
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed #222;
+            list-style: none;
+            li {
+              width: 50%;
+              text-align: left;
+              line-height: 1.5;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              .products-main-cards-icons {
+                width: 16px;
+                height: 16px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          p {
+            padding-top: 4px;
+          }
+        }
+      }
+      &:hover .products-main-cards-info-manufacturer-dropdown {
+        display: block;
       }
     }
     .products-main-cards-info-call-to-action {
@@ -134,9 +202,11 @@ $resize2: 1200px;
       .products-main-cards-info-call-to-action-contact-now-button {
         background-color: #e64545;
         padding: 8px 10px;
+        font-size: clamp(12px, 1vw, 16px);
         color: #fff;
         border-radius: 4px;
         transition: 0.3s;
+        white-space: nowrap;
         &:hover {
           background-color: #d92121;
         }
@@ -155,6 +225,10 @@ $resize2: 1200px;
       .products-main-cards-info-call-to-action-massenger {
         width: 24px;
         height: 24px;
+        display: none;
+        @include responsive($tablet) {
+          display: block;
+        }
       }
     }
     .products-main-cards-info-hover {
@@ -164,7 +238,7 @@ $resize2: 1200px;
       left: 0;
       position: absolute;
       top: 98%;
-      z-index: 9999;
+      z-index: 10;
 
       visibility: hidden;
       overflow: hidden;
@@ -185,15 +259,21 @@ $resize2: 1200px;
       }
     }
   }
-  &:hover {
-    .products-main-cards-info-hover {
-      opacity: 1;
-      box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.6);
-      height: auto;
-      visibility: visible;
-      display: block;
-      transition: 0.3s;
+  @include responsive($tablet) {
+    &:hover {
+      .products-main-cards-info-hover {
+        opacity: 1;
+        box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.6);
+        height: auto;
+        visibility: visible;
+        display: block;
+        transition: 0.3s;
+      }
     }
+  }
+  @include responsive($resize-mobile) {
+    padding: 20px;
+    width: 33.33%;
   }
   @include responsive($resize2) {
     width: 25%;

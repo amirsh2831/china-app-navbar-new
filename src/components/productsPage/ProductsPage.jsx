@@ -2,12 +2,11 @@ import React from "react";
 import "./ProductsPage.scss";
 import { useMediaQuery } from "react-responsive";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-// import Typography from "@mui/material/Typography";
+
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import SuppliersMainBanner from "../suppliersMainPage/suppliersMainBanner/SupplierMainBanner";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import SuppliersMainBannerSliderCards from "../suppliersMainPage/suppliersMainBanner/suppliersMainBannerSliderCards/suppliersMainBannerSliderCards";
 import SuppliersMainTabs from "../suppliersMainPage/suppliersMainTabs/SuppliersMainTabs";
 import Categories from "./categories/Categories";
 import MainPRoductsSlider from "./mainProductsSlider/MainProductsSlider";
@@ -21,8 +20,16 @@ import RelatedVideos from "./relatedVideos/RelatedVideos";
 import Questions from "./questions/Questions";
 import MoreInterested from "./moreInterested/MoreInterested";
 import Requests from "./requests/Requests";
+import { useEffect, useState } from "react";
+import SuppliersMobilieSubNav from "../suppliersMainPage/suppliersMobileSubNab/SuppliersMobilieSubNav";
 const ProductsPage = () => {
-  const isMoblie = useMediaQuery({ maxWidth: 465 });
+  const isMoblie = useMediaQuery({ maxWidth: 425 });
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
       Home
@@ -43,6 +50,13 @@ const ProductsPage = () => {
   return (
     <>
       <div className="products-main-page-container">
+        {isMoblie ? (
+          <SuppliersMobilieSubNav />
+        ) : scroll ? (
+          <SuppliersMobilieSubNav />
+        ) : (
+          ""
+        )}
         {!isMoblie && (
           <Stack spacing={2}>
             <Breadcrumbs
@@ -65,6 +79,12 @@ const ProductsPage = () => {
           <Categories />
           <div className="products-page-main-body-product-container">
             <MainPRoductsSlider />
+            <div className="products-page-mobile-cards-title">
+              <span className="products-page-mobile-cards-title-text">
+                Made In China
+                <p>products found from trusted manufacturers & suppliers</p>
+              </span>
+            </div>
             <div className="products-page-main-body-cards-container">
               <ProductCards productCardsInfo={ProductsCardInformation} />
               <ProductCards productCardsInfo={ProductsCardInformation} />

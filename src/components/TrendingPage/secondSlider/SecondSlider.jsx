@@ -31,7 +31,7 @@ const SecondSlider = () => {
         pagination={true}
         modules={[Autoplay, EffectCoverflow, Pagination]}
         className="mySwiper"
-        id="SecondSwiper"
+        id="footprints-SecondSwiper"
       >
         <SwiperSlide>
           <div className="slide-content">

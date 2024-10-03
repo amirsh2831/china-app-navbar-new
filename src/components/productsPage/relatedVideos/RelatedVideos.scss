@@ -18,7 +18,7 @@
     justify-content: space-between;
     row-gap: 24px;
     .products-page-more-videos-item {
-      width: 30%;
+      width: 49%;
       .products-page-more-videos-preview {
         position: relative;
         width: 100%;
@@ -30,14 +30,15 @@
         }
         .products-page-main-videos-play-button {
           position: absolute;
-          top: 40%;
-          left: 40%;
+          font-size: clamp(20px, 36px, 50px);
+          top: 30%;
+          left: 38%;
           color: #fff;
         }
       }
       .products-page-main-videos-info {
-        margin-top: 24px;
-        font-size: 14px;
+        margin-top: 12px;
+        font-size: clamp(10px, 1vw, 14px);
         color: #555;
         line-height: 1.5;
         display: -webkit-box;
@@ -45,6 +46,12 @@
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include responsive($tablet) {
+          margin-top: 24px;
+        }
+      }
+      @include responsive($mobile) {
+        width: 30%;
       }
       @include responsive($tablet) {
         width: 24%;

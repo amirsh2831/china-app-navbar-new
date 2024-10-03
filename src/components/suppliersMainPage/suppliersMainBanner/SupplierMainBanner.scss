@@ -178,6 +178,7 @@ $resize1: 540px;
           background: rgba(0, 0, 0, 0.3);
           color: #fff;
           padding: 30px 16px;
+          border-radius: 0 !important;
           &::after {
             font-size: 18px;
           }
@@ -187,6 +188,8 @@ $resize1: 540px;
           background: rgba(0, 0, 0, 0.3);
           color: #fff;
           padding: 30px 16px;
+          border-radius: 0 !important;
+
           &::after {
             font-size: 18px;
           }
@@ -197,6 +200,7 @@ $resize1: 540px;
         }
 
         .swiper-slide {
+          background-color: transparent;
           text-align: center;
           font-size: 18px;
 

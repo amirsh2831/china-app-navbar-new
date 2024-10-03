@@ -1,3 +1,4 @@
+@use "../../../../styles/responsive.scss" as *;
 .products-page-card-photo-slider-container {
   width: 100%;
   height: 100%;
@@ -15,22 +16,28 @@
       background: rgba(0, 0, 0, 0.6);
       border-radius: 16px;
       padding: 0 5px;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       a {
         color: #fff;
+      }
+      @include responsive($mobile) {
+        display: flex;
       }
     }
     .products-page-card-photo-slider-index-item {
       background: rgba(0, 0, 0, 0.6);
       border-radius: 16px;
       padding: 6px 12px;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       color: #fff;
       font-size: 12px;
+      @include responsive($mobile) {
+        display: flex;
+      }
     }
   }
   #products-page-main-cards-photo-slider {
@@ -41,7 +48,9 @@
       // opacity: 0;
       // visibility: hidden;
       background: rgba(0, 0, 0, 0.3);
-      padding: 16px 16px;
+      border-radius: 0 !important;
+      padding: 30px 8px;
+
       right: 0;
       transition: 0.3s;
       &::after {
@@ -50,10 +59,12 @@
       }
     }
     .swiper-button-prev {
+      border-radius: 0;
+
       // opacity: 0;
       // visibility: hidden;
       background: rgba(0, 0, 0, 0.3);
-      padding: 16px 16px;
+      padding: 30px 8px;
       left: 0;
       transition: 0.3s;
       &::after {

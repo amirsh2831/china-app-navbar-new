@@ -1,8 +1,10 @@
+@use "../../../styles/responsive.scss" as *;
 .products-main-slider {
   //   max-width: 1208px;
   //   padding: 0 0px;
   //   margin: 48px auto;
-  height: 168px;
+  height: 130px;
+  padding-top: 16px;
   //   width: 95%;
   display: flex;
   align-items: center;
@@ -46,17 +48,21 @@
     gap: 8px;
 
     .products-cat-image {
-      width: 92px;
+      width: 64px;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 92px;
+      height: 64px;
       border-radius: 100%;
       background-color: #f5f5f5;
       img {
         width: 68px;
         height: 68px;
         transition: all ease-in 0.3s;
+      }
+      @include responsive($mobile) {
+        width: 92px;
+        height: 92px;
       }
     }
     .products-cat-title {
@@ -70,5 +76,9 @@
         transform: scale(1.1);
       }
     }
+  }
+  @include responsive($mobile) {
+    padding-top: 0;
+    height: 168px;
   }
 }

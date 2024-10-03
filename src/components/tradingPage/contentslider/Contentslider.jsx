@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import { Navigation } from "swiper/modules";
-const Contentslider = ({ cat, products }) => {
+const Contentslider = ({ cat, products, initial }) => {
   // Import Swiper React components
 
   return (
@@ -31,7 +31,7 @@ const Contentslider = ({ cat, products }) => {
           </Swiper>
         </div>
         <div className="products-sldier">
-          <ProductSlider product={products} />
+          <ProductSlider product={products} initial={initial} />
         </div>
       </div>
     </>

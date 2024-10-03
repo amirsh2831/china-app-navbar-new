@@ -1,18 +1,22 @@
 @use "../../styles/responsive.scss" as *;
 .products-main-page-container {
-  width: 98%;
+  max-width: 1920px;
+  width: 100%;
   margin: auto;
   .products-page-text-under-main-banner {
     font-weight: 600;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 16px;
-    font-size: 20px;
+    font-size: clamp(16px, 1vw, 20px);
     margin-top: 16px;
     p {
-      font-size: 14px;
+      font-size: clamp(12px, 1vw, 14px);
       font-weight: 500;
       color: #888;
+    }
+    @include responsive($mobile) {
+      display: flex;
     }
     // copy and Paste
   }
@@ -26,45 +30,82 @@
     .products-page-main-body-product-container {
       position: relative;
       height: 100%;
-      width: 98%;
-      // height: 1800px;
+      width: 100%;
       height: max-content;
+      .products-page-mobile-cards-title {
+        padding-left: 4px;
+        margin-top: 16px;
+        .products-page-mobile-cards-title-text {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #222;
+          p {
+            color: #888;
+            font-weight: normal;
+            font-size: 12px;
+          }
+        }
+        @include responsive($mobile) {
+          display: none;
+        }
+      }
       .products-page-main-body-cards-container {
         position: relative;
         background-color: #fff;
-        margin-top: 24px;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        margin-top: 8px;
         // padding-bottom: 16px;
         border-bottom: 1px solid #e6ecf2;
       }
+      @include responsive($mobile) {
+        width: 98%;
+        // margin-top: 24px;
+      }
       @include responsive($tablet) {
+        width: 80%;
+      }
+      @include responsive($laptop) {
         width: 85%;
       }
     }
     .products-page-main-body-cards-pagination {
       background-color: #fff;
-      padding: 16px 16px;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: center;
+      padding: 12px 5px;
       .products-page-cards-pagination-next-button {
         background-color: #e64545;
         padding: 8px 10px;
-        display: flex;
+        display: none;
         align-items: center;
         gap: 4px;
         color: #fff;
         border-radius: 4px;
         margin-left: 8px;
+
+        @include responsive($mobile) {
+          display: flex;
+        }
+      }
+      @include responsive($mobile) {
+        padding: 16px 16px;
+        justify-content: end;
       }
     }
     .products-page-secondary-banner {
       padding-top: 16px;
       margin-top: 16px;
     }
+  }
+  @include responsive($mobile) {
+    width: 98%;
   }
 }

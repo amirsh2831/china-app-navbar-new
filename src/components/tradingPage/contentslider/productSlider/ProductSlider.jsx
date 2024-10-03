@@ -13,7 +13,7 @@ import { useMediaQuery } from "react-responsive";
 // import required modules
 import { Grid, Pagination } from "swiper/modules";
 
-export const ProductSlider = ({ product }) => {
+export const ProductSlider = ({ product, initial }) => {
   const isTablet = useMediaQuery({ maxWidth: 1024 });
   const isMobileOrTablet = useMediaQuery({ maxWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 425 });
@@ -22,8 +22,12 @@ export const ProductSlider = ({ product }) => {
     <>
       <Swiper
         id="productSlider"
-        slidesPerView={isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : 5}
-        slidesPerGroup={isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : 5}
+        slidesPerView={
+          isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : initial
+        }
+        slidesPerGroup={
+          isMobile ? 1 : isMobileOrTablet ? 2 : isTablet ? 3 : initial
+        }
         grid={
           isMobile
             ? {

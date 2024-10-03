@@ -7,7 +7,6 @@ const SuppliersPage = () => {
   return (
     <>
       <Navbar />
-      <SuppliersMobilieSubNav />
       <SupplierMain />
       <footer>
         <Footer />

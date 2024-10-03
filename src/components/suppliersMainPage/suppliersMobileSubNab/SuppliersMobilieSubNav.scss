@@ -1,12 +1,13 @@
 @use "../../../styles/responsive.scss" as *;
 .suppliers-page-mobile-sub-navbar {
   position: fixed;
-  z-index: 80;
+  z-index: 999;
   top: 46px;
   background-color: #fff;
   width: 100%;
   height: auto;
-  box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  left: 0;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.01);
   display: flex;
   align-items: center;
   //   padding: 8px 0;
@@ -47,10 +48,10 @@
     }
   }
   @include responsive($mobile) {
-    // top: 128px;
-    display: none;
+    top: 60px;
   }
   @include responsive($tablet) {
+    display: none;
   }
 }
 .suppliers-page-mobile-sub-navbar-active-item {
