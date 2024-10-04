@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainSlider.scss";
 import ContentSlider from "../contentslider/Contentslider";
-import { MainSliderProducts, IndustryItemsCat } from "../../../constants";
+import { MainSliderProducts, IndustryItemsCat } from "../data";
 import BestSellers from "./mainSliderCards/BestSellers";
 import SingleProd from "./mainSliderCards/SingleProd";
 import MainProductContainer from "./mianProductSlider/MainProductContainer";

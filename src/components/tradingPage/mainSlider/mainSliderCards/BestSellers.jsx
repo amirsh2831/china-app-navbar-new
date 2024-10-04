@@ -1,6 +1,6 @@
 import React from "react";
 import "./BestSellers.scss";
-import { BestSelleritems } from "../../../../constants";
+import { BestSelleritems } from "../../data";
 import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

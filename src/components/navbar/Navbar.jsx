@@ -9,7 +9,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./Navbar.scss";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import { Categories } from "../../constants";
+import { Categories } from "./data";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Sidebar from "../sidebar/Sidebar";
 

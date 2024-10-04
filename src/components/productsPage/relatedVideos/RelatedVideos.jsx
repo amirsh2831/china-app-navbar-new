@@ -1,6 +1,6 @@
 import React from "react";
 import "./RelatedVideos.scss";
-import { ProductsVideos } from "../../../constants";
+import { ProductsVideos } from "../data";
 import PlayCircleFilledWhiteOutlinedIcon from "@mui/icons-material/PlayCircleFilledWhiteOutlined";
 const RelatedVideos = () => {
   return (

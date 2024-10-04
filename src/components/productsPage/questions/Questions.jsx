@@ -1,6 +1,6 @@
 import React from "react";
 import "./Questions.scss";
-import { ProductsQAndA } from "../../../constants";
+import { ProductsQAndA } from "../data";
 const Questions = () => {
   return (
     <>

@@ -13,7 +13,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
 import SuppliersMainSecondBanner from "./suppliersMainSecondBanner/SuppliersMainSecondBanner";
-import { TrendingPageLinks } from "../../constants";
+import { TrendingPageLinks } from "./data";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import SuppliersMobilieSubNav from "./suppliersMobileSubNab/SuppliersMobilieSubNav";

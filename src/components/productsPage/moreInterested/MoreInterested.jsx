@@ -1,6 +1,6 @@
 import React from "react";
 import "./MoreInterested.scss";
-import { ProductsAlsoInterested } from "../../../constants";
+import { ProductsAlsoInterested } from "../data";
 import { useState } from "react";
 const MoreInterested = () => {
   const [more, setMore] = useState(false);

@@ -14,7 +14,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import Box from "@mui/material/Box";
 import "./Sidebar.scss";
-import { SupplySubMenu } from "../../constants";
+import { SupplySubMenu } from "./data";
 
 const Sidebar = () => {
   return (

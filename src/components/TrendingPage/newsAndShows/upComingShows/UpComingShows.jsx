@@ -1,5 +1,5 @@
 import React from "react";
-import { UpComingShowsData } from "../../../../constants";
+import { UpComingShowsData } from "../../data";
 import "./UpComingShows.scss";
 
 const UpComingShows = () => {

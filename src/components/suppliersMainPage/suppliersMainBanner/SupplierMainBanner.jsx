@@ -12,7 +12,7 @@ import { useMediaQuery } from "react-responsive";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
-import { SuppliersSlider } from "../../../constants";
+import { SuppliersSlider } from "../data";
 import { useInViewContext } from "../../../Context/ContextProvider";
 import VideoPlayerModal from "./videoPlayerModal/VideoPlayerModal";
 import { useState } from "react";

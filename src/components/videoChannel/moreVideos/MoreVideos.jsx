@@ -1,6 +1,6 @@
 import React from "react";
 import "./moreVideos.scss";
-import { moreVideos } from "../../../constants";
+import { moreVideos } from "../data";
 
 const MoreVideos = () => {
   return (

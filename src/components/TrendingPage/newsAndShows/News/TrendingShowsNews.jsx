@@ -1,5 +1,5 @@
 import React from "react";
-import { ShowNews } from "../../../../constants";
+import { ShowNews } from "../../data";
 import "./TrendingShowsNews.scss";
 const TrendingShowsNews = () => {
   return (

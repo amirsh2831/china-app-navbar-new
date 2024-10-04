@@ -1,6 +1,6 @@
 import React from "react";
 import "./SuppliersRecommended.scss";
-import { TrendingPageLinks } from "../../../constants";
+import { TrendingPageLinks } from "../data";
 const SuppliersRecommended = () => {
   return (
     <>

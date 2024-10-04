@@ -1,7 +1,6 @@
 import React from "react";
-import { ProductsCategories } from "../../../../constants";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { suppliersCatCategries } from "../../../../constants/index";
+import { ProductsCategories, suppliersCatCategries } from "../../data";
 import { useState } from "react";
 import "./CategoriesList.scss";
 const CategoriesList = ({ type }) => {

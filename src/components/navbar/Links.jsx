@@ -1,5 +1,5 @@
 import React from "react";
-import { Navlinks } from "../../constants";
+import { Navlinks } from "./data";
 import AdsClickRoundedIcon from "@mui/icons-material/AdsClickRounded";
 import { useMediaQuery } from "react-responsive";
 import NavLinksDropDown from "./NavLinksDropDown";

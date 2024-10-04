@@ -3,7 +3,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import "./TrendingPageNavbar.scss";
-import { Buyers, footerData, Lang, SupplySubMenu } from "../../constants";
+import { Buyers, footerData, Lang, SupplySubMenu } from "./data";
 import { Divider } from "@mui/material";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";

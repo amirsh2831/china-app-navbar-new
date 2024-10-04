@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useState, useRef, useEffect } from "react";
 import "./Search.scss";
-import { AllIndustries } from "../../../constants";
+import { AllIndustries } from "../data";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";

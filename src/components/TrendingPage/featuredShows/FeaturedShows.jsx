@@ -1,6 +1,6 @@
 import React from "react";
 import FeaturedShowsCard from "./card/FeaturedShowsCard";
-import { FeaturedShowsCardsData } from "../../../constants";
+import { FeaturedShowsCardsData } from "../data";
 import "./FeaturedShows.scss";
 import { useRef, useState } from "react";
 // Import Swiper React components

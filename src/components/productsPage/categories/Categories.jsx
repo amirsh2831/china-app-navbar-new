@@ -6,6 +6,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import { ProductsCategories } from "../data";
+import MemberAndType from "../../suppliersMainPage/suppliersMainCategories/MemberAndType/MemberAndType";
 import Divider from "@mui/material/Divider";
 import CategoriesList from "./categoriesList/CategoriesList";
 import { useState } from "react";

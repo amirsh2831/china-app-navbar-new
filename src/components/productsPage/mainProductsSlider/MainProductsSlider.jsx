@@ -5,7 +5,7 @@ import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
 import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
-import { TradingCat } from "../../../constants/index";
+import { TradingCat } from "../data";
 // import { useMediaQuery } from "react-responsive";
 
 // Import Swiper styles

@@ -1,5 +1,5 @@
 import React from "react";
-import { footerData, footerLinks, Lang } from "../../constants";
+import { footerData, footerLinks, Lang } from "./data";
 import "./Footer.scss";
 import AppleIcon from "@mui/icons-material/Apple";
 import AdbIcon from "@mui/icons-material/Adb";

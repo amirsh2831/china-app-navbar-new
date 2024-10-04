@@ -1,5 +1,5 @@
 import React from "react";
-import { TrendingPageLinks } from "../../../constants";
+import { TrendingPageLinks } from "../data";
 import "./BottomLinks.scss";
 const BottomLinks = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
-import { TradingCat } from "../../../constants";
+import { TradingCat } from "../data";
 import SearchIcon from "@mui/icons-material/Search";
 import "./DynamicNavbar.scss";
 import { useInViewContext } from "../../../Context/ContextProvider";

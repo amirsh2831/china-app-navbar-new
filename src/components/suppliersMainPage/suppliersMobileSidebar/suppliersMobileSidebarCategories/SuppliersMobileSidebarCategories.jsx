@@ -1,5 +1,5 @@
 import React from "react";
-import { SuppliersAnnualRevenue } from "../../../../constants";
+import { SuppliersAnnualRevenue } from "../../data";
 import { useState } from "react";
 import "./SupplierMoblieSidebarCategories.scss";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";

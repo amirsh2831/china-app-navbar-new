@@ -11,7 +11,7 @@ import SuppliersMainTabs from "../suppliersMainPage/suppliersMainTabs/SuppliersM
 import Categories from "./categories/Categories";
 import MainPRoductsSlider from "./mainProductsSlider/MainProductsSlider";
 import ProductCards from "./productCards/ProductCards";
-import { ProductsCardInformation } from "../../constants";
+import { ProductsCardInformation } from "./data";
 import Pagination from "@mui/material/Pagination";
 import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
 import SuppliersMainSecondBanner from "../suppliersMainPage/suppliersMainSecondBanner/SuppliersMainSecondBanner";

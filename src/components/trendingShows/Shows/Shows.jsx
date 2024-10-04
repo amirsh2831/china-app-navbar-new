@@ -1,5 +1,5 @@
 import React from "react";
-import { TrendingShows } from "../../../constants";
+import { TrendingShows } from "../data";
 import "./Shows.scss";
 
 const Shows = () => {

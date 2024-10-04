@@ -10,10 +10,7 @@ import SuppliersManufacturersSampleCards from "./SuppliersManufacturersSampleCar
 import Replay30OutlinedIcon from "@mui/icons-material/Replay30Outlined";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import { useMediaQuery } from "react-responsive";
-import {
-  SuppliersAuditedSupplier,
-  SuppliersManufacturersCards,
-} from "../../../constants";
+import { SuppliersAuditedSupplier, SuppliersManufacturersCards } from "../data";
 const SuppliersMainManufacturersCard = () => {
   const resize1 = useMediaQuery({ maxWidth: 1150 });
   return (

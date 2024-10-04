@@ -9,7 +9,7 @@ import "./PhotoSlider.scss";
 
 // import required modules
 import { Navigation } from "swiper/modules";
-import { MainBannerPhotoSlider } from "../../../../constants";
+import { MainBannerPhotoSlider } from "../../data";
 import { useState } from "react";
 const PhotoSlider = ({ setSliderIndex, index, setTotalSlides }) => {
   // const [sliderIndex, setSliderIndex] = useState(1);

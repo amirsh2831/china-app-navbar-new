@@ -2,7 +2,7 @@ import React from "react";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import "./Signin.scss";
-import { Lang, SigninFooter } from "../../constants";
+import { Lang, SigninFooter } from "./data";
 import { useState } from "react";
 import SigninComp from "../signinComp/SigninComp";
 const Signin = () => {

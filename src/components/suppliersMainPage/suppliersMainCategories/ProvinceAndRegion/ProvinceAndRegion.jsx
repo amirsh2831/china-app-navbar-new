@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { suppliersCatCategries } from "../../../../constants";
+import { suppliersCatCategries } from "../../data";
 const ProvinceAndRegion = () => {
   const [more, SetMore] = useState(false);
   const handleMoreLess = () => {

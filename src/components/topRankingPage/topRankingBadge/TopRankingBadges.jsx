@@ -1,6 +1,6 @@
 import React from "react";
 import "./TopRankingBadges.scss";
-import { Badges } from "../../../constants";
+import { Badges } from "../data";
 const TopRankingBadges = () => {
   return (
     <>

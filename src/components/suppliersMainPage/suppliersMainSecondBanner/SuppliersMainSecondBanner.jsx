@@ -12,7 +12,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
-import { SuppliersSlider } from "../../../constants";
+import { SuppliersSlider } from "../data";
 import VideoPlayerModal from "../suppliersMainBanner/videoPlayerModal/VideoPlayerModal";
 import { useState } from "react";
 import PhotoSlider from "../suppliersMainBanner/photoSlider/PhotoSlider";
