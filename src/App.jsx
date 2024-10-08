@@ -25,18 +25,13 @@ import Signin from "./components/signinPage/Signin";
 import SigninComp from "./components/signinComp/SigninComp";
 import ProductsPage from "./components/productsPage/ProductsPage";
 import TopRanking from "./components/topRankingPage/TopRanking";
+import SecuredProductsPage from "./components/securedProductsPage/SecuredProductsPage";
 
 function App() {
   return (
     <>
-      <TrendingPageNavbar />
-      <TrendingPageMainSlider />
-      <Search />
-
-      <Footprint />
-      <FeaturedShows />
-      <MediaCooperation />
-      <NewsAndShows />
+      <Navbar />
+      <SecuredProductsPage />
       <footer>
         <Footer />
       </footer>

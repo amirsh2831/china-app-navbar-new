@@ -1,0 +1,73 @@
+@mixin filter_button {
+  button {
+    font-size: 12px;
+    height: 100%;
+    border: 1px solid #ced3d9;
+    width: max-content;
+    padding: 7px 12px;
+    background-color: #f5f7fa;
+    border-radius: 2px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #e6ecf2;
+    }
+  }
+}
+@mixin filter_input {
+  input {
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ced3d9;
+    border-radius: 2px;
+    padding: 2px 8px;
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+}
+@mixin filter_title {
+  span {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #222;
+    font-weight: normal;
+  }
+}
+@mixin filter_styles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spt-filter {
+  padding: 0 20px;
+  height: 100%;
+  //   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__odp {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__price {
+      @include filter_styles();
+      @include filter_title();
+      @include filter_input();
+      @include filter_button();
+    }
+    &__order {
+      @include filter_styles();
+      @include filter_title();
+      @include filter_input();
+      @include filter_button();
+    }
+  }
+  &__sort {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,127 @@
+.spt {
+  width: 92%;
+  margin: auto;
+  padding-top: 16px;
+  margin-bottom: 48px;
+  &__title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    strong {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    span {
+      font-size: 14px;
+      color: #222;
+    }
+    p {
+      font-size: 14px;
+
+      color: #555;
+    }
+  }
+  &__body {
+    margin-top: 16px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+
+    &__categories {
+      width: 16%;
+      height: 600px;
+    }
+    &__main {
+      background-color: #fff;
+      width: 83%;
+      height: 100%;
+      &__filter {
+        width: 100%;
+        align-items: center;
+        height: 64px;
+      }
+      &__cards {
+        border: 1px solid #e6ecf2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        // border-bottom: 1px solid gray;
+      }
+      &__pagination {
+        padding: 8px 16px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__counter {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          span {
+            color: #888;
+            font-size: 12px;
+          }
+          p {
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+          }
+        }
+        &__buttons {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          &__next {
+            padding: 8px 12px;
+            border-radius: 3px;
+            color: #fff;
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            font-size: 14px;
+            background-color: #e64545;
+            transition: 0.3s;
+            &:hover {
+              background-color: #d92121;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#products-page-categories-fixed-item {
+  max-width: 259px;
+  cursor: pointer;
+  position: fixed;
+  // bottom: 1200px;
+  width: 14.7%;
+  height: 60px;
+  // left: 0;
+  z-index: 990;
+  // top: 77px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  border-bottom: 1px solid #e6ecf2;
+
+  p {
+    // background-color: red;
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 600;
+  }
+  &:hover {
+    color: crimson;
+  }
+  // @include responsive($tablet) {
+  //   display: flex;
+  // }
+  // @include responsive($laptop) {
+  //   width: 13%;
+  // }
+}
