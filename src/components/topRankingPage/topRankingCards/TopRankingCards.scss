@@ -3,7 +3,7 @@ $mobile-resize: 520px;
 
 .top-ranking-product-card {
   border-radius: 4px;
-  width: 200px;
+  // width: 200px;
   height: 420px;
   background-color: #fff;
   display: flex;
@@ -88,6 +88,6 @@ $mobile-resize: 520px;
     padding-right: 4px;
   }
   @include responsive($mobile-resize) {
-    width: 237px;
+    // width: 237px;
   }
 }

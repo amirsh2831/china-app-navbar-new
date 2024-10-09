@@ -203,6 +203,11 @@
           left: -50px;
         }
       }
+      li:nth-child(7) {
+        &:hover .dropdown-container {
+          min-width: 20px;
+        }
+      }
       // li:nth-child(1) {
       //   display: flex;
       //   font-size: 12px;

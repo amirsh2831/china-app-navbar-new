@@ -3,7 +3,8 @@ import React from "react";
 // import { FaChevronDown } from "react-icons/fa6";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import { Buyers, HelpSubMenu, SupplySubMenu, Categories, Lang } from "./data";
+import { Buyers, HelpSubMenu, SupplySubMenu, Categories, Lang } from "../data";
+import "./subNavbar.scss";
 const SubNavbar = () => {
   return (
     <>

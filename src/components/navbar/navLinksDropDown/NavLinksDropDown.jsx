@@ -6,6 +6,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import XIcon from "@mui/icons-material/X";
 import GoogleIcon from "@mui/icons-material/Google";
+import "./NavLinksDropDown.scss";
 const NavLinksDropDown = ({ id }) => {
   switch (id) {
     case 1: {

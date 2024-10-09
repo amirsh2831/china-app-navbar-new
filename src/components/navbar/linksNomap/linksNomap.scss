@@ -1,0 +1,28 @@
+@use "../../../styles/responsive.scss" as *;
+@use "../../../styles/variables.scss" as *;
+.nav-links {
+  display: none;
+  @include responsive($mobile) {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    .link-item {
+      position: relative;
+      transition: 0.2s;
+      line-height: 0;
+      text-align: center;
+      cursor: pointer;
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+.nav-links:hover .dropdown-container {
+  // z-index: 100;
+
+  display: block;
+}

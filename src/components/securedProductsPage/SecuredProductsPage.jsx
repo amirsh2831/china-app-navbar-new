@@ -5,19 +5,35 @@ import ProductCards from "../productsPage/productCards/ProductCards";
 import Stack from "@mui/material/Stack";
 import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
 import Pagination from "@mui/material/Pagination";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import { ProductsCardInformation } from "./data";
 import FilterSection from "./filterSection/FilterSection";
 import Categories from "./categories/Categories";
+import SuppliersMobilieSubNav from "../suppliersMainPage/suppliersMobileSubNab/SuppliersMobilieSubNav";
 const SecuredProductsPage = () => {
   const [counter, setCounter] = useState(1);
   const handleCounter = (id) => {
     setCounter(id);
   };
+  const isMoblie = useMediaQuery({ maxWidth: 425 });
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
   return (
     <>
       {/* spt is = Secured Product Trading */}
       <div className="spt">
+        {isMoblie ? (
+          <SuppliersMobilieSubNav />
+        ) : scroll ? (
+          <SuppliersMobilieSubNav />
+        ) : (
+          ""
+        )}
         <div className="spt__title">
           <strong>Made In China</strong> <span>65,579</span>
           <p>Products Found</p>

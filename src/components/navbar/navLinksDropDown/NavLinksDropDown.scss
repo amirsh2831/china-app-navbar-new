@@ -1,0 +1,116 @@
+@use "../../../styles//variables.scss" as *;
+$primary-color: crimson;
+$light-gray: lightgray;
+$input-camera-icon-color: gray;
+$white: white;
+$menu-hover-background: rgba(143, 184, 255, 0.108);
+$opacity-high: 0.87;
+$opacity-medium: 0.6;
+$opacity-low: 0.38;
+
+$text-20: 20px;
+$text-18: 18px;
+$text-16: 16px;
+$text-14: 14px;
+$text-12: 12px;
+$text-10: 10px;
+$text-8: 8px;
+.dropdown-container {
+  min-width: 250px;
+  color: black;
+  padding: 8px 8px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -90px;
+  display: none;
+  box-shadow: $shadow-ul;
+  z-index: 100;
+  background-color: #fff;
+  .post-faq-text {
+    width: 320px;
+  }
+  .call-to-action-submenu {
+    padding-top: 16px;
+    margin: auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      width: 200px;
+      height: 28px;
+      border-radius: 48px;
+      font-size: 12px;
+      margin-bottom: 16px;
+      &.sign-in {
+        background-color: $primary-color;
+        color: $white;
+      }
+      &.join {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+    }
+  }
+  .call-to-action-middle {
+    max-width: 220px;
+    padding: 0 36px;
+    margin: auto;
+  }
+  .call-to-action-text {
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    margin: auto;
+    p {
+      line-height: 16px;
+      opacity: $opacity-high;
+    }
+  }
+  ul.list {
+    width: 220px;
+    display: block;
+    list-style: none;
+    padding: 16px 6px;
+    margin: 0;
+    li {
+      width: 240px;
+      display: flex;
+      align-items: center;
+      padding: 4px 0;
+      height: 24px;
+      text-align: left;
+      font-size: $text-14;
+      &:hover {
+        background-color: $menu-hover-background;
+        color: $primary-color;
+      }
+    }
+    li.post-sourcing-request {
+      margin-top: 16px;
+    }
+  }
+  &:hover {
+    color: black;
+  }
+}
+span {
+  font-weight: 100;
+  opacity: $opacity-high;
+}
+p {
+  font-size: $text-12;
+  font-weight: 400;
+  opacity: $opacity-high;
+  white-space: pre-wrap;
+}
+// &:hover {
+//   color: $primary-color;
+// }
+
+div :hover .dropdown-container {
+  display: block;
+  // z-index: 100;
+  color: black;
+}

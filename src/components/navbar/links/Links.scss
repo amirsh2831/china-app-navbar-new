@@ -1,0 +1,49 @@
+// nav links
+// links item
+//icon-text
+// link-item
+@use "../../../styles/responsive.scss" as *;
+@use "../../../styles/variables.scss" as *;
+$primary-color: crimson;
+$light-gray: lightgray;
+$input-camera-icon-color: gray;
+$white: white;
+$menu-hover-background: rgba(143, 184, 255, 0.108);
+$opacity-high: 0.87;
+$opacity-medium: 0.6;
+$opacity-low: 0.38;
+
+$text-20: 20px;
+$text-18: 18px;
+$text-16: 16px;
+$text-14: 14px;
+$text-12: 12px;
+$text-10: 10px;
+$text-8: 8px;
+
+.nav-links {
+  display: none;
+  @include responsive($mobile) {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    .link-item {
+      position: relative;
+      transition: 0.2s;
+      line-height: 0;
+      text-align: center;
+      cursor: pointer;
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+.nav-links:hover .dropdown-container {
+  // z-index: 100;
+
+  display: block;
+}

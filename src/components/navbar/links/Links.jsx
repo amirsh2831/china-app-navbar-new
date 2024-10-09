@@ -1,8 +1,9 @@
 import React from "react";
-import { Navlinks } from "./data";
+import { Navlinks } from "../data";
 import AdsClickRoundedIcon from "@mui/icons-material/AdsClickRounded";
 import { useMediaQuery } from "react-responsive";
-import NavLinksDropDown from "./NavLinksDropDown";
+import NavLinksDropDown from "../navLinksDropDown/NavLinksDropDown";
+import "./Links.scss";
 import { useState } from "react";
 const Links = ({ scrollProps }) => {
   const [hoveredItem, setHoveredItem] = useState(null);

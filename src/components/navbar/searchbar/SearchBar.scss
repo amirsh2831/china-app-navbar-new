@@ -1,0 +1,116 @@
+// seachbar resize
+// seach-icons
+// navbar-products
+// search icons
+// camera icon
+// search button
+@use "../../../styles/responsive.scss" as *;
+@use "../../../styles//variables.scss" as *;
+$primary-color: crimson;
+$light-gray: lightgray;
+$input-camera-icon-color: gray;
+$white: white;
+$menu-hover-background: rgba(143, 184, 255, 0.108);
+$opacity-high: 0.87;
+$opacity-medium: 0.6;
+$opacity-low: 0.38;
+
+$text-20: 20px;
+$text-18: 18px;
+$text-16: 16px;
+$text-14: 14px;
+$text-12: 12px;
+$text-10: 10px;
+$text-8: 8px;
+.searchbar {
+  display: none;
+  input {
+    padding-left: 16px;
+    width: 80%;
+  }
+  @include responsive($mobile) {
+    display: block;
+    border-radius: 36px;
+    border: 1px solid $primary-color;
+    display: flex;
+    width: 90%;
+    height: 36px;
+    align-items: center;
+  }
+  @include responsive($laptop) {
+    width: 90%;
+  }
+}
+
+.search-icons {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+  align-items: center;
+  height: 100%;
+  justify-self: flex-end;
+  width: 20%;
+
+  button {
+    &.camera-icon {
+      display: none;
+      @include responsive($tablet) {
+        margin-right: 8px;
+        display: block;
+      }
+    }
+    &.search-button {
+      background-color: $primary-color;
+      border-top-right-radius: 36px;
+      border-bottom-right-radius: 36px;
+      color: $white;
+      text-align: center;
+      padding-top: 6px;
+      width: 36px;
+      font-size: $text-14;
+      height: 100%;
+
+      width: 64px;
+      @include responsive($tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+  @include responsive($desktop) {
+    width: 10%;
+  }
+}
+
+.navbar-products {
+  border-right: 1px solid $input-camera-icon-color;
+  display: flex;
+  align-items: center;
+  // font-size: $text-12;
+  font-weight: 500;
+  gap: 4px;
+  padding: 0 8px;
+  padding: 0 16px;
+  font-size: clamp(12px, 2vw, 16px);
+  // @include responsive($tablet) {
+  // }
+}
+
+.searchbar-resize {
+  display: none;
+  @include responsive($mobile) {
+    border-radius: 36px;
+    border: 2px solid $primary-color;
+    display: flex;
+    width: 85%;
+    height: 36px;
+    align-items: center;
+    padding: 0;
+  }
+  input {
+    width: 80%;
+    padding-left: 16px;
+    @include responsive($desktop) {
+      width: 95%;
+    }
+  }
+}

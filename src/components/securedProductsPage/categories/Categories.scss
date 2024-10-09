@@ -5,15 +5,15 @@
     padding: 16px;
     background-color: #fff;
     h3 {
-      line-height: 27px;
+      line-height: clamp(20px, 2vh, 27px);
       font-weight: 700;
-      font-size: 15px;
+      font-size: clamp(12px, 1vw, 15px);
       //   margin-bottom: 12px;
     }
     h4 {
       margin-top: 8px;
       font-weight: 600;
-      font-size: 13px;
+      font-size: clamp(10px, 1vw, 13px);
       margin-bottom: 8px;
     }
     ul {
@@ -21,7 +21,10 @@
       list-style: none;
       margin-bottom: 8px;
       li {
-        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: clamp(10px, 1vw, 13px);
         line-height: 1.75;
         a {
           font-weight: normal;
@@ -32,9 +35,8 @@
     &__links {
       //   background-color: red;
       a {
-        font-size: 13px;
+        font-size: clamp(11px, 1vw, 13px);
         color: #555;
-        line-height: 21px;
         font-weight: 600;
       }
     }

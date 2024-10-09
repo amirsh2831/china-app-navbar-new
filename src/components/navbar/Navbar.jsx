@@ -1,7 +1,7 @@
 import React from "react";
-import SearchBar from "./SearchBar";
-import Links from "./Links.JSX";
-import SubNavbar from "./SubNavbar";
+import SearchBar from "./searchbar/SearchBar.jsx";
+import Links from "./links/Links.jsx";
+import SubNavbar from "./subNavbar/SubNavbar";
 import { useState, useEffect } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";

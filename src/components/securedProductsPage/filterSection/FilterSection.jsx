@@ -20,7 +20,7 @@ const FilterSection = () => {
           {/* left side of the filter */}
           <div className="spt-filter__odp__order">
             <span>Min Order: </span>
-            <input placeholder="less than" />
+            <input placeholder="less than" id="spt-min-order-input" />
             <button>OK</button>
           </div>
           <div className="spt-filter__odp__price">

@@ -64,6 +64,7 @@ $mobile-resize: 520px;
     padding-top: 8px;
     width: 220px;
     background-color: #fff;
+    margin-bottom: 20px;
     @include responsive($tablet-size) {
       display: block;
     }
@@ -82,7 +83,7 @@ $mobile-resize: 520px;
 
   .top-ranking-main-products {
     position: relative;
-    // width: 85%;
+    width: 85%;
     margin: auto;
     .top-ranking-products-header {
       padding-left: 10px;
@@ -101,19 +102,27 @@ $mobile-resize: 520px;
     }
     .top-ranking-products-grid-wrapper {
       justify-content: space-evenly;
+      width: 100%;
       margin: 24px 0;
-      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 100%;
-      gap: 10px;
+      display: flex;
+      // row-gap: 100px;
+      gap: 16px;
       @include responsive($mobile-resize) {
-        gap: 36px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+        gap: 10px;
+
+        // gap: 36px;
       }
       @include responsive($tablet-size) {
-        justify-content: flex-start;
-        gap: 16px;
+        // justify-content: flex-start;
+        // gap: 16px;
       }
+    }
+    @include responsive($mobile) {
+      width: 95%;
     }
     @include responsive($tablet-size) {
       width: calc(100% - 227px);

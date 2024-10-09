@@ -2,7 +2,7 @@ import React from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-
+import "./SearchBar.scss";
 const SearchBar = ({ scrollProps }) => {
   return (
     <>
